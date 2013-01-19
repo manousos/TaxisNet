@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17 ?????? 2013 11:03:45 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.User" table="User" catalog="TaxisDB">
+        <id name="userId" type="java.lang.Integer">
+            <column name="UserID" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="UserName" length="50" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="21844" not-null="true" />
+        </property>
+        <property name="active" type="int">
+            <column name="Active" not-null="true" />
+        </property>
+        <property name="otp" type="string">
+            <column name="OTP" length="15" />
+        </property>
+        <set name="taxpayers" table="Taxpayer" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UserID" not-null="true" />
+            </key>
+            <one-to-many class="gr.manousos.model.Taxpayer" />
+        </set>
+    </class>
+</hibernate-mapping>

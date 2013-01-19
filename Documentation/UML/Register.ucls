@@ -1,0 +1,199 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
+  <interface id="1" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.service.UserSrv" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/service/UserSrv.java" binary="false">    
+    <position height="-1" width="-1" x="203" y="-519"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.service.UserSrvImpl" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/service/UserSrvImpl.java" binary="false">    
+    <position height="-1" width="-1" x="202" y="-309"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.TaxpayerDAO" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/TaxpayerDAO.java" binary="false">    
+    <position height="-1" width="-1" x="593" y="213"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.DAOFactory" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/DAOFactory.java" binary="false">    
+    <position height="-1" width="-1" x="186" y="403"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.GenericDAO" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/GenericDAO.java" binary="false">    
+    <position height="-1" width="-1" x="608" y="481"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.Hibernate.GenericDAOImpl" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/Hibernate/GenericDAOImpl.java" binary="false">    
+    <position height="-1" width="-1" x="599" y="765"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.Hibernate.HibernateDAOFactory" 
+    project="TaxisNet" file="/TaxisNet/src/gr/manousos/DAO/Hibernate/HibernateDAOFactory.java" binary="false">    
+    <position height="-1" width="-1" x="153" y="1077"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.Hibernate.TaxpayerHibernate" 
+    project="TaxisNet" file="/TaxisNet/src/gr/manousos/DAO/Hibernate/TaxpayerHibernate.java" binary="false">    
+    <position height="-1" width="-1" x="943" y="618"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.model.Taxpayer" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/model/Taxpayer.java" binary="false">    
+    <position height="-1" width="-1" x="922" y="-31"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.model.Contact" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/model/Contact.java" binary="false">    
+    <position height="-1" width="-1" x="1340" y="-142"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.model.User" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/model/User.java" binary="false">    
+    <position height="-1" width="-1" x="1325" y="320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <dependency id="12">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="13">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <dependency id="14">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="15">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="16" name="taxpayers"/>      
+      <multiplicity id="17" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="18">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="19">    
+    <bendpoint x="1140" y="-27"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="20" name="contact"/>      
+      <multiplicity id="21" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="22">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <association id="23">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="24" name="taxpayers"/>      
+      <multiplicity id="25" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="26">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <association id="27">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="28" name="user"/>      
+      <multiplicity id="29" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="30">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <realization id="31">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <dependency id="32">    
+    <bendpoint x="942" y="1073"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="34">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="35">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <generalization id="36">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <realization id="37">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="38">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <realization id="40">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+    visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true"/>    
+    <operations public="true" package="true" protected="true" private="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

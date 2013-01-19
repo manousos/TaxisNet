@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!--<property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property> -->
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/TaxisDB?useUnicode=yes&amp;characterEncoding=UTF-8</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+		<property name="hibernate.search.autoregister_listeners">false</property>
+		<!-- Show and print nice SQL on stdout -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<!-- Mapping files -->
+		<mapping resource="gr/manousos/model/E2coOwner.hbm.xml" />
+		<mapping resource="gr/manousos/model/E2otherEstate.hbm.xml" />
+		<mapping resource="gr/manousos/model/E2.hbm.xml" />
+		<mapping resource="gr/manousos/model/Contact.hbm.xml" />
+		<mapping resource="gr/manousos/model/User.hbm.xml" />
+		<mapping resource="gr/manousos/model/Taxpayer.hbm.xml" />
+		<mapping resource="gr/manousos/model/E2estate.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

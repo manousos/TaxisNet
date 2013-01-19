@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://service.manousos.gr/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.manousos.gr/" version="1.0">
+<xs:element name="finalSubmitE2" type="tns:finalSubmitE2"/>
+<xs:element name="finalSubmitE2Response" type="tns:finalSubmitE2Response"/>
+<xs:element name="getE2DocById" type="tns:getE2DocById"/>
+<xs:element name="getE2DocByIdResponse" type="tns:getE2DocByIdResponse"/>
+<xs:element name="test" type="tns:test"/>
+<xs:element name="testResponse" type="tns:testResponse"/>
+<xs:complexType name="test">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="testResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getE2DocById">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getE2DocByIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:e2"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="e2">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="e2estates" nillable="true" type="tns:e2Estate"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="e2otherEstates" nillable="true" type="tns:e2OtherEstate"/>
+      <xs:element minOccurs="0" name="id" type="tns:e2Id"/>
+      <xs:element minOccurs="0" name="isComplete" type="xs:int"/>
+      <xs:element minOccurs="0" name="taxpayer" type="tns:taxpayer"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="e2Estate">
+    <xs:sequence>
+      <xs:element name="area" type="xs:float"/>
+      <xs:element minOccurs="0" name="e2" type="tns:e2"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="e2coOwners" nillable="true" type="tns:e2CoOwner"/>
+      <xs:element minOccurs="0" name="estateId" type="xs:int"/>
+      <xs:element name="from" type="xs:int"/>
+      <xs:element minOccurs="0" name="location" type="xs:string"/>
+      <xs:element name="monthlyRental" type="xs:float"/>
+      <xs:element minOccurs="0" name="position" type="xs:string"/>
+      <xs:element name="rersentCoOwner" type="xs:float"/>
+      <xs:element name="revenueFreeHome" type="xs:float"/>
+      <xs:element name="revenueFreeOffice" type="xs:float"/>
+      <xs:element name="revenuePrivateHotel" type="xs:float"/>
+      <xs:element name="revenuePrivateOffice" type="xs:float"/>
+      <xs:element minOccurs="0" name="tenantAfm" type="xs:string"/>
+      <xs:element minOccurs="0" name="tenantFullName" type="xs:string"/>
+      <xs:element name="to" type="xs:int"/>
+      <xs:element minOccurs="0" name="usage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="e2CoOwner">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="afm" type="xs:string"/>
+      <xs:element minOccurs="0" name="e2estate" type="tns:e2Estate"/>
+      <xs:element minOccurs="0" name="fullName" type="xs:string"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="percent" type="xs:float"/>
+      <xs:element minOccurs="0" name="rent" type="xs:float"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="e2OtherEstate">
+    <xs:sequence>
+      <xs:element name="area" type="xs:float"/>
+      <xs:element minOccurs="0" name="e2" type="tns:e2"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="location" type="xs:string"/>
+      <xs:element minOccurs="0" name="position" type="xs:string"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:element minOccurs="0" name="usage" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="e2Id">
+    <xs:sequence>
+      <xs:element name="taxierId" type="xs:int"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="taxpayer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="afm" type="xs:string"/>
+      <xs:element minOccurs="0" name="contact" type="tns:contact"/>
+      <xs:element minOccurs="0" name="fatherName" type="xs:string"/>
+      <xs:element minOccurs="0" name="fname" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="lname" type="xs:string"/>
+      <xs:element minOccurs="0" name="user" type="tns:user"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="contact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cell" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactId" type="xs:int"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="fax" type="xs:string"/>
+      <xs:element minOccurs="0" name="phone" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="taxpayers" nillable="true" type="tns:taxpayer"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="user">
+    <xs:sequence>
+      <xs:element name="active" type="xs:int"/>
+      <xs:element minOccurs="0" name="otp" type="xs:string"/>
+      <xs:element minOccurs="0" name="password" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="taxpayers" nillable="true" type="tns:taxpayer"/>
+      <xs:element minOccurs="0" name="userId" type="xs:int"/>
+      <xs:element minOccurs="0" name="userName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="finalSubmitE2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:e2"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="finalSubmitE2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:e2"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

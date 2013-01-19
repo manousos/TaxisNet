@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17 ?????? 2013 11:03:45 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E2" table="E2" catalog="TaxisDB">
+        <composite-id name="id" class="gr.manousos.model.E2Id">
+            <key-property name="taxierId" type="int">
+                <column name="TaxierID" />
+            </key-property>
+            <key-property name="year" type="int">
+                <column name="Year" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="taxpayer" class="gr.manousos.model.Taxpayer" update="false" insert="false" fetch="select">
+            <column name="TaxierID" not-null="true" />
+        </many-to-one>
+        <property name="isComplete" type="java.lang.Integer">
+            <column name="isComplete" />
+        </property>
+        <set name="e2otherEstates" table="E2OtherEstate" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TaxpayerID" not-null="true" />
+                <column name="Year" not-null="true" />
+            </key>
+            <one-to-many class="gr.manousos.model.E2otherEstate" />
+        </set>
+        <set name="e2estates" table="E2Estate" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TaxierID" not-null="true" />
+                <column name="Year" not-null="true" />
+            </key>
+            <one-to-many class="gr.manousos.model.E2estate" />
+        </set>
+    </class>
+</hibernate-mapping>

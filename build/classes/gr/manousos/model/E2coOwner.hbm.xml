@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 17 ?????? 2013 11:03:45 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E2coOwner" table="E2coOwner" catalog="TaxisDB">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="e2estate" class="gr.manousos.model.E2estate" fetch="select">
+            <column name="EstateID" not-null="true" />
+        </many-to-one>
+        <property name="fullName" type="string">
+            <column name="FullName" length="50" not-null="true" />
+        </property>
+        <property name="afm" type="string">
+            <column name="AFM" length="10" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="100" not-null="true" />
+        </property>
+        <property name="percent" type="float">
+            <column name="Percent" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="rent" type="java.lang.Float">
+            <column name="Rent" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>
