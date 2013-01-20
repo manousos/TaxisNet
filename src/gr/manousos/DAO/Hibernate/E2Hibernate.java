@@ -67,16 +67,15 @@ public class E2Hibernate extends GenericDAOImpl<E2, Serializable> implements
 		try {
 			getSession().beginTransaction();
 			super.makePersistent(entity);
-			this.submitE2(entity);
+			this.submitEstates(entity);
 			getSession().getTransaction().commit();
 		} catch (Exception ex) {
-			log.error("E2 makePersistent error ", ex);
+			log.error("E2 makePersistent error. " + ex.getMessage(), ex);
 			getSession().getTransaction().rollback();
 		} finally {
 			if (getSession().isOpen())
 				getSession().close();
 		}
-
 		return entity;
 	}
 
@@ -117,21 +116,22 @@ public class E2Hibernate extends GenericDAOImpl<E2, Serializable> implements
 	 * (non-Javadoc)
 	 * 
 	 * @see gr.manousos.DAO.E2DAO#submitE2(gr.manousos.model.E2)
-	 */
-	// TODO: change name to submit estates and change return type to bool !
+	 */	
 	@Override
-	public int submitE2(E2 e2Object) {
+	public void submitEstates(E2 e2Object) {
+		try {
+			for (E2estate estate : e2Object.getE2estates()) {
+				getSession().saveOrUpdate(estate);
+				for (E2coOwner coOwner : estate.getE2coOwners())
+					getSession().saveOrUpdate(coOwner);
+			}
 
-		for (E2estate estate : e2Object.getE2estates()) {
-			getSession().saveOrUpdate(estate);
-			for (E2coOwner coOwner : estate.getE2coOwners())
-				getSession().saveOrUpdate(coOwner);
+			for (E2otherEstate othEstates : e2Object.getE2otherEstates())
+				getSession().saveOrUpdate(othEstates);
+		} catch (Exception ex) {
+			log.error("E2 submit childs error. " + ex.getMessage(), ex);
+			getSession().getTransaction().rollback();
 		}
-
-		for (E2otherEstate othEstates : e2Object.getE2otherEstates())
-			getSession().saveOrUpdate(othEstates);
-
-		return 1;
 	}
 
 	@Override

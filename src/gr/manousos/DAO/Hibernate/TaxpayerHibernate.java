@@ -134,13 +134,16 @@ public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 		Taxpayer taxPayer = null;
 		try {
 			getSession().beginTransaction();
-			taxPayer = (Taxpayer) super.findById(id, false);// getSession().load(Taxpayer.class,id);
+			taxPayer = (Taxpayer) super.findById(id, true); // getSession().get(Taxpayer.class,
+															// id);
+															// getSession().load(Taxpayer.class,id);
 			getSession().getTransaction().commit();
 		} catch (Exception ex) {
 			log.error("getTaxpayerByID Error= " + ex.toString());
-		} /*finally {
-			getSession().close();
-		}*/
+			getSession().getTransaction().rollback();
+		} /*
+		 * finally { getSession().close(); }
+		 */
 		return taxPayer;
 	}
 }
