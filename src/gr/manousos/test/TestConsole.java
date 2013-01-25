@@ -31,14 +31,14 @@ public class TestConsole {
 
 		// E2 primary KEY
 		E2Id key = new E2Id();
-		key.setTaxierId(t.getId());
+		key.setTaxierId(9);
 		key.setYear(Calendar.getInstance().get(Calendar.YEAR));
 
 		// master table !
 		E2 e2 = new E2();
 		e2.setId(key);
 		e2.setIsComplete(0);
-		e2.setTaxpayer(t);
+		//e2.setTaxpayer(t);
 		// dao.getE2DAO().makePersistent(e2);
 
 		E2estate e2estateObj = new E2estate();
@@ -83,5 +83,6 @@ public class TestConsole {
 		e2.setE2estates(listOfE2estates);		
 
 		dao.getE2DAO().makePersistent(e2);		
+		
 	}
 }

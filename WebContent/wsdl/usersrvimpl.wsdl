@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions name="UserSrvImplService" targetNamespace="http://service.manousos.gr/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.manousos.gr/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
   <wsdl:types>
-    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
   <import namespace="http://service.manousos.gr/" schemaLocation="usersrvimpl_schema1.xsd"/>
 </schema>
   </wsdl:types>
@@ -17,12 +17,12 @@
     <wsdl:part name="parameters" element="tns:Register">
     </wsdl:part>
   </wsdl:message>
-  <wsdl:message name="RegisterTaxPayer">
-    <wsdl:part name="parameters" element="tns:RegisterTaxPayer">
-    </wsdl:part>
-  </wsdl:message>
   <wsdl:message name="RegisterTaxPayerResponse">
     <wsdl:part name="parameters" element="tns:RegisterTaxPayerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RegisterTaxPayer">
+    <wsdl:part name="parameters" element="tns:RegisterTaxPayer">
     </wsdl:part>
   </wsdl:message>
   <wsdl:message name="getTaxPayerById">
@@ -104,7 +104,7 @@
   </wsdl:binding>
   <wsdl:service name="UserSrvImplService">
     <wsdl:port name="UserSrvImplPort" binding="tns:UserSrvImplServiceSoapBinding">
-      <soap:address location="http://localhost:8088/TaxisNet/services/UserSrvImplPort"/>
+      <soap:address location="http://localhost:9090/UserSrvImplPort"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -11,6 +11,7 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
 import org.hibernate.LockMode;
 import org.hibernate.Query;
+import org.hibernate.Session;
 
 import gr.manousos.DAO.TaxpayerDAO;
 import gr.manousos.model.Taxpayer;
@@ -132,18 +133,24 @@ public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 	@Override
 	public Taxpayer getTaxpayerByID(int id) {
 		Taxpayer taxPayer = null;
+		// Session mySess = getSession();
 		try {
 			getSession().beginTransaction();
-			taxPayer = (Taxpayer) super.findById(id, true); // getSession().get(Taxpayer.class,
-															// id);
-															// getSession().load(Taxpayer.class,id);
+			// mySess.beginTransaction();
+			taxPayer = (Taxpayer) super.findById(id, true);
+			// //
+			// getSession().get(Taxpayer.class,
+			// id);
+			// getSession().load(Taxpayer.class,id);
 			getSession().getTransaction().commit();
+			// mySess.getTransaction().commit();
 		} catch (Exception ex) {
 			log.error("getTaxpayerByID Error= " + ex.toString());
 			getSession().getTransaction().rollback();
 		} /*
 		 * finally { getSession().close(); }
 		 */
+		//getSession().update(taxPayer);
 		return taxPayer;
 	}
 }

@@ -18,7 +18,7 @@ public abstract class GenericDAOImpl<T, ID extends Serializable> implements
 	private Class<T> persistentClass;
 	private Session session;
 
-	//get persistence type using reflection
+	// get persistence type using reflection
 	public GenericDAOImpl() {
 		this.persistentClass = (Class<T>) ((ParameterizedType) getClass()
 				.getGenericSuperclass()).getActualTypeArguments()[0];
@@ -45,7 +45,8 @@ public abstract class GenericDAOImpl<T, ID extends Serializable> implements
 			entity = (T) getSession().load(getPersistentClass(), id,
 					LockMode.UPGRADE);
 		else
-			entity = (T) getSession().load(getPersistentClass(), id);
+			entity = (T) getSession().load(getPersistentClass(), id,
+					LockMode.NONE);
 
 		return entity;
 	}

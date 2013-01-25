@@ -20,7 +20,7 @@
 		<property name="otp" type="string">
 			<column name="OTP" length="15" />
 		</property>
-		<set name="taxpayers" table="Taxpayer" inverse="true" lazy="true"
+		<set name="taxpayers" table="Taxpayer" inverse="true" lazy="false"
 			fetch="select">
 			<key>
 				<column name="UserID" not-null="true" />

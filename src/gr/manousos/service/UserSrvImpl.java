@@ -1,3 +1,8 @@
+/**
+ * Please modify this class to meet your needs
+ * This class is not complete
+ */
+
 package gr.manousos.service;
 
 import javax.jws.WebService;
@@ -7,6 +12,7 @@ import org.apache.commons.logging.LogFactory;
 
 import gr.manousos.DAO.DAOFactory;
 import gr.manousos.model.Taxpayer;
+
 
 @WebService(targetNamespace = "http://service.manousos.gr/", endpointInterface = "gr.manousos.service.UserSrv", portName = "UserSrvImplPort", serviceName = "UserSrvImplService")
 public class UserSrvImpl implements UserSrv {
