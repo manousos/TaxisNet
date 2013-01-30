@@ -116,18 +116,36 @@ public class E2Hibernate extends GenericDAOImpl<E2, Serializable> implements
 	 * (non-Javadoc)
 	 * 
 	 * @see gr.manousos.DAO.E2DAO#submitE2(gr.manousos.model.E2)
-	 */	
+	 */
 	@Override
 	public void submitEstates(E2 e2Object) {
 		try {
 			for (E2estate estate : e2Object.getE2estates()) {
+				// just for avoid MarshalException on rest services!
+				estate.setE2(e2Object);
 				getSession().saveOrUpdate(estate);
-				for (E2coOwner coOwner : estate.getE2coOwners())
+				for (E2coOwner coOwner : estate.getE2coOwners()) {
+					/*
+					 * Just to avoid this:
+					 * com.sun.jersey.api.client.ClientHandlerException:
+					 * javax.ws.rs.WebApplicationException:
+					 * javax.xml.bind.MarshalException - with linked exception:
+					 * [com.sun.istack.SAXException2: A cycle is detected in the
+					 * object graph. This will cause infinitely deep XML:
+					 * gr.manousos.model.E2estate@2f6b904d ->
+					 * gr.manousos.model.E2coOwner@8135daf ->
+					 * gr.manousos.model.E2estate@2f6b904d]
+					 */
+					coOwner.setE2estate(estate);
 					getSession().saveOrUpdate(coOwner);
+				}
 			}
 
-			for (E2otherEstate othEstates : e2Object.getE2otherEstates())
+			for (E2otherEstate othEstates : e2Object.getE2otherEstates()) {
+				// just for avoid MarshalException on rest services!
+				othEstates.setE2(e2Object);
 				getSession().saveOrUpdate(othEstates);
+			}
 		} catch (Exception ex) {
 			log.error("E2 submit childs error. " + ex.getMessage(), ex);
 			getSession().getTransaction().rollback();
