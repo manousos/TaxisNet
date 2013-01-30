@@ -10,7 +10,7 @@ import gr.manousos.model.E2;
 import gr.manousos.model.E2Id;
 
 
-@WebService(targetNamespace = "http://service.manousos.gr/", endpointInterface = "gr.manousos.service.DocumentSrv", portName = "DocumentSrvImplPort", serviceName = "DocumentSrvImplService")
+//@WebService(targetNamespace = "http://service.manousos.gr/", endpointInterface = "gr.manousos.service.DocumentSrv", portName = "DocumentSrvImplPort", serviceName = "DocumentSrvImplService")
 public class DocumentSrvImpl implements DocumentSrv {
 
 	private static Log log = LogFactory.getLog(UserSrvImpl.class);

@@ -4,7 +4,7 @@ import javax.jws.WebService;
 
 import gr.manousos.model.E2;
 
-@WebService(name = "DocumentSrv", targetNamespace = "http://service.manousos.gr/")
+//@WebService(name = "DocumentSrv", targetNamespace = "http://service.manousos.gr/")
 public interface DocumentSrv {
 	public E2 finalSubmitE2(E2 entity);
 

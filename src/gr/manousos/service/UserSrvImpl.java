@@ -5,7 +5,7 @@
 
 package gr.manousos.service;
 
-import javax.jws.WebService;
+import java.util.logging.Logger;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -13,9 +13,14 @@ import org.apache.commons.logging.LogFactory;
 import gr.manousos.DAO.DAOFactory;
 import gr.manousos.model.Taxpayer;
 
+import javax.jws.WebService;
 
-@WebService(targetNamespace = "http://service.manousos.gr/", endpointInterface = "gr.manousos.service.UserSrv", portName = "UserSrvImplPort", serviceName = "UserSrvImplService")
+
+//@WebService(targetNamespace = "http://service.manousos.gr/", endpointInterface = "gr.manousos.service.UserSrv", portName = "UserSrvImplPort", serviceName = "UserSrvImplService")
 public class UserSrvImpl implements UserSrv {
+
+	private static final Logger LOG = Logger.getLogger(UserSrvImpl.class
+			.getName());
 
 	private static Log log = LogFactory.getLog(UserSrvImpl.class);
 	private DAOFactory dao = DAOFactory.instance(DAOFactory.HIBERNATE);
@@ -47,4 +52,5 @@ public class UserSrvImpl implements UserSrv {
 	public Taxpayer getTaxPayerById(int id) {
 		return dao.getUserInfoDAO().getTaxpayerByID(id);
 	}
+
 }

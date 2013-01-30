@@ -151,7 +151,11 @@ public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 		 * finally { getSession().close(); }
 		 */
 		// getSession().update(taxPayer);
-		return new Taxpayer(null, null, taxPayer.getAfm(), taxPayer.getFname(),
-				taxPayer.getLname(), taxPayer.getFatherName());
+		Taxpayer respTaxPayer = new Taxpayer(null, null, taxPayer.getAfm(),
+				taxPayer.getFname(), taxPayer.getLname(),
+				taxPayer.getFatherName());
+		respTaxPayer.setId(taxPayer.getId());
+		
+		return respTaxPayer;
 	}
 }
