@@ -4,6 +4,8 @@
 package gr.manousos.DAO.Hibernate;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -120,24 +122,37 @@ public class E2Hibernate extends GenericDAOImpl<E2, Serializable> implements
 	@Override
 	public void submitEstates(E2 e2Object) {
 		try {
+			Set<E2coOwner> listOfCoOwners = new HashSet<E2coOwner>();
 			for (E2estate estate : e2Object.getE2estates()) {
 				// just for avoid MarshalException on rest services!
 				estate.setE2(e2Object);
 				getSession().saveOrUpdate(estate);
-				for (E2coOwner coOwner : estate.getE2coOwners()) {
-					/*
-					 * Just to avoid this:
-					 * com.sun.jersey.api.client.ClientHandlerException:
-					 * javax.ws.rs.WebApplicationException:
-					 * javax.xml.bind.MarshalException - with linked exception:
-					 * [com.sun.istack.SAXException2: A cycle is detected in the
-					 * object graph. This will cause infinitely deep XML:
-					 * gr.manousos.model.E2estate@2f6b904d ->
-					 * gr.manousos.model.E2coOwner@8135daf ->
-					 * gr.manousos.model.E2estate@2f6b904d]
-					 */
-					coOwner.setE2estate(estate);
-					getSession().saveOrUpdate(coOwner);
+				
+				if (listOfCoOwners.size() == 0)
+					listOfCoOwners = estate.getE2coOwners();
+				
+				for (E2coOwner coOwner : listOfCoOwners) {
+					if (coOwner.getLocation().equals(estate.getLocation())
+							&& coOwner.getPosition().equals(
+									estate.getPosition())
+							&& coOwner.getUsage().equals(estate.getUsage())
+							&& coOwner.getArea() == estate.getArea()) {
+
+						/*
+						 * Just to avoid this:
+						 * com.sun.jersey.api.client.ClientHandlerException:
+						 * javax.ws.rs.WebApplicationException:
+						 * javax.xml.bind.MarshalException - with linked
+						 * exception: [com.sun.istack.SAXException2: A cycle is
+						 * detected in the object graph. This will cause
+						 * infinitely deep XML:
+						 * gr.manousos.model.E2estate@2f6b904d ->
+						 * gr.manousos.model.E2coOwner@8135daf ->
+						 * gr.manousos.model.E2estate@2f6b904d]
+						 */
+						coOwner.setE2estate(estate);
+						getSession().saveOrUpdate(coOwner);
+					}
 				}
 			}
 
