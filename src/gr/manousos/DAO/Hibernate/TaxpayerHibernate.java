@@ -1,20 +1,20 @@
 package gr.manousos.DAO.Hibernate;
 
-import static org.hibernate.criterion.Restrictions.eq;
-
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
 import org.hibernate.Criteria;
 import org.hibernate.LockMode;
 import org.hibernate.Query;
-import org.hibernate.Session;
+import static org.hibernate.criterion.Restrictions.eq;
 
 import gr.manousos.DAO.TaxpayerDAO;
 import gr.manousos.model.Taxpayer;
+import gr.manousos.model.User;
 
 public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 		implements TaxpayerDAO {
@@ -133,29 +133,64 @@ public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 	@Override
 	public Taxpayer getTaxpayerByID(int id) {
 		Taxpayer taxPayer = null;
-		// Session mySess = getSession();
+
 		try {
 			getSession().beginTransaction();
-			// mySess.beginTransaction();
 			taxPayer = (Taxpayer) super.findById(id, true);
-			// //
-			// getSession().get(Taxpayer.class,
-			// id);
-			// getSession().load(Taxpayer.class,id);
 			getSession().getTransaction().commit();
-			// mySess.getTransaction().commit();
 		} catch (Exception ex) {
 			log.error("getTaxpayerByID Error= " + ex.toString());
 			getSession().getTransaction().rollback();
 		} /*
 		 * finally { getSession().close(); }
 		 */
-		// getSession().update(taxPayer);
 		Taxpayer respTaxPayer = new Taxpayer(null, null, taxPayer.getAfm(),
 				taxPayer.getFname(), taxPayer.getLname(),
 				taxPayer.getFatherName());
 		respTaxPayer.setId(taxPayer.getId());
-		
+
 		return respTaxPayer;
+	}
+
+	@Override
+	public User getUserByUserName(String username) {
+		try {
+			getSession().beginTransaction();
+
+			Criteria crit = getSession().createCriteria(User.class);
+			crit.add(eq("userName", username));
+			User user = (User) crit.uniqueResult();
+
+			getSession().getTransaction().commit();
+
+			return user;
+		} catch (Exception e) {
+			log.error("getUserByUserName Error= " + e.toString());
+			getSession().getTransaction().rollback();
+		}
+		return null;
+	}
+
+	@Override
+	public Boolean Login(String username, String password) {
+		User user = null;
+		try {
+			getSession().beginTransaction();
+
+			Criteria crit = getSession().createCriteria(User.class);
+			crit.add(eq("userName", username));
+			crit.add(eq("password", password));
+			crit.setLockMode(LockMode.NONE);
+			user = (User) crit.uniqueResult();
+
+			getSession().getTransaction().commit();
+		} catch (Exception e) {
+			log.error("Login Error= " + e.toString());
+			getSession().getTransaction().rollback();
+		}
+		if (user != null)
+			return true;
+
+		return false;
 	}
 }
