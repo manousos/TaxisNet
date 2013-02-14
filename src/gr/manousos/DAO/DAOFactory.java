@@ -29,7 +29,8 @@ public abstract class DAOFactory {
 	}
 
 	// Add your DAO interfaces here
-	public abstract TaxpayerDAO getUserInfoDAO();
+	public abstract UserDAO getUserDAO();
+	public abstract TaxpayerDAO getTaxpayerDAO();
 	public abstract E2DAO getE2DAO();		
 	//public abstract ContactDAO getContactDAO();
 

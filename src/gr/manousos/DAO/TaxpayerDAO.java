@@ -12,8 +12,5 @@ public interface TaxpayerDAO extends GenericDAO<Taxpayer, Serializable> {
 
 	public Taxpayer getTaxpayerByID(int id);
 
-	public User getUserByUserName(String username);
-
-	public Boolean Login(String username, String password);
-
+	public Taxpayer getTaxpayerByUserName(String username);
 }

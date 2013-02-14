@@ -12,6 +12,7 @@ import gr.manousos.model.E2estate;
 import gr.manousos.model.E2otherEstate;
 import gr.manousos.model.Taxpayer;
 import gr.manousos.model.E2Id;
+import gr.manousos.model.User;
 import gr.manousos.service.UserSrv;
 
 public class TestConsole {
@@ -28,10 +29,16 @@ public class TestConsole {
 		// UserSrv userClient = userService.getUserSrvImplPort();
 		// gr.manousos.model.Taxpayer taxpayer = userClient.getTaxPayerById(9);
 
-		Taxpayer t = dao.getUserInfoDAO().getTaxpayerByID(9);
-
+		Taxpayer t = dao.getTaxpayerDAO().getTaxpayerByUserName("manousos1");
+		User u =dao.getUserDAO().getUserByUserName("manousos1");
+		//Taxpayer t = dao.getTaxpayerDAO().getTaxpayerByID(9);
 		System.out.println("AFM : " + t == null ? "einai null" : t.getAfm());
 
+		//testSaveE2(dao);
+
+	}
+
+	private static void testSaveE2(DAOFactory dao) {
 		// E2 primary KEY
 		E2Id key = new E2Id();
 		key.setTaxierId(9);
@@ -125,6 +132,5 @@ public class TestConsole {
 		e2estateObj.setE2coOwners(listOfE2coOwner);
 		e2.setE2estates(listOfE2estates);
 		dao.getE2DAO().makePersistent(e2);
-
 	}
 }

@@ -364,3 +364,4 @@ org.hibernate.SessionException: Session is closed!
 	at gr.manousos.DAO.Hibernate.E2Hibernate.makePersistent(E2Hibernate.java:71)
 	at gr.manousos.DAO.Hibernate.E2Hibernate.makePersistent(E2Hibernate.java:1)
 	at gr.manousos.test.TestConsole.main(TestConsole.java:127)
+20:21:46,085 ERROR TaxpayerHibernate:167 - getTaxpayerByUserName Error= java.lang.ClassCastException: gr.manousos.model.User cannot be cast to gr.manousos.model.Taxpayer

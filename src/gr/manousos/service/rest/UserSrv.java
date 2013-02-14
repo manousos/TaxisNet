@@ -32,7 +32,7 @@ public class UserSrv {
 	public void RegisterTaxPayer(Taxpayer user) {
 		try {
 			// dao.getUserInfoDAO().addTaxpayer(user);
-			user = dao.getUserInfoDAO().makePersistent(user);
+			user = dao.getTaxpayerDAO().makePersistent(user);
 		} catch (Exception ex) {
 			// System.err.println("submit Register Error= " + ex.toString());
 		}
@@ -45,7 +45,7 @@ public class UserSrv {
 	public Taxpayer Register(Taxpayer user) {
 		try {
 			// dao.getUserInfoDAO().addTaxpayer(user);
-			user = dao.getUserInfoDAO().makePersistent(user);
+			user = dao.getTaxpayerDAO().makePersistent(user);
 		} catch (Exception ex) {
 			log.error("Taxpayer makePersistent error ", ex);
 		}
@@ -58,7 +58,7 @@ public class UserSrv {
 	@Produces(MediaType.APPLICATION_JSON)
 	public User getUserByUserName(String username) {
 		try {
-			return dao.getUserInfoDAO().getUserByUserName(username);
+			return dao.getUserDAO().getUserByUserName(username);
 		} catch (Exception e) {
 			log.error("Taxpayer makePersistent error ", e);
 		}
@@ -72,7 +72,7 @@ public class UserSrv {
 	public String Login(@FormParam("username") String username,
 			@FormParam("password") String password) {
 		try {
-			if (dao.getUserInfoDAO().Login(username, password))
+			if (dao.getUserDAO().Login(username, password))
 				return "1";
 
 		} catch (Exception e) {
@@ -83,10 +83,18 @@ public class UserSrv {
 
 	@Path("/TaxPayer/{id}")
 	@GET
-	// @Consumes({ MediaType.APPLICATION_JSON })
 	@Produces("application/json")
 	public Taxpayer getTaxPayerById(@PathParam("id") int id) {
-		return dao.getUserInfoDAO().getTaxpayerByID(id);
+		return dao.getTaxpayerDAO().getTaxpayerByID(id);
 
 	}
+
+	@Path("/getTaxPayerByUserName/{username}")
+	@GET
+	@Produces("application/json")
+	public Taxpayer getTaxPayerById(@PathParam("username") String username) {
+		return dao.getTaxpayerDAO().getTaxpayerByUserName(username);
+
+	}
+
 }
