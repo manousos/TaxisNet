@@ -12,6 +12,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import gr.manousos.DAO.DAOFactory;
+import gr.manousos.model.E1;
 import gr.manousos.model.E2;
 import gr.manousos.model.E2Id;
 
@@ -31,7 +32,24 @@ public class DocumentSrv {
 			dao.getE2DAO().makePersistent(entity);
 			res = "E2 Saved !!";
 		} catch (Exception ex) {
-			log.error("document service E2 error ", ex);
+			log.error("document service finalSubmitE2 error ", ex);
+			res = ex.toString();
+		}
+
+		return res;
+	}
+	
+	@Path("/submitE1")
+	@POST
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.APPLICATION_JSON)
+	public String finalSubmitE1(E1 entity) {
+		String res = "";
+		try {
+			dao.getE1DAO().makePersistent(entity);
+			res = "E1 Saved !!";
+		} catch (Exception ex) {
+			log.error("document service finalSubmitE1 error ", ex);
 			res = ex.toString();
 		}
 
