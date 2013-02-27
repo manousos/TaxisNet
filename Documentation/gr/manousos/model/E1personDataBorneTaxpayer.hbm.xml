@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E1personDataBorneTaxpayer" table="E1PersonDataBorneTaxpayer" catalog="TaxisDB">
+        <id name="idE1personDataBorneTaxpayer" type="java.lang.Integer">
+            <column name="idE1PersonDataBorneTaxpayer" />
+            <generator class="identity" />
+        </id>
+        <property name="name1" type="string">
+            <column name="Name1" length="45" />
+        </property>
+        <property name="birthYear1" type="java.lang.Integer">
+            <column name="BirthYear1" />
+        </property>
+        <property name="schoolName1" type="string">
+            <column name="SchoolName1" length="100" />
+        </property>
+        <property name="831" type="string">
+            <column name="831" length="10" />
+        </property>
+        <property name="name2" type="string">
+            <column name="Name2" length="45" />
+        </property>
+        <property name="birthYear2" type="java.lang.Integer">
+            <column name="BirthYear2" />
+        </property>
+        <property name="schoolName2" type="string">
+            <column name="SchoolName2" length="100" />
+        </property>
+        <property name="832" type="string">
+            <column name="832" length="10" />
+        </property>
+        <property name="name3" type="string">
+            <column name="Name3" length="45" />
+        </property>
+        <property name="birthYear3" type="java.lang.Integer">
+            <column name="BirthYear3" />
+        </property>
+        <property name="schoolName3" type="string">
+            <column name="SchoolName3" length="100" />
+        </property>
+        <property name="833" type="string">
+            <column name="833" length="10" />
+        </property>
+        <property name="name4" type="string">
+            <column name="Name4" length="45" />
+        </property>
+        <property name="birthYear4" type="java.lang.Integer">
+            <column name="BirthYear4" />
+        </property>
+        <property name="schoolName4" type="string">
+            <column name="SchoolName4" length="100" />
+        </property>
+        <property name="834" type="string">
+            <column name="834" length="10" />
+        </property>
+        <property name="fullName1" type="string">
+            <column name="FullName1" length="45" />
+        </property>
+        <property name="835" type="string">
+            <column name="835" length="10" />
+        </property>
+        <property name="relationshipWithPrincipal1" type="string">
+            <column name="RelationshipWithPrincipal1" length="45" />
+        </property>
+        <property name="relationShipWithWife1" type="string">
+            <column name="RelationShipWithWife1" length="45" />
+        </property>
+        <property name="fullName2" type="string">
+            <column name="FullName2" length="45" />
+        </property>
+        <property name="836" type="string">
+            <column name="836" length="10" />
+        </property>
+        <property name="relationshipWithPrincipal2" type="string">
+            <column name="RelationshipWithPrincipal2" length="45" />
+        </property>
+        <property name="relationShipWithWife2" type="string">
+            <column name="RelationShipWithWife2" length="45" />
+        </property>
+        <property name="fullName3" type="string">
+            <column name="FullName3" length="45" />
+        </property>
+        <property name="837" type="string">
+            <column name="837" length="45" />
+        </property>
+        <property name="relationshipWithPrincipal3" type="string">
+            <column name="RelationshipWithPrincipal3" length="45" />
+        </property>
+        <property name="relationShipWithWife3" type="string">
+            <column name="RelationShipWithWife3" length="45" />
+        </property>
+        <property name="fullName4" type="string">
+            <column name="FullName4" length="45" />
+        </property>
+        <property name="838" type="string">
+            <column name="838" length="10" />
+        </property>
+        <property name="relationshipWithPrincipal4" type="string">
+            <column name="RelationshipWithPrincipal4" length="45" />
+        </property>
+        <property name="relationShipWithWife4" type="string">
+            <column name="RelationShipWithWife4" length="45" />
+        </property>
+        <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idE1PersonDataBorneTaxpayer" />
+            </key>
+            <one-to-many class="gr.manousos.model.E1" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.Address" table="Address" catalog="TaxisDB">
+        <id name="idAddress" type="int">
+            <column name="idAddress" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="taxpayer" class="gr.manousos.model.Taxpayer" fetch="select">
+            <column name="TaxpayerID" />
+        </many-to-one>
+        <property name="relateRersonId" type="java.lang.Integer">
+            <column name="RelateRersonID" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="200" />
+        </property>
+        <property name="addressNum" type="java.lang.Integer">
+            <column name="AddressNum" />
+        </property>
+        <property name="zip" type="java.lang.Integer">
+            <column name="Zip" />
+        </property>
+        <property name="city" type="string">
+            <column name="City" length="45" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="Type">
+                <comment>1: HOME 2: COMPANY</comment>
+            </column>
+        </property>
+        <set name="relatePersons" table="RelatePerson" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Address" />
+            </key>
+            <one-to-many class="gr.manousos.model.RelatePerson" />
+        </set>
+    </class>
+</hibernate-mapping>

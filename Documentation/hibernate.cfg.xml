@@ -3,25 +3,35 @@
 "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory>
-		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
-		<!-- <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> -->
-		<property name="hibernate.connection.driver_class">org.gjt.mm.mysql.Driver</property>
-		<property name="hibernate.connection.password">root</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost/TaxisDB?useUnicode=yes&amp;characterEncoding=UTF-8</property>
-		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
-		<property name="hibernate.search.autoregister_listeners">false</property>
-		<!-- Show and print nice SQL on stdout -->
-		<property name="show_sql">true</property>
-		<property name="format_sql">true</property>
-		<!-- Mapping files -->
-		<mapping resource="gr/manousos/model/E2coOwner.hbm.xml" />
-		<mapping resource="gr/manousos/model/E2otherEstate.hbm.xml" />
-		<mapping resource="gr/manousos/model/E2.hbm.xml" />
-		<mapping resource="gr/manousos/model/Contact.hbm.xml" />
-		<mapping resource="gr/manousos/model/User.hbm.xml" />
-		<mapping resource="gr/manousos/model/Taxpayer.hbm.xml" />
-		<mapping resource="gr/manousos/model/E2estate.hbm.xml" />
-	</session-factory>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/TaxisDB</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <mapping resource="gr/manousos/model/E1reduceTax.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1taxableIncomes.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1incomeFromAgricularCompanyData.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1objectiveSpending.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1personDataBorneTaxpayer.hbm.xml" />
+        <mapping resource="gr/manousos/model/E2.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1incomesReduceTaxes.hbm.xml" />
+        <mapping resource="gr/manousos/model/Address.hbm.xml" />
+        <mapping resource="gr/manousos/model/User.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1expensesRemovedFromTotalIncome.hbm.xml" />
+        <mapping resource="gr/manousos/model/RelatePerson.hbm.xml" />
+        <mapping resource="gr/manousos/model/E2estate.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1relatePersons.hbm.xml" />
+        <mapping resource="gr/manousos/model/E2coOwner.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1prepaidTaxes.hbm.xml" />
+        <mapping resource="gr/manousos/model/E2otherEstate.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1infoData.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1taxPayerBankAccount.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1dataFromTaxPayerFolder.hbm.xml" />
+        <mapping resource="gr/manousos/model/Contact.hbm.xml" />
+        <mapping resource="gr/manousos/model/Taxpayer.hbm.xml" />
+    </session-factory>
 </hibernate-configuration>

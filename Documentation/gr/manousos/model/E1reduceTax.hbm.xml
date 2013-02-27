@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E1reduceTax" table="E1ReduceTax" catalog="TaxisDB">
+        <id name="idE1reduceTax" type="java.lang.Integer">
+            <column name="idE1ReduceTax" />
+            <generator class="identity" />
+        </id>
+        <property name="001" type="java.lang.Integer">
+            <column name="001" />
+        </property>
+        <property name="002" type="java.lang.Integer">
+            <column name="002" />
+        </property>
+        <property name="003" type="java.lang.Integer">
+            <column name="003" />
+        </property>
+        <property name="004" type="java.lang.Integer">
+            <column name="004" />
+        </property>
+        <property name="005" type="java.lang.Integer">
+            <column name="005" />
+        </property>
+        <property name="006" type="java.lang.Integer">
+            <column name="006" />
+        </property>
+        <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idE1ReduceTax" />
+            </key>
+            <one-to-many class="gr.manousos.model.E1" />
+        </set>
+    </class>
+</hibernate-mapping>

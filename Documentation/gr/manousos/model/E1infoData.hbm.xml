@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E1infoData" table="E1InfoData" catalog="TaxisDB">
+        <id name="e1infoDataId" type="java.lang.Integer">
+            <column name="E1InfoDataID" />
+            <generator class="identity" />
+        </id>
+        <property name="327" type="java.lang.Integer">
+            <column name="327" />
+        </property>
+        <property name="328" type="java.lang.Integer">
+            <column name="328" />
+        </property>
+        <property name="319" type="java.lang.Integer">
+            <column name="319" />
+        </property>
+        <property name="320" type="java.lang.Integer">
+            <column name="320" />
+        </property>
+        <property name="023" type="java.lang.Integer">
+            <column name="023" />
+        </property>
+        <property name="024" type="java.lang.Integer">
+            <column name="024" />
+        </property>
+        <property name="329" type="java.lang.Integer">
+            <column name="329" />
+        </property>
+        <property name="330" type="java.lang.Integer">
+            <column name="330" />
+        </property>
+        <property name="331" type="java.lang.Integer">
+            <column name="331" />
+        </property>
+        <property name="011" type="java.lang.Integer">
+            <column name="011" />
+        </property>
+        <property name="012" type="java.lang.Integer">
+            <column name="012" />
+        </property>
+        <property name="013" type="java.lang.Integer">
+            <column name="013" />
+        </property>
+        <property name="014" type="java.lang.Integer">
+            <column name="014" />
+        </property>
+        <property name="015" type="java.lang.Integer">
+            <column name="015" />
+        </property>
+        <property name="016" type="java.lang.Integer">
+            <column name="016" />
+        </property>
+        <property name="017" type="java.lang.Integer">
+            <column name="017" />
+        </property>
+        <property name="018" type="java.lang.Integer">
+            <column name="018" />
+        </property>
+        <property name="021" type="java.lang.Integer">
+            <column name="021" />
+        </property>
+        <property name="022" type="java.lang.Integer">
+            <column name="022" />
+        </property>
+        <property name="025" type="java.lang.Integer">
+            <column name="025" />
+        </property>
+        <property name="026" type="java.lang.Integer">
+            <column name="026" />
+        </property>
+        <property name="007" type="java.lang.Integer">
+            <column name="007" />
+        </property>
+        <property name="008" type="java.lang.Integer">
+            <column name="008" />
+        </property>
+        <property name="617" type="java.lang.Integer">
+            <column name="617" />
+        </property>
+        <property name="385" type="java.lang.Integer">
+            <column name="385" />
+        </property>
+        <property name="386" type="java.lang.Integer">
+            <column name="386" />
+        </property>
+        <property name="029" type="java.lang.Integer">
+            <column name="029" />
+        </property>
+        <property name="030" type="java.lang.Integer">
+            <column name="030" />
+        </property>
+        <property name="905" type="java.lang.Integer">
+            <column name="905" />
+        </property>
+        <property name="906" type="java.lang.Integer">
+            <column name="906" />
+        </property>
+        <property name="911" type="java.lang.Integer">
+            <column name="911" />
+        </property>
+        <property name="912" type="java.lang.Integer">
+            <column name="912" />
+        </property>
+        <property name="010" type="java.lang.Integer">
+            <column name="010" />
+        </property>
+        <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="E1InfoDataID" />
+            </key>
+            <one-to-many class="gr.manousos.model.E1" />
+        </set>
+    </class>
+</hibernate-mapping>

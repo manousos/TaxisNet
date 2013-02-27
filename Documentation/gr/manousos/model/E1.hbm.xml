@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E1" table="E1" catalog="TaxisDB">
+        <composite-id name="id" class="gr.manousos.model.E1Id">
+            <key-property name="taxpayerId" type="int">
+                <column name="TaxpayerID" />
+            </key-property>
+            <key-property name="year" type="int">
+                <column name="Year" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="e1reduceTax" class="gr.manousos.model.E1reduceTax" fetch="select">
+            <column name="idE1ReduceTax" />
+        </many-to-one>
+        <many-to-one name="e1objectiveSpending" class="gr.manousos.model.E1objectiveSpending" fetch="select">
+            <column name="idE1ObjectiveSpending" />
+        </many-to-one>
+        <many-to-one name="e1taxPayerBankAccount" class="gr.manousos.model.E1taxPayerBankAccount" fetch="select">
+            <column name="idE1TaxPayerBankAccount" />
+        </many-to-one>
+        <many-to-one name="taxpayer" class="gr.manousos.model.Taxpayer" update="false" insert="false" fetch="select">
+            <column name="TaxpayerID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="e1infoData" class="gr.manousos.model.E1infoData" fetch="select">
+            <column name="E1InfoDataID" />
+        </many-to-one>
+        <many-to-one name="e1dataFromTaxPayerFolder" class="gr.manousos.model.E1dataFromTaxPayerFolder" fetch="select">
+            <column name="idE1DataFromTaxPayerFolder" />
+        </many-to-one>
+        <many-to-one name="e1personDataBorneTaxpayer" class="gr.manousos.model.E1personDataBorneTaxpayer" fetch="select">
+            <column name="idE1PersonDataBorneTaxpayer" />
+        </many-to-one>
+        <many-to-one name="e1expensesRemovedFromTotalIncome" class="gr.manousos.model.E1expensesRemovedFromTotalIncome" fetch="select">
+            <column name="idE1ExpensesRemovedFromTotalIncome" />
+        </many-to-one>
+        <many-to-one name="e1prepaidTaxes" class="gr.manousos.model.E1prepaidTaxes" fetch="select">
+            <column name="idE1PrepaidTaxes" />
+        </many-to-one>
+        <many-to-one name="e1taxableIncomes" class="gr.manousos.model.E1taxableIncomes" fetch="select">
+            <column name="E1TaxableIncomeID" />
+        </many-to-one>
+        <many-to-one name="e1incomesReduceTaxes" class="gr.manousos.model.E1incomesReduceTaxes" fetch="select">
+            <column name="idE1IncomesReduceTaxes" />
+        </many-to-one>
+        <property name="isComplete" type="java.lang.Integer">
+            <column name="isComplete" />
+        </property>
+    </class>
+</hibernate-mapping>

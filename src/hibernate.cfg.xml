@@ -17,12 +17,27 @@
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 		<!-- Mapping files -->
-		<mapping resource="gr/manousos/model/E2coOwner.hbm.xml" />
-		<mapping resource="gr/manousos/model/E2otherEstate.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1reduceTax.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1taxableIncomes.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1incomeFromAgricularCompanyData.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1objectiveSpending.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1personDataBorneTaxpayer.hbm.xml" />
 		<mapping resource="gr/manousos/model/E2.hbm.xml" />
-		<mapping resource="gr/manousos/model/Contact.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1incomesReduceTaxes.hbm.xml" />
+		<mapping resource="gr/manousos/model/Address.hbm.xml" />
 		<mapping resource="gr/manousos/model/User.hbm.xml" />
-		<mapping resource="gr/manousos/model/Taxpayer.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1expensesRemovedFromTotalIncome.hbm.xml" />
+		<mapping resource="gr/manousos/model/RelatePerson.hbm.xml" />
 		<mapping resource="gr/manousos/model/E2estate.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1relatePersons.hbm.xml" />
+		<mapping resource="gr/manousos/model/E2coOwner.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1prepaidTaxes.hbm.xml" />
+		<mapping resource="gr/manousos/model/E2otherEstate.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1infoData.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1taxPayerBankAccount.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1dataFromTaxPayerFolder.hbm.xml" />
+		<mapping resource="gr/manousos/model/Contact.hbm.xml" />
+		<mapping resource="gr/manousos/model/Taxpayer.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

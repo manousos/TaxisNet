@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E1incomeFromAgricularCompanyData" table="E1IncomeFromAgricularCompanyData" catalog="TaxisDB">
+        <id name="idE1incomeFromAgricularCompanyId" type="java.lang.Integer">
+            <column name="idE1IncomeFromAgricularCompanyID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="e1taxableIncomes" class="gr.manousos.model.E1taxableIncomes" fetch="select">
+            <column name="E1TaxableIncomeID" />
+        </many-to-one>
+        <property name="location" type="string">
+            <column name="Location" length="150" />
+        </property>
+        <property name="prodKind" type="java.lang.Integer">
+            <column name="ProdKind">
+                <comment>1: Tillage 2: Stockraising 3: Other</comment>
+            </column>
+        </property>
+        <property name="population" type="java.lang.Float">
+            <column name="Population" precision="12" scale="0">
+                <comment>&#206;&#163;&#207;&#132;&#207;&#129;&#206;&#173;&#206;&#188;&#206;&#188;&#206;&#177;&#207;&#132;&#206;&#177;,&#206;&#182;&#207;&#142;&#206;&#177;
+                ...</comment>
+            </column>
+        </property>
+        <property name="locationType" type="java.lang.Integer">
+            <column name="LocationType">
+                <comment>1: &#206;&#159;&#207;&#129;&#206;&#181;&#206;&#185;&#206;&#189;&#207;&#140; 2:
+                &#206;&#151;&#206;&#188;&#206;&#185;&#206;&#191;&#207;&#129;&#206;&#181;&#206;&#185;&#206;&#189;&#207;&#140; 3:
+                &#206;&#160;&#206;&#181;&#206;&#180;&#206;&#185;&#206;&#189;&#207;&#140;</comment>
+            </column>
+        </property>
+        <property name="hasWater" type="java.lang.Integer">
+            <column name="HasWater" />
+        </property>
+        <property name="netIncome" type="java.lang.Float">
+            <column name="NetIncome" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

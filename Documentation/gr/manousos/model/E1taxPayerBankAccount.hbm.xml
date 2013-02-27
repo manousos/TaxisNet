@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E1taxPayerBankAccount" table="E1TaxPayerBankAccount" catalog="TaxisDB">
+        <id name="idE1taxPayerBankAccount" type="java.lang.Integer">
+            <column name="idE1TaxPayerBankAccount" />
+            <generator class="identity" />
+        </id>
+        <property name="bic" type="string">
+            <column name="BIC" length="45" />
+        </property>
+        <property name="iban" type="string">
+            <column name="IBAN" length="45" />
+        </property>
+        <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idE1TaxPayerBankAccount" />
+            </key>
+            <one-to-many class="gr.manousos.model.E1" />
+        </set>
+    </class>
+</hibernate-mapping>

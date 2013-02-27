@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 17 ?????? 2013 11:03:45 ???? by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.Contact" table="Contact" catalog="TaxisDB">
         <id name="contactId" type="java.lang.Integer">
@@ -12,10 +12,10 @@
             <column name="Phone" length="15" not-null="true" />
         </property>
         <property name="fax" type="string">
-            <column name="Fax" length="15" not-null="true" />
+            <column name="Fax" length="15" />
         </property>
         <property name="cell" type="string">
-            <column name="Cell" length="15" />
+            <column name="Cell" length="15" not-null="true" />
         </property>
         <property name="email" type="string">
             <column name="Email" length="100" not-null="true" />
@@ -25,6 +25,12 @@
                 <column name="Contact" not-null="true" />
             </key>
             <one-to-many class="gr.manousos.model.Taxpayer" />
+        </set>
+        <set name="relatePersons" table="RelatePerson" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ContactID" />
+            </key>
+            <one-to-many class="gr.manousos.model.RelatePerson" />
         </set>
     </class>
 </hibernate-mapping>

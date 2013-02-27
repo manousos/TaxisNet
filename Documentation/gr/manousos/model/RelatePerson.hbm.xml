@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.RelatePerson" table="RelatePerson" catalog="TaxisDB">
+        <id name="idRelatePerson" type="int">
+            <column name="idRelatePerson" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="contact" class="gr.manousos.model.Contact" fetch="select">
+            <column name="ContactID" />
+        </many-to-one>
+        <many-to-one name="address" class="gr.manousos.model.Address" fetch="select">
+            <column name="Address" />
+        </many-to-one>
+        <property name="type" type="java.lang.Integer">
+            <column name="Type">
+                <comment>1: WIFE 2: DELEGATE</comment>
+            </column>
+        </property>
+        <property name="afm" type="string">
+            <column name="AFM" length="45" />
+        </property>
+        <property name="fname" type="string">
+            <column name="FName" length="45" />
+        </property>
+        <property name="lname" type="string">
+            <column name="LName" length="45" />
+        </property>
+        <property name="fatherName" type="string">
+            <column name="FatherName" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>
