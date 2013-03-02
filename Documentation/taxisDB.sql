@@ -2,25 +2,8 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-CREATE SCHEMA IF NOT EXISTS `TaxisDB` DEFAULT CHARACTER SET latin1 ;
+CREATE SCHEMA IF NOT EXISTS `TaxisDB` DEFAULT CHARACTER SET utf8 ;
 USE `TaxisDB` ;
-delimiter $$
-
-CREATE TABLE `Address` (
-  `idAddress` int(11) NOT NULL,
-  `TaxpayerID` int(11) DEFAULT NULL,
-  `RelateRersonID` int(11) DEFAULT NULL,
-  `Address` varchar(200) DEFAULT NULL,
-  `AddressNum` int(3) DEFAULT NULL,
-  `Zip` int(5) DEFAULT NULL,
-  `City` varchar(45) DEFAULT NULL,
-  `Type` int(1) DEFAULT NULL COMMENT '1: HOME\n2: COMPANY',
-  PRIMARY KEY (`idAddress`),
-  KEY `fk_Address_1_idx` (`TaxpayerID`),
-  CONSTRAINT `fk_Address_1` FOREIGN KEY (`TaxpayerID`) REFERENCES `Taxpayer` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
-
-
 delimiter $$
 
 CREATE TABLE `Contact` (
@@ -35,21 +18,35 @@ CREATE TABLE `Contact` (
 
 delimiter $$
 
+delimiter $$
+
 CREATE TABLE `E1` (
   `TaxpayerID` int(11) NOT NULL,
-  `Year` int(11) NOT NULL,
+  `Year` int(4) NOT NULL,
+  `TaxpayerAddress` varchar(500) NOT NULL,
+  `ATID` varchar(10) NOT NULL,
   `isComplete` int(1) DEFAULT NULL,
-  `E1InfoDataID` int(11) DEFAULT NULL,
-  `idE1ReduceTax` int(11) DEFAULT NULL,
-  `E1TaxableIncomeID` int(11) DEFAULT NULL,
-  `idE1ObjectiveSpending` int(11) DEFAULT NULL,
-  `idE1IncomesReduceTaxes` int(11) DEFAULT NULL,
-  `idE1ExpensesRemovedFromTotalIncome` int(11) DEFAULT NULL,
-  `idE1PrepaidTaxes` int(11) DEFAULT NULL,
-  `idE1PersonDataBorneTaxpayer` int(11) DEFAULT NULL,
-  `idE1DataFromTaxPayerFolder` int(11) DEFAULT NULL,
-  `idE1TaxPayerBankAccount` int(11) DEFAULT NULL,
+  `E1InfoDataID` int(11) DEFAULT '0',
+  `E1TaxableIncomeID` int(11) DEFAULT '0',
+  `idE1ReduceTax` int(11) DEFAULT '0',
+  `idE1ObjectiveSpending` int(11) DEFAULT '0',
+  `idE1IncomesReduceTaxes` int(11) DEFAULT '0',
+  `idE1ExpensesRemovedFromTotalIncome` int(11) DEFAULT '0',
+  `idE1PrepaidTaxes` int(11) DEFAULT '0',
+  `idE1PersonDataBorneTaxpayer` int(11) DEFAULT '0',
+  `idE1DataFromTaxPayerFolder` int(11) DEFAULT '0',
+  `idE1TaxPayerBankAccount` int(11) DEFAULT '0',
   PRIMARY KEY (`TaxpayerID`,`Year`),
+  UNIQUE KEY `idE1TaxPayerBankAccount_UNIQUE` (`idE1TaxPayerBankAccount`),
+  UNIQUE KEY `idE1DataFromTaxPayerFolder_UNIQUE` (`idE1DataFromTaxPayerFolder`),
+  UNIQUE KEY `idE1PersonDataBorneTaxpayer_UNIQUE` (`idE1PersonDataBorneTaxpayer`),
+  UNIQUE KEY `idE1PrepaidTaxes_UNIQUE` (`idE1PrepaidTaxes`),
+  UNIQUE KEY `idE1ExpensesRemovedFromTotalIncome_UNIQUE` (`idE1ExpensesRemovedFromTotalIncome`),
+  UNIQUE KEY `idE1IncomesReduceTaxes_UNIQUE` (`idE1IncomesReduceTaxes`),
+  UNIQUE KEY `idE1ObjectiveSpending_UNIQUE` (`idE1ObjectiveSpending`),
+  UNIQUE KEY `idE1ReduceTax_UNIQUE` (`idE1ReduceTax`),
+  UNIQUE KEY `E1InfoDataID_UNIQUE` (`E1InfoDataID`),
+  UNIQUE KEY `E1TaxableIncomeID_UNIQUE` (`E1TaxableIncomeID`),
   KEY `fk_E1_Taxpayer_idx` (`TaxpayerID`),
   KEY `fk_E1_ExpensesRemovedFromTotalIncome_idx` (`idE1ExpensesRemovedFromTotalIncome`),
   KEY `fk_E1_IncomesreduceTaxes_idx` (`idE1IncomesReduceTaxes`),
@@ -70,9 +67,11 @@ CREATE TABLE `E1` (
   CONSTRAINT `fk_E1_PrepaidTaxes` FOREIGN KEY (`idE1PrepaidTaxes`) REFERENCES `E1PrepaidTaxes` (`idE1PrepaidTaxes`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_E1_ReduceTax` FOREIGN KEY (`idE1ReduceTax`) REFERENCES `E1ReduceTax` (`idE1ReduceTax`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_E1_TaxableIncomes` FOREIGN KEY (`E1TaxableIncomeID`) REFERENCES `E1TaxableIncomes` (`E1TaxableIncome`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_E1_Taxpayer` FOREIGN KEY (`TaxpayerID`) REFERENCES `Taxpayer` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_E1_TaxPayerBankAccount` FOREIGN KEY (`idE1TaxPayerBankAccount`) REFERENCES `E1TaxPayerBankAccount` (`idE1TaxPayerBankAccount`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+  CONSTRAINT `fk_E1_TaxPayerBankAccount` FOREIGN KEY (`idE1TaxPayerBankAccount`) REFERENCES `E1TaxPayerBankAccount` (`idE1TaxPayerBankAccount`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_E1_Taxpayer` FOREIGN KEY (`TaxpayerID`) REFERENCES `Taxpayer` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
+
+
 
 
 delimiter $$
@@ -108,7 +107,7 @@ CREATE TABLE `E1DataFromTaxPayerFolder` (
   `989` float DEFAULT NULL,
   `990` float DEFAULT NULL,
   PRIMARY KEY (`idE1DataFromTaxPayerFolder`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -187,7 +186,7 @@ CREATE TABLE `E1ExpensesRemovedFromTotalIncome` (
   `035` int(1) DEFAULT '0',
   `036` int(1) DEFAULT '0',
   PRIMARY KEY (`idE1ExpensesRemovedFromTotalIncome`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -204,7 +203,7 @@ CREATE TABLE `E1IncomeFromAgricularCompanyData` (
   PRIMARY KEY (`idE1IncomeFromAgricularCompanyID`),
   KEY `fk_E1IncomeFromAgricularCompanyData_1_idx` (`E1TaxableIncomeID`),
   CONSTRAINT `fk_E1IncomeFromAgricularCompanyData_1` FOREIGN KEY (`E1TaxableIncomeID`) REFERENCES `E1TaxableIncomes` (`E1TaxableIncome`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -253,7 +252,7 @@ CREATE TABLE `E1IncomesReduceTaxes` (
   `787` float DEFAULT NULL,
   `788` float DEFAULT NULL,
   PRIMARY KEY (`idE1IncomesReduceTaxes`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -294,7 +293,7 @@ CREATE TABLE `E1InfoData` (
   `912` int(1) DEFAULT NULL,
   `010` int(1) DEFAULT NULL,
   PRIMARY KEY (`E1InfoDataID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -419,7 +418,7 @@ CREATE TABLE `E1ObjectiveSpending` (
   `727` float DEFAULT NULL,
   `728` float DEFAULT NULL,
   PRIMARY KEY (`idE1ObjectiveSpending`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -459,7 +458,7 @@ CREATE TABLE `E1PersonDataBorneTaxpayer` (
   `RelationshipWithPrincipal4` varchar(45) DEFAULT NULL,
   `RelationShipWithWife4` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idE1PersonDataBorneTaxpayer`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -489,7 +488,7 @@ CREATE TABLE `E1PrepaidTaxes` (
   `127` float DEFAULT NULL,
   `128` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idE1PrepaidTaxes`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -503,19 +502,20 @@ CREATE TABLE `E1ReduceTax` (
   `005` int(11) DEFAULT NULL,
   `006` int(11) DEFAULT NULL,
   PRIMARY KEY (`idE1ReduceTax`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
 
-CREATE TABLE `E1RelatePersons` (
+CREATE TABLE  `TaxisDB`.`E1RelatePersons` (
   `TaxpayerID` int(11) NOT NULL,
   `Year` int(4) NOT NULL,
   `idRelatePerson` int(11) NOT NULL,
   KEY `fk_E1RelatePersons_1_idx` (`idRelatePerson`),
-  KEY `fk_E1RelatePersons_E1_idx` (`TaxpayerID`,`Year`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
-
+  KEY `fk_E1RelatePersons_E1_idx` (`TaxpayerID`,`Year`),
+  CONSTRAINT `fk_E1RelatePersons_RelatePerson` FOREIGN KEY (`idRelatePerson`) REFERENCES `RelatePerson` (`idRelatePerson`),
+  CONSTRAINT `fk_E1RelatePersons_E1` FOREIGN KEY (`TaxpayerID`, `Year`) REFERENCES `E1` (`TaxpayerID`, `Year`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
 
 delimiter $$
 
@@ -661,7 +661,7 @@ CREATE TABLE `E1TaxableIncomes` (
   `395` float DEFAULT NULL,
   `396` float DEFAULT NULL,
   PRIMARY KEY (`E1TaxableIncome`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -671,7 +671,7 @@ CREATE TABLE `E1TaxPayerBankAccount` (
   `BIC` varchar(45) DEFAULT NULL,
   `IBAN` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idE1TaxPayerBankAccount`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 delimiter $$
@@ -746,22 +746,30 @@ CREATE TABLE `E2OtherEstate` (
 
 delimiter $$
 
+delimiter $$
+
 CREATE TABLE `RelatePerson` (
   `idRelatePerson` int(11) NOT NULL,
   `Type` int(1) DEFAULT NULL COMMENT '1: WIFE\n2: DELEGATE',
-  `Address` int(11) DEFAULT NULL,
+  `Address` varchar(500) DEFAULT NULL,
   `AFM` varchar(45) DEFAULT NULL,
   `ContactID` int(11) DEFAULT NULL,
   `FName` varchar(45) DEFAULT NULL,
   `LName` varchar(45) DEFAULT NULL,
   `FatherName` varchar(10) DEFAULT NULL,
+  `ATID` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`idRelatePerson`),
   KEY `fk_RelatePerson_Address_idx` (`Address`),
   KEY `fk_RelatePerson_1_idx` (`ContactID`),
-  CONSTRAINT `fk_RelatePerson_1` FOREIGN KEY (`ContactID`) REFERENCES `Contact` (`ContactID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_RelatePerson_Address` FOREIGN KEY (`Address`) REFERENCES `Address` (`idAddress`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1$$
+  CONSTRAINT `fk_RelatePerson_1` FOREIGN KEY (`ContactID`) REFERENCES `Contact` (`ContactID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
+
+
+
+delimiter $$
+
+delimiter $$
 
 delimiter $$
 
@@ -779,7 +787,11 @@ CREATE TABLE `Taxpayer` (
   KEY `fk_taxPayer_User_idx` (`UserID`),
   CONSTRAINT `fk_taxPayer_Contact` FOREIGN KEY (`Contact`) REFERENCES `Contact` (`ContactID`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_taxPayer_User` FOREIGN KEY (`UserID`) REFERENCES `User` (`UserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4$$
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4$$
+
+
+
+
 
 
 delimiter $$
@@ -792,7 +804,7 @@ CREATE TABLE `User` (
   `OTP` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`UserID`),
   UNIQUE KEY `UserName_UNIQUE` (`UserName`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1$$
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8$$
 
 
 

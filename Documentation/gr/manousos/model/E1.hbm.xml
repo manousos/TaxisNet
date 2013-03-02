@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 27 ?????? 2013 12:29:40 ???? by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 2 ?????? 2013 11:21:38 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.E1" table="E1" catalog="TaxisDB">
         <composite-id name="id" class="gr.manousos.model.E1Id">
@@ -13,40 +13,53 @@
             </key-property>
         </composite-id>
         <many-to-one name="e1reduceTax" class="gr.manousos.model.E1reduceTax" fetch="select">
-            <column name="idE1ReduceTax" />
+            <column name="idE1ReduceTax" unique="true" />
         </many-to-one>
         <many-to-one name="e1objectiveSpending" class="gr.manousos.model.E1objectiveSpending" fetch="select">
-            <column name="idE1ObjectiveSpending" />
+            <column name="idE1ObjectiveSpending" unique="true" />
         </many-to-one>
         <many-to-one name="e1taxPayerBankAccount" class="gr.manousos.model.E1taxPayerBankAccount" fetch="select">
-            <column name="idE1TaxPayerBankAccount" />
+            <column name="idE1TaxPayerBankAccount" unique="true" />
         </many-to-one>
         <many-to-one name="taxpayer" class="gr.manousos.model.Taxpayer" update="false" insert="false" fetch="select">
             <column name="TaxpayerID" not-null="true" />
         </many-to-one>
         <many-to-one name="e1infoData" class="gr.manousos.model.E1infoData" fetch="select">
-            <column name="E1InfoDataID" />
+            <column name="E1InfoDataID" unique="true" />
         </many-to-one>
         <many-to-one name="e1dataFromTaxPayerFolder" class="gr.manousos.model.E1dataFromTaxPayerFolder" fetch="select">
-            <column name="idE1DataFromTaxPayerFolder" />
+            <column name="idE1DataFromTaxPayerFolder" unique="true" />
         </many-to-one>
         <many-to-one name="e1personDataBorneTaxpayer" class="gr.manousos.model.E1personDataBorneTaxpayer" fetch="select">
-            <column name="idE1PersonDataBorneTaxpayer" />
+            <column name="idE1PersonDataBorneTaxpayer" unique="true" />
         </many-to-one>
         <many-to-one name="e1expensesRemovedFromTotalIncome" class="gr.manousos.model.E1expensesRemovedFromTotalIncome" fetch="select">
-            <column name="idE1ExpensesRemovedFromTotalIncome" />
+            <column name="idE1ExpensesRemovedFromTotalIncome" unique="true" />
         </many-to-one>
         <many-to-one name="e1prepaidTaxes" class="gr.manousos.model.E1prepaidTaxes" fetch="select">
-            <column name="idE1PrepaidTaxes" />
+            <column name="idE1PrepaidTaxes" unique="true" />
         </many-to-one>
         <many-to-one name="e1taxableIncomes" class="gr.manousos.model.E1taxableIncomes" fetch="select">
-            <column name="E1TaxableIncomeID" />
+            <column name="E1TaxableIncomeID" unique="true" />
         </many-to-one>
         <many-to-one name="e1incomesReduceTaxes" class="gr.manousos.model.E1incomesReduceTaxes" fetch="select">
-            <column name="idE1IncomesReduceTaxes" />
+            <column name="idE1IncomesReduceTaxes" unique="true" />
         </many-to-one>
+        <property name="taxpayerAddress" type="string">
+            <column name="TaxpayerAddress" length="500" not-null="true" />
+        </property>
+        <property name="atid" type="string">
+            <column name="ATID" length="10" not-null="true" />
+        </property>
         <property name="isComplete" type="java.lang.Integer">
             <column name="isComplete" />
         </property>
+        <set name="e1relatePersonses" table="E1RelatePersons" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TaxpayerID" not-null="true" />
+                <column name="Year" not-null="true" />
+            </key>
+            <one-to-many class="gr.manousos.model.E1relatePersons" />
+        </set>
     </class>
 </hibernate-mapping>

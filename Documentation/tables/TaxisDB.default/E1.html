@@ -111,6 +111,56 @@
 					</tr>
 					<tr>
 						<td>
+							<a href="#column_detail_TaxpayerAddress">
+								TaxpayerAddress
+							</a>
+						</td>
+						<td>
+							longtext
+						</td>
+						<td>
+							500
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_ATID">
+								ATID
+							</a>
+						</td>
+						<td>
+							varchar(10)
+						</td>
+						<td>
+							10
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
 							<a href="#column_detail_isComplete">
 								isComplete
 							</a>
@@ -156,32 +206,7 @@
 							true
 						</td>
 						<td>
-							false
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="#column_detail_idE1ReduceTax">
-								idE1ReduceTax
-							</a>
-						</td>
-						<td>
-							integer
-						</td>
-						<td>
-							255
-						</td>
-						<td>
-							19
-						</td>
-						<td>
-							2
-						</td>
-						<td>
 							true
-						</td>
-						<td>
-							false
 						</td>
 					</tr>
 					<tr>
@@ -206,7 +231,32 @@
 							true
 						</td>
 						<td>
-							false
+							true
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_idE1ReduceTax">
+								idE1ReduceTax
+							</a>
+						</td>
+						<td>
+							integer
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							true
 						</td>
 					</tr>
 					<tr>
@@ -231,7 +281,7 @@
 							true
 						</td>
 						<td>
-							false
+							true
 						</td>
 					</tr>
 					<tr>
@@ -256,7 +306,7 @@
 							true
 						</td>
 						<td>
-							false
+							true
 						</td>
 					</tr>
 					<tr>
@@ -281,7 +331,7 @@
 							true
 						</td>
 						<td>
-							false
+							true
 						</td>
 					</tr>
 					<tr>
@@ -306,7 +356,7 @@
 							true
 						</td>
 						<td>
-							false
+							true
 						</td>
 					</tr>
 					<tr>
@@ -331,7 +381,7 @@
 							true
 						</td>
 						<td>
-							false
+							true
 						</td>
 					</tr>
 					<tr>
@@ -356,7 +406,7 @@
 							true
 						</td>
 						<td>
-							false
+							true
 						</td>
 					</tr>
 					<tr>
@@ -381,7 +431,7 @@
 							true
 						</td>
 						<td>
-							false
+							true
 						</td>
 					</tr>
 			</tbody>
@@ -792,6 +842,46 @@
 				<tbody>
 						<tr>
 							<td>
+								idE1TaxPayerBankAccount_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1TaxPayerBankAccount">
+										idE1TaxPayerBankAccount
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								idE1PrepaidTaxes_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1PrepaidTaxes">
+										idE1PrepaidTaxes
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								idE1ExpensesRemovedFromTotalIncome_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1ExpensesRemovedFromTotalIncome">
+										idE1ExpensesRemovedFromTotalIncome
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								E1TaxableIncomeID_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_E1TaxableIncomeID">
+										E1TaxableIncomeID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
 								PRIMARY
 							</td>
 							<td>
@@ -800,6 +890,66 @@
 									</a>
 									<a href="#column_detail_Year">
 										Year
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								idE1ReduceTax_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1ReduceTax">
+										idE1ReduceTax
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								E1InfoDataID_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_E1InfoDataID">
+										E1InfoDataID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								idE1ObjectiveSpending_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1ObjectiveSpending">
+										idE1ObjectiveSpending
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								idE1IncomesReduceTaxes_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1IncomesReduceTaxes">
+										idE1IncomesReduceTaxes
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								idE1DataFromTaxPayerFolder_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1DataFromTaxPayerFolder">
+										idE1DataFromTaxPayerFolder
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								idE1PersonDataBorneTaxpayer_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1PersonDataBorneTaxpayer">
+										idE1PersonDataBorneTaxpayer
 									</a>
 							</td>
 						</tr>
@@ -996,6 +1146,62 @@
 
 
 				<hr/>
+				<h3 id="column_detail_TaxpayerAddress">TaxpayerAddress</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> longtext
+					</li>
+					<li>
+						<strong>Length:</strong> 500
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_ATID">ATID</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(10)
+					</li>
+					<li>
+						<strong>Length:</strong> 10
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
 				<h3 id="column_detail_isComplete">isComplete</h3>
 				
 				<ul>
@@ -1043,35 +1249,7 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
-					</li>
-					<li>
-						<strong>Comment:</strong> 
-					</li>
-				</ul>
-
-
-				<hr/>
-				<h3 id="column_detail_idE1ReduceTax">idE1ReduceTax</h3>
-				
-				<ul>
-					<li>
-						<strong>Type:</strong> integer
-					</li>
-					<li>
-						<strong>Length:</strong> 255
-					</li>
-					<li>
-						<strong>Precision:</strong> 19
-					</li>
-					<li>
-						<strong>Scale:</strong> 2
-					</li>
-					<li>
-						<strong>Nullable:</strong> true
-					</li>
-					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
@@ -1099,7 +1277,35 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_idE1ReduceTax">idE1ReduceTax</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> integer
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
@@ -1127,7 +1333,7 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
@@ -1155,7 +1361,7 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
@@ -1183,7 +1389,7 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
@@ -1211,7 +1417,7 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
@@ -1239,7 +1445,7 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
@@ -1267,7 +1473,7 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
@@ -1295,7 +1501,7 @@
 						<strong>Nullable:</strong> true
 					</li>
 					<li>
-						<strong>Unique:</strong> false
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 
