@@ -36,6 +36,7 @@ CREATE TABLE `E1` (
   `idE1PersonDataBorneTaxpayer` int(11) DEFAULT '0',
   `idE1DataFromTaxPayerFolder` int(11) DEFAULT '0',
   `idE1TaxPayerBankAccount` int(11) DEFAULT '0',
+  `DateInserted` datetime DEFAULT NULL,
   PRIMARY KEY (`TaxpayerID`,`Year`),
   UNIQUE KEY `idE1TaxPayerBankAccount_UNIQUE` (`idE1TaxPayerBankAccount`),
   UNIQUE KEY `idE1DataFromTaxPayerFolder_UNIQUE` (`idE1DataFromTaxPayerFolder`),
@@ -680,6 +681,7 @@ CREATE TABLE `E2` (
   `TaxierID` int(11) NOT NULL,
   `Year` int(11) NOT NULL,
   `isComplete` int(1) DEFAULT '0',
+  `DateInserted` datetime DEFAULT NULL,
   PRIMARY KEY (`TaxierID`,`Year`),
   CONSTRAINT `FK_Taxpayer_E2` FOREIGN KEY (`TaxierID`) REFERENCES `Taxpayer` (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8$$

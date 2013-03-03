@@ -67,6 +67,7 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 			getSession().getTransaction().rollback();
 			log.error("E1 Hibernate Submit error ", e);
 		}
+		return 0;
 	}
 
 	@Override

@@ -23,8 +23,7 @@
 		<mapping resource="gr/manousos/model/E1objectiveSpending.hbm.xml" />
 		<mapping resource="gr/manousos/model/E1personDataBorneTaxpayer.hbm.xml" />
 		<mapping resource="gr/manousos/model/E2.hbm.xml" />
-		<mapping resource="gr/manousos/model/E1incomesReduceTaxes.hbm.xml" />
-		<mapping resource="gr/manousos/model/Address.hbm.xml" />
+		<mapping resource="gr/manousos/model/E1incomesReduceTaxes.hbm.xml" />		
 		<mapping resource="gr/manousos/model/User.hbm.xml" />
 		<mapping resource="gr/manousos/model/E1.hbm.xml" />
 		<mapping resource="gr/manousos/model/E1expensesRemovedFromTotalIncome.hbm.xml" />

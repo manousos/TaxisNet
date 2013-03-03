@@ -4,6 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import gr.manousos.DAO.DAOFactory;
+import gr.manousos.DAO.E1DAO;
 import gr.manousos.DAO.E2DAO;
 import gr.manousos.DAO.TaxpayerDAO;
 import gr.manousos.DAO.UserDAO;
@@ -37,6 +38,11 @@ public class HibernateDAOFactory extends DAOFactory {
 	@Override
 	public UserDAO getUserDAO() {
 		return (UserDAO) instantiateDAO(UserHibernate.class);
+	}
+
+	@Override
+	public E1DAO getE1DAO() {
+		return (E1DAO) instantiateDAO(E1Hibernate.class);
 	}
 
 }

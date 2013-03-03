@@ -1,7 +1,8 @@
 package gr.manousos.model;
 
-// Generated 2 Μαρ 2013 11:21:38 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,6 +14,7 @@ public class E2 implements java.io.Serializable {
 	private E2Id id;
 	private Taxpayer taxpayer;
 	private Integer isComplete;
+	private Date dateInserted;
 	private Set<E2otherEstate> e2otherEstates = new HashSet<E2otherEstate>(0);
 	private Set<E2estate> e2estates = new HashSet<E2estate>(0);
 
@@ -25,10 +27,12 @@ public class E2 implements java.io.Serializable {
 	}
 
 	public E2(E2Id id, Taxpayer taxpayer, Integer isComplete,
-			Set<E2otherEstate> e2otherEstates, Set<E2estate> e2estates) {
+			Date dateInserted, Set<E2otherEstate> e2otherEstates,
+			Set<E2estate> e2estates) {
 		this.id = id;
 		this.taxpayer = taxpayer;
 		this.isComplete = isComplete;
+		this.dateInserted = dateInserted;
 		this.e2otherEstates = e2otherEstates;
 		this.e2estates = e2estates;
 	}
@@ -55,6 +59,14 @@ public class E2 implements java.io.Serializable {
 
 	public void setIsComplete(Integer isComplete) {
 		this.isComplete = isComplete;
+	}
+
+	public Date getDateInserted() {
+		return this.dateInserted;
+	}
+
+	public void setDateInserted(Date dateInserted) {
+		this.dateInserted = dateInserted;
 	}
 
 	public Set<E2otherEstate> getE2otherEstates() {
