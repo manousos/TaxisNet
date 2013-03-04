@@ -13,6 +13,13 @@
 		<property name="hibernate.current_session_context_class">thread</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
 		<property name="hibernate.search.autoregister_listeners">false</property>
+		<!-- Connection Pool -->
+		<property name="hibernate.c3p0.min_size">5</property>
+		<property name="hibernate.c3p0.max_size">1000</property>
+		<property name="hibernate.c3p0.timeout">300</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
 		<!-- Show and print nice SQL on stdout -->
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
@@ -23,7 +30,7 @@
 		<mapping resource="gr/manousos/model/E1objectiveSpending.hbm.xml" />
 		<mapping resource="gr/manousos/model/E1personDataBorneTaxpayer.hbm.xml" />
 		<mapping resource="gr/manousos/model/E2.hbm.xml" />
-		<mapping resource="gr/manousos/model/E1incomesReduceTaxes.hbm.xml" />		
+		<mapping resource="gr/manousos/model/E1incomesReduceTaxes.hbm.xml" />
 		<mapping resource="gr/manousos/model/User.hbm.xml" />
 		<mapping resource="gr/manousos/model/E1.hbm.xml" />
 		<mapping resource="gr/manousos/model/E1expensesRemovedFromTotalIncome.hbm.xml" />
