@@ -91,7 +91,7 @@
 							</a>
 						</td>
 						<td>
-							N/D
+							integer
 						</td>
 						<td>
 							255
@@ -156,7 +156,18 @@
 			<tbody>
 					<tr>
 						<td>
-							No Primary Key
+								PRIMARY
+						</td>
+						<td>
+								<a href="#column_detail_TaxpayerID">
+									TaxpayerID
+								</a>
+								<a href="#column_detail_Year">
+									Year
+								</a>
+								<a href="#column_detail_idRelatePerson">
+									idRelatePerson
+								</a>
 						</td>
 					</tr>
 			</tbody>
@@ -199,39 +210,6 @@
 						</tr>
 						<tr>
 							<td>
-								FKA8963CF92C0D5B50
-							</td>
-							<td>
-								<a href="RelatePerson.html" target="generalFrame">
-									RelatePerson
-								</a>
-							</td>
-							<td>
-									<a href="#column_detail_idRelatePerson">
-										idRelatePerson
-									</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								FKA8963CF91A8DBBC7
-							</td>
-							<td>
-								<a href="E1.html" target="generalFrame">
-									E1
-								</a>
-							</td>
-							<td>
-									<a href="#column_detail_TaxpayerID">
-										TaxpayerID
-									</a>
-									<a href="#column_detail_Year">
-										Year
-									</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
 								fk_E1RelatePersons_E1
 							</td>
 							<td>
@@ -251,6 +229,41 @@
 				</tbody>
 			</table>
 			
+			<table id="unique_keys">
+				<thead>
+					<tr>
+						<th class="MainTableHeading" colspan="2">
+							Unique Keys
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 50%">
+							Name
+						</th>
+						<th style="width: 50%">
+							Columns
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+						<tr>
+							<td>
+								PRIMARY
+							</td>
+							<td>
+									<a href="#column_detail_TaxpayerID">
+										TaxpayerID
+									</a>
+									<a href="#column_detail_Year">
+										Year
+									</a>
+									<a href="#column_detail_idRelatePerson">
+										idRelatePerson
+									</a>
+							</td>
+						</tr>
+				</tbody>
+			</table>
 		
 			<table id="indexes">
 				<thead>
@@ -331,7 +344,7 @@
 				
 				<ul>
 					<li>
-						<strong>Type:</strong> N/D
+						<strong>Type:</strong> integer
 					</li>
 					<li>
 						<strong>Length:</strong> 255

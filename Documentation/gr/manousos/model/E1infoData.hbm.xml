@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 3 ?????? 2013 10:07:01 ???? by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 18 ?????? 2013 12:42:57 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.E1infoData" table="E1InfoData" catalog="TaxisDB">
         <id name="e1infoDataId" type="java.lang.Integer">
@@ -9,103 +9,103 @@
             <generator class="identity" />
         </id>
         <property name="327" type="java.lang.Integer">
-            <column name="327" />
+            <column name="_327" />
         </property>
         <property name="328" type="java.lang.Integer">
-            <column name="328" />
+            <column name="_328" />
         </property>
         <property name="319" type="java.lang.Integer">
-            <column name="319" />
+            <column name="_319" />
         </property>
         <property name="320" type="java.lang.Integer">
-            <column name="320" />
+            <column name="_320" />
         </property>
         <property name="023" type="java.lang.Integer">
-            <column name="023" />
+            <column name="_023" />
         </property>
         <property name="024" type="java.lang.Integer">
-            <column name="024" />
+            <column name="_024" />
         </property>
         <property name="329" type="java.lang.Integer">
-            <column name="329" />
+            <column name="_329" />
         </property>
         <property name="330" type="java.lang.Integer">
-            <column name="330" />
+            <column name="_330" />
         </property>
         <property name="331" type="java.lang.Integer">
-            <column name="331" />
+            <column name="_331" />
         </property>
         <property name="011" type="java.lang.Integer">
-            <column name="011" />
+            <column name="_011" />
         </property>
         <property name="012" type="java.lang.Integer">
-            <column name="012" />
+            <column name="_012" />
         </property>
         <property name="013" type="java.lang.Integer">
-            <column name="013" />
+            <column name="_013" />
         </property>
         <property name="014" type="java.lang.Integer">
-            <column name="014" />
+            <column name="_014" />
         </property>
         <property name="015" type="java.lang.Integer">
-            <column name="015" />
+            <column name="_015" />
         </property>
         <property name="016" type="java.lang.Integer">
-            <column name="016" />
+            <column name="_016" />
         </property>
         <property name="017" type="java.lang.Integer">
-            <column name="017" />
+            <column name="_017" />
         </property>
         <property name="018" type="java.lang.Integer">
-            <column name="018" />
+            <column name="_018" />
         </property>
         <property name="021" type="java.lang.Integer">
-            <column name="021" />
+            <column name="_021" />
         </property>
         <property name="022" type="java.lang.Integer">
-            <column name="022" />
+            <column name="_022" />
         </property>
         <property name="025" type="java.lang.Integer">
-            <column name="025" />
+            <column name="_025" />
         </property>
         <property name="026" type="java.lang.Integer">
-            <column name="026" />
+            <column name="_026" />
         </property>
         <property name="007" type="java.lang.Integer">
-            <column name="007" />
+            <column name="_007" />
         </property>
         <property name="008" type="java.lang.Integer">
-            <column name="008" />
+            <column name="_008" />
         </property>
         <property name="617" type="java.lang.Integer">
-            <column name="617" />
+            <column name="_617" />
         </property>
         <property name="385" type="java.lang.Integer">
-            <column name="385" />
+            <column name="_385" />
         </property>
         <property name="386" type="java.lang.Integer">
-            <column name="386" />
+            <column name="_386" />
         </property>
         <property name="029" type="java.lang.Integer">
-            <column name="029" />
+            <column name="_029" />
         </property>
         <property name="030" type="java.lang.Integer">
-            <column name="030" />
+            <column name="_030" />
         </property>
         <property name="905" type="java.lang.Integer">
-            <column name="905" />
+            <column name="_905" />
         </property>
         <property name="906" type="java.lang.Integer">
-            <column name="906" />
+            <column name="_906" />
         </property>
         <property name="911" type="java.lang.Integer">
-            <column name="911" />
+            <column name="_911" />
         </property>
         <property name="912" type="java.lang.Integer">
-            <column name="912" />
+            <column name="_912" />
         </property>
         <property name="010" type="java.lang.Integer">
-            <column name="010" />
+            <column name="_010" />
         </property>
         <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
             <key>

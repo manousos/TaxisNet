@@ -1,6 +1,6 @@
 package gr.manousos.model;
 
-// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 18 Μαρ 2013 12:42:56 πμ by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,77 +10,77 @@ import java.util.Set;
  */
 public class User implements java.io.Serializable {
 
-	private Integer userId;
-	private String userName;
-	private String password;
-	private int active;
-	private String otp;
-	private Set<Taxpayer> taxpayers = new HashSet<Taxpayer>(0);
+    private Integer userId;
+    private String userName;
+    private String password;
+    private int active;
+    private String otp;
+    private Set<Taxpayer> taxpayers = new HashSet<Taxpayer>(0);
 
-	public User() {
-	}
+    public User() {
+    }
 
-	public User(String userName, String password, int active) {
-		this.userName = userName;
-		this.password = password;
-		this.active = active;
-	}
+    public User(String userName, String password, int active) {
+	this.userName = userName;
+	this.password = password;
+	this.active = active;
+    }
 
-	public User(String userName, String password, int active, String otp,
-			Set<Taxpayer> taxpayers) {
-		this.userName = userName;
-		this.password = password;
-		this.active = active;
-		this.otp = otp;
-		this.taxpayers = taxpayers;
-	}
+    public User(String userName, String password, int active, String otp,
+	    Set<Taxpayer> taxpayers) {
+	this.userName = userName;
+	this.password = password;
+	this.active = active;
+	this.otp = otp;
+	this.taxpayers = taxpayers;
+    }
 
-	public Integer getUserId() {
-		return this.userId;
-	}
+    public Integer getUserId() {
+	return this.userId;
+    }
 
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
+    public void setUserId(Integer userId) {
+	this.userId = userId;
+    }
 
-	public String getUserName() {
-		return this.userName;
-	}
+    public String getUserName() {
+	return this.userName;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public void setUserName(String userName) {
+	this.userName = userName;
+    }
 
-	public String getPassword() {
-		return this.password;
-	}
+    public String getPassword() {
+	return this.password;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setPassword(String password) {
+	this.password = password;
+    }
 
-	public int getActive() {
-		return this.active;
-	}
+    public int getActive() {
+	return this.active;
+    }
 
-	public void setActive(int active) {
-		this.active = active;
-	}
+    public void setActive(int active) {
+	this.active = active;
+    }
 
-	public String getOtp() {
-		return this.otp;
-	}
+    public String getOtp() {
+	return this.otp;
+    }
 
-	public void setOtp(String otp) {
-		this.otp = otp;
-	}
+    public void setOtp(String otp) {
+	this.otp = otp;
+    }
 
-	public Set<Taxpayer> getTaxpayers() {
-		return this.taxpayers;
-	}
+    public Set<Taxpayer> getTaxpayers() {
+	return this.taxpayers;
+    }
 
-	public void setTaxpayers(Set<Taxpayer> taxpayers) {
-		this.taxpayers = taxpayers;
-	}
+    public void setTaxpayers(Set<Taxpayer> taxpayers) {
+	this.taxpayers = taxpayers;
+    }
 
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 18 ?????? 2013 12:42:57 ???? by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="gr.manousos.model.E1nauticalincomes" table="E1NAUTICALINCOMES" catalog="TaxisDB">
+        <id name="idE1nauticalincomes" type="java.lang.Integer">
+            <column name="idE1NAUTICALINCOMES" />
+            <generator class="identity" />
+        </id>
+        <property name="255" type="java.lang.Float">
+            <column name="_255" precision="12" scale="0" />
+        </property>
+        <property name="256" type="java.lang.Float">
+            <column name="_256" precision="12" scale="0" />
+        </property>
+        <property name="257" type="java.lang.Float">
+            <column name="_257" precision="12" scale="0" />
+        </property>
+        <property name="258" type="java.lang.Float">
+            <column name="_258" precision="12" scale="0" />
+        </property>
+        <property name="263" type="java.lang.Float">
+            <column name="_263" precision="12" scale="0" />
+        </property>
+        <property name="264" type="java.lang.Float">
+            <column name="_264" precision="12" scale="0" />
+        </property>
+        <property name="265" type="java.lang.Float">
+            <column name="_265" precision="12" scale="0" />
+        </property>
+        <property name="266" type="java.lang.Float">
+            <column name="_266" precision="12" scale="0" />
+        </property>
+        <property name="253" type="java.lang.Float">
+            <column name="_253" precision="12" scale="0" />
+        </property>
+        <property name="254" type="java.lang.Float">
+            <column name="_254" precision="12" scale="0" />
+        </property>
+        <property name="201" type="java.lang.Float">
+            <column name="_201" precision="12" scale="0" />
+        </property>
+        <property name="202" type="java.lang.Float">
+            <column name="_202" precision="12" scale="0" />
+        </property>
+        <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idE1NauticalIncomes" unique="true" />
+            </key>
+            <one-to-many class="gr.manousos.model.E1" />
+        </set>
+    </class>
+</hibernate-mapping>

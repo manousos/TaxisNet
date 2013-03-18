@@ -1,6 +1,6 @@
 package gr.manousos.model;
 
-// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 18 Μαρ 2013 12:42:56 πμ by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,87 +10,87 @@ import java.util.Set;
  */
 public class Contact implements java.io.Serializable {
 
-	private Integer contactId;
-	private String phone;
-	private String fax;
-	private String cell;
-	private String email;
-	private Set<Taxpayer> taxpayers = new HashSet<Taxpayer>(0);
-	private Set<RelatePerson> relatePersons = new HashSet<RelatePerson>(0);
+    private Integer contactId;
+    private String phone;
+    private String fax;
+    private String cell;
+    private String email;
+    private Set<Taxpayer> taxpayers = new HashSet<Taxpayer>(0);
+    private Set<RelatePerson> relatePersons = new HashSet<RelatePerson>(0);
 
-	public Contact() {
-	}
+    public Contact() {
+    }
 
-	public Contact(String phone, String cell, String email) {
-		this.phone = phone;
-		this.cell = cell;
-		this.email = email;
-	}
+    public Contact(String phone, String cell, String email) {
+	this.phone = phone;
+	this.cell = cell;
+	this.email = email;
+    }
 
-	public Contact(String phone, String fax, String cell, String email,
-			Set<Taxpayer> taxpayers, Set<RelatePerson> relatePersons) {
-		this.phone = phone;
-		this.fax = fax;
-		this.cell = cell;
-		this.email = email;
-		this.taxpayers = taxpayers;
-		this.relatePersons = relatePersons;
-	}
+    public Contact(String phone, String fax, String cell, String email,
+	    Set<Taxpayer> taxpayers, Set<RelatePerson> relatePersons) {
+	this.phone = phone;
+	this.fax = fax;
+	this.cell = cell;
+	this.email = email;
+	this.taxpayers = taxpayers;
+	this.relatePersons = relatePersons;
+    }
 
-	public Integer getContactId() {
-		return this.contactId;
-	}
+    public Integer getContactId() {
+	return this.contactId;
+    }
 
-	public void setContactId(Integer contactId) {
-		this.contactId = contactId;
-	}
+    public void setContactId(Integer contactId) {
+	this.contactId = contactId;
+    }
 
-	public String getPhone() {
-		return this.phone;
-	}
+    public String getPhone() {
+	return this.phone;
+    }
 
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
+    public void setPhone(String phone) {
+	this.phone = phone;
+    }
 
-	public String getFax() {
-		return this.fax;
-	}
+    public String getFax() {
+	return this.fax;
+    }
 
-	public void setFax(String fax) {
-		this.fax = fax;
-	}
+    public void setFax(String fax) {
+	this.fax = fax;
+    }
 
-	public String getCell() {
-		return this.cell;
-	}
+    public String getCell() {
+	return this.cell;
+    }
 
-	public void setCell(String cell) {
-		this.cell = cell;
-	}
+    public void setCell(String cell) {
+	this.cell = cell;
+    }
 
-	public String getEmail() {
-		return this.email;
-	}
+    public String getEmail() {
+	return this.email;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setEmail(String email) {
+	this.email = email;
+    }
 
-	public Set<Taxpayer> getTaxpayers() {
-		return this.taxpayers;
-	}
+    public Set<Taxpayer> getTaxpayers() {
+	return this.taxpayers;
+    }
 
-	public void setTaxpayers(Set<Taxpayer> taxpayers) {
-		this.taxpayers = taxpayers;
-	}
+    public void setTaxpayers(Set<Taxpayer> taxpayers) {
+	this.taxpayers = taxpayers;
+    }
 
-	public Set<RelatePerson> getRelatePersons() {
-		return this.relatePersons;
-	}
+    public Set<RelatePerson> getRelatePersons() {
+	return this.relatePersons;
+    }
 
-	public void setRelatePersons(Set<RelatePerson> relatePersons) {
-		this.relatePersons = relatePersons;
-	}
+    public void setRelatePersons(Set<RelatePerson> relatePersons) {
+	this.relatePersons = relatePersons;
+    }
 
 }

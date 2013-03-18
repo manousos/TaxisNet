@@ -1,5 +1,5 @@
 package gr.manousos.model;
-// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 18 Μαρ 2013 12:42:56 πμ by Hibernate Tools 3.4.0.CR1
 
 
 import java.util.HashSet;
@@ -33,13 +33,13 @@ public class E1prepaidTaxes  implements java.io.Serializable {
      private Float 297;
      private Float 298;
      private Float 127;
-     private String 128;
+     private Float 128;
      private Set<E1> e1s = new HashSet<E1>(0);
 
     public E1prepaidTaxes() {
     }
 
-    public E1prepaidTaxes(Float 601, Float 602, Float 603, Float 604, Float 605, Float 606, Float 607, Float 608, Float 609, Float 610, Float 651, Float 652, Float 293, Float 294, Float 313, Float 314, Float 315, Float 316, Float 297, Float 298, Float 127, String 128, Set<E1> e1s) {
+    public E1prepaidTaxes(Float 601, Float 602, Float 603, Float 604, Float 605, Float 606, Float 607, Float 608, Float 609, Float 610, Float 651, Float 652, Float 293, Float 294, Float 313, Float 314, Float 315, Float 316, Float 297, Float 298, Float 127, Float 128, Set<E1> e1s) {
        this.601 = 601;
        this.602 = 602;
        this.603 = 603;
@@ -219,11 +219,11 @@ public class E1prepaidTaxes  implements java.io.Serializable {
     public void set127(Float 127) {
         this.127 = 127;
     }
-    public String get128() {
+    public Float get128() {
         return this.128;
     }
     
-    public void set128(String 128) {
+    public void set128(Float 128) {
         this.128 = 128;
     }
     public Set<E1> getE1s() {

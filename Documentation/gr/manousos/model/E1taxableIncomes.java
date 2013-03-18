@@ -1,5 +1,5 @@
 package gr.manousos.model;
-// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 18 Μαρ 2013 12:42:56 πμ by Hibernate Tools 3.4.0.CR1
 
 
 import java.util.HashSet;
@@ -151,13 +151,44 @@ public class E1taxableIncomes  implements java.io.Serializable {
      private Float 174;
      private Float 395;
      private Float 396;
-     private Set<E1incomeFromAgricularCompanyData> e1incomeFromAgricularCompanyDatas = new HashSet<E1incomeFromAgricularCompanyData>(0);
+     private String agrLocation1;
+     private String agrProdKind1;
+     private Float agrPopulation1;
+     private Integer agrLocationType1;
+     private Integer agrHasWater1;
+     private Float agrNetIncome1;
+     private Float agrTotalNetincome1;
+     private Float agrTotalWifeNetincome1;
+     private String agrLocation2;
+     private String agrProdKind2;
+     private Float agrPopulation2;
+     private Integer agrLocationType2;
+     private Integer agrHasWater2;
+     private Float agrNetIncome2;
+     private Float agrTotalNetincome2;
+     private Float agrTotalWifeNetincome2;
+     private String agrLocation3;
+     private String agrProdKind3;
+     private Float agrPopulation3;
+     private Integer agrLocationType3;
+     private Integer agrHasWater3;
+     private Float agrNetIncome3;
+     private Float agrTotalNetincome3;
+     private Float agrTotalWifeNetincome3;
+     private String agrLocation4;
+     private String agrProdKind4;
+     private Float agrPopulation4;
+     private Integer agrLocationType4;
+     private Integer agrHasWater4;
+     private Float agrNetIncome4;
+     private Float agrTotalNetincome4;
+     private Float agrTotalWifeNetincome4;
      private Set<E1> e1s = new HashSet<E1>(0);
 
     public E1taxableIncomes() {
     }
 
-    public E1taxableIncomes(Float 301, Float 302, Float 303, Float 304, Float 321, Float 322, Float 317, Float 318, Float 461, Float 462, Float 921, Float 922, Float 919, Float 920, Float 915, Float 916, Float 923, Float 924, Float 335, Float 336, Float 326, Float 337, Float 338, Float 339, Float 340, Float 465, Float 466, Float 467, Float 468, Float 475, Float 476, Float 479, Float 480, Float 481, Float 482, Float 401, Float 402, Float 403, Float 404, Float 405, Float 406, Float 407, Float 408, Float 413, Float 414, Float 415, Float 416, Float 425, Float 426, Float 501, Float 502, Float 503, Float 504, Float 505, Float 506, Float 507, Float 508, Float 511, Float 512, Float 515, Float 516, Float 517, Float 518, Float 103, Float 104, Float 121, Float 122, Float 105, Float 106, Float 107, Float 108, Float 109, Float 110, Float 101, Float 102, Float 909, Float 910, Float 111, Float 112, Float 113, Float 114, Float 129, Float 130, Float 143, Float 144, Float 145, Float 146, Float 147, Float 148, Float 141, Float 142, Float 701, Float 702, Float 123, Float 124, Float 125, Float 126, Float 151, Float 152, Float 163, Float 164, Float 165, Float 166, Float 159, Float 160, Float 175, Float 176, Float 131, Float 132, Float 133, Float 134, Float 741, Float 742, Float 291, Float 292, Float 389, Float 390, Float 391, Float 392, Float 463, Float 464, Float 471, Float 472, Float 411, Float 412, Float 421, Float 422, Float 509, Float 510, Float 513, Float 514, Float 295, Float 296, Float 171, Float 172, Float 173, Float 174, Float 395, Float 396, Set<E1incomeFromAgricularCompanyData> e1incomeFromAgricularCompanyDatas, Set<E1> e1s) {
+    public E1taxableIncomes(Float 301, Float 302, Float 303, Float 304, Float 321, Float 322, Float 317, Float 318, Float 461, Float 462, Float 921, Float 922, Float 919, Float 920, Float 915, Float 916, Float 923, Float 924, Float 335, Float 336, Float 326, Float 337, Float 338, Float 339, Float 340, Float 465, Float 466, Float 467, Float 468, Float 475, Float 476, Float 479, Float 480, Float 481, Float 482, Float 401, Float 402, Float 403, Float 404, Float 405, Float 406, Float 407, Float 408, Float 413, Float 414, Float 415, Float 416, Float 425, Float 426, Float 501, Float 502, Float 503, Float 504, Float 505, Float 506, Float 507, Float 508, Float 511, Float 512, Float 515, Float 516, Float 517, Float 518, Float 103, Float 104, Float 121, Float 122, Float 105, Float 106, Float 107, Float 108, Float 109, Float 110, Float 101, Float 102, Float 909, Float 910, Float 111, Float 112, Float 113, Float 114, Float 129, Float 130, Float 143, Float 144, Float 145, Float 146, Float 147, Float 148, Float 141, Float 142, Float 701, Float 702, Float 123, Float 124, Float 125, Float 126, Float 151, Float 152, Float 163, Float 164, Float 165, Float 166, Float 159, Float 160, Float 175, Float 176, Float 131, Float 132, Float 133, Float 134, Float 741, Float 742, Float 291, Float 292, Float 389, Float 390, Float 391, Float 392, Float 463, Float 464, Float 471, Float 472, Float 411, Float 412, Float 421, Float 422, Float 509, Float 510, Float 513, Float 514, Float 295, Float 296, Float 171, Float 172, Float 173, Float 174, Float 395, Float 396, String agrLocation1, String agrProdKind1, Float agrPopulation1, Integer agrLocationType1, Integer agrHasWater1, Float agrNetIncome1, Float agrTotalNetincome1, Float agrTotalWifeNetincome1, String agrLocation2, String agrProdKind2, Float agrPopulation2, Integer agrLocationType2, Integer agrHasWater2, Float agrNetIncome2, Float agrTotalNetincome2, Float agrTotalWifeNetincome2, String agrLocation3, String agrProdKind3, Float agrPopulation3, Integer agrLocationType3, Integer agrHasWater3, Float agrNetIncome3, Float agrTotalNetincome3, Float agrTotalWifeNetincome3, String agrLocation4, String agrProdKind4, Float agrPopulation4, Integer agrLocationType4, Integer agrHasWater4, Float agrNetIncome4, Float agrTotalNetincome4, Float agrTotalWifeNetincome4, Set<E1> e1s) {
        this.301 = 301;
        this.302 = 302;
        this.303 = 303;
@@ -297,7 +328,38 @@ public class E1taxableIncomes  implements java.io.Serializable {
        this.174 = 174;
        this.395 = 395;
        this.396 = 396;
-       this.e1incomeFromAgricularCompanyDatas = e1incomeFromAgricularCompanyDatas;
+       this.agrLocation1 = agrLocation1;
+       this.agrProdKind1 = agrProdKind1;
+       this.agrPopulation1 = agrPopulation1;
+       this.agrLocationType1 = agrLocationType1;
+       this.agrHasWater1 = agrHasWater1;
+       this.agrNetIncome1 = agrNetIncome1;
+       this.agrTotalNetincome1 = agrTotalNetincome1;
+       this.agrTotalWifeNetincome1 = agrTotalWifeNetincome1;
+       this.agrLocation2 = agrLocation2;
+       this.agrProdKind2 = agrProdKind2;
+       this.agrPopulation2 = agrPopulation2;
+       this.agrLocationType2 = agrLocationType2;
+       this.agrHasWater2 = agrHasWater2;
+       this.agrNetIncome2 = agrNetIncome2;
+       this.agrTotalNetincome2 = agrTotalNetincome2;
+       this.agrTotalWifeNetincome2 = agrTotalWifeNetincome2;
+       this.agrLocation3 = agrLocation3;
+       this.agrProdKind3 = agrProdKind3;
+       this.agrPopulation3 = agrPopulation3;
+       this.agrLocationType3 = agrLocationType3;
+       this.agrHasWater3 = agrHasWater3;
+       this.agrNetIncome3 = agrNetIncome3;
+       this.agrTotalNetincome3 = agrTotalNetincome3;
+       this.agrTotalWifeNetincome3 = agrTotalWifeNetincome3;
+       this.agrLocation4 = agrLocation4;
+       this.agrProdKind4 = agrProdKind4;
+       this.agrPopulation4 = agrPopulation4;
+       this.agrLocationType4 = agrLocationType4;
+       this.agrHasWater4 = agrHasWater4;
+       this.agrNetIncome4 = agrNetIncome4;
+       this.agrTotalNetincome4 = agrTotalNetincome4;
+       this.agrTotalWifeNetincome4 = agrTotalWifeNetincome4;
        this.e1s = e1s;
     }
    
@@ -1281,12 +1343,229 @@ public class E1taxableIncomes  implements java.io.Serializable {
     public void set396(Float 396) {
         this.396 = 396;
     }
-    public Set<E1incomeFromAgricularCompanyData> getE1incomeFromAgricularCompanyDatas() {
-        return this.e1incomeFromAgricularCompanyDatas;
+    public String getAgrLocation1() {
+        return this.agrLocation1;
     }
     
-    public void setE1incomeFromAgricularCompanyDatas(Set<E1incomeFromAgricularCompanyData> e1incomeFromAgricularCompanyDatas) {
-        this.e1incomeFromAgricularCompanyDatas = e1incomeFromAgricularCompanyDatas;
+    public void setAgrLocation1(String agrLocation1) {
+        this.agrLocation1 = agrLocation1;
+    }
+    public String getAgrProdKind1() {
+        return this.agrProdKind1;
+    }
+    
+    public void setAgrProdKind1(String agrProdKind1) {
+        this.agrProdKind1 = agrProdKind1;
+    }
+    public Float getAgrPopulation1() {
+        return this.agrPopulation1;
+    }
+    
+    public void setAgrPopulation1(Float agrPopulation1) {
+        this.agrPopulation1 = agrPopulation1;
+    }
+    public Integer getAgrLocationType1() {
+        return this.agrLocationType1;
+    }
+    
+    public void setAgrLocationType1(Integer agrLocationType1) {
+        this.agrLocationType1 = agrLocationType1;
+    }
+    public Integer getAgrHasWater1() {
+        return this.agrHasWater1;
+    }
+    
+    public void setAgrHasWater1(Integer agrHasWater1) {
+        this.agrHasWater1 = agrHasWater1;
+    }
+    public Float getAgrNetIncome1() {
+        return this.agrNetIncome1;
+    }
+    
+    public void setAgrNetIncome1(Float agrNetIncome1) {
+        this.agrNetIncome1 = agrNetIncome1;
+    }
+    public Float getAgrTotalNetincome1() {
+        return this.agrTotalNetincome1;
+    }
+    
+    public void setAgrTotalNetincome1(Float agrTotalNetincome1) {
+        this.agrTotalNetincome1 = agrTotalNetincome1;
+    }
+    public Float getAgrTotalWifeNetincome1() {
+        return this.agrTotalWifeNetincome1;
+    }
+    
+    public void setAgrTotalWifeNetincome1(Float agrTotalWifeNetincome1) {
+        this.agrTotalWifeNetincome1 = agrTotalWifeNetincome1;
+    }
+    public String getAgrLocation2() {
+        return this.agrLocation2;
+    }
+    
+    public void setAgrLocation2(String agrLocation2) {
+        this.agrLocation2 = agrLocation2;
+    }
+    public String getAgrProdKind2() {
+        return this.agrProdKind2;
+    }
+    
+    public void setAgrProdKind2(String agrProdKind2) {
+        this.agrProdKind2 = agrProdKind2;
+    }
+    public Float getAgrPopulation2() {
+        return this.agrPopulation2;
+    }
+    
+    public void setAgrPopulation2(Float agrPopulation2) {
+        this.agrPopulation2 = agrPopulation2;
+    }
+    public Integer getAgrLocationType2() {
+        return this.agrLocationType2;
+    }
+    
+    public void setAgrLocationType2(Integer agrLocationType2) {
+        this.agrLocationType2 = agrLocationType2;
+    }
+    public Integer getAgrHasWater2() {
+        return this.agrHasWater2;
+    }
+    
+    public void setAgrHasWater2(Integer agrHasWater2) {
+        this.agrHasWater2 = agrHasWater2;
+    }
+    public Float getAgrNetIncome2() {
+        return this.agrNetIncome2;
+    }
+    
+    public void setAgrNetIncome2(Float agrNetIncome2) {
+        this.agrNetIncome2 = agrNetIncome2;
+    }
+    public Float getAgrTotalNetincome2() {
+        return this.agrTotalNetincome2;
+    }
+    
+    public void setAgrTotalNetincome2(Float agrTotalNetincome2) {
+        this.agrTotalNetincome2 = agrTotalNetincome2;
+    }
+    public Float getAgrTotalWifeNetincome2() {
+        return this.agrTotalWifeNetincome2;
+    }
+    
+    public void setAgrTotalWifeNetincome2(Float agrTotalWifeNetincome2) {
+        this.agrTotalWifeNetincome2 = agrTotalWifeNetincome2;
+    }
+    public String getAgrLocation3() {
+        return this.agrLocation3;
+    }
+    
+    public void setAgrLocation3(String agrLocation3) {
+        this.agrLocation3 = agrLocation3;
+    }
+    public String getAgrProdKind3() {
+        return this.agrProdKind3;
+    }
+    
+    public void setAgrProdKind3(String agrProdKind3) {
+        this.agrProdKind3 = agrProdKind3;
+    }
+    public Float getAgrPopulation3() {
+        return this.agrPopulation3;
+    }
+    
+    public void setAgrPopulation3(Float agrPopulation3) {
+        this.agrPopulation3 = agrPopulation3;
+    }
+    public Integer getAgrLocationType3() {
+        return this.agrLocationType3;
+    }
+    
+    public void setAgrLocationType3(Integer agrLocationType3) {
+        this.agrLocationType3 = agrLocationType3;
+    }
+    public Integer getAgrHasWater3() {
+        return this.agrHasWater3;
+    }
+    
+    public void setAgrHasWater3(Integer agrHasWater3) {
+        this.agrHasWater3 = agrHasWater3;
+    }
+    public Float getAgrNetIncome3() {
+        return this.agrNetIncome3;
+    }
+    
+    public void setAgrNetIncome3(Float agrNetIncome3) {
+        this.agrNetIncome3 = agrNetIncome3;
+    }
+    public Float getAgrTotalNetincome3() {
+        return this.agrTotalNetincome3;
+    }
+    
+    public void setAgrTotalNetincome3(Float agrTotalNetincome3) {
+        this.agrTotalNetincome3 = agrTotalNetincome3;
+    }
+    public Float getAgrTotalWifeNetincome3() {
+        return this.agrTotalWifeNetincome3;
+    }
+    
+    public void setAgrTotalWifeNetincome3(Float agrTotalWifeNetincome3) {
+        this.agrTotalWifeNetincome3 = agrTotalWifeNetincome3;
+    }
+    public String getAgrLocation4() {
+        return this.agrLocation4;
+    }
+    
+    public void setAgrLocation4(String agrLocation4) {
+        this.agrLocation4 = agrLocation4;
+    }
+    public String getAgrProdKind4() {
+        return this.agrProdKind4;
+    }
+    
+    public void setAgrProdKind4(String agrProdKind4) {
+        this.agrProdKind4 = agrProdKind4;
+    }
+    public Float getAgrPopulation4() {
+        return this.agrPopulation4;
+    }
+    
+    public void setAgrPopulation4(Float agrPopulation4) {
+        this.agrPopulation4 = agrPopulation4;
+    }
+    public Integer getAgrLocationType4() {
+        return this.agrLocationType4;
+    }
+    
+    public void setAgrLocationType4(Integer agrLocationType4) {
+        this.agrLocationType4 = agrLocationType4;
+    }
+    public Integer getAgrHasWater4() {
+        return this.agrHasWater4;
+    }
+    
+    public void setAgrHasWater4(Integer agrHasWater4) {
+        this.agrHasWater4 = agrHasWater4;
+    }
+    public Float getAgrNetIncome4() {
+        return this.agrNetIncome4;
+    }
+    
+    public void setAgrNetIncome4(Float agrNetIncome4) {
+        this.agrNetIncome4 = agrNetIncome4;
+    }
+    public Float getAgrTotalNetincome4() {
+        return this.agrTotalNetincome4;
+    }
+    
+    public void setAgrTotalNetincome4(Float agrTotalNetincome4) {
+        this.agrTotalNetincome4 = agrTotalNetincome4;
+    }
+    public Float getAgrTotalWifeNetincome4() {
+        return this.agrTotalWifeNetincome4;
+    }
+    
+    public void setAgrTotalWifeNetincome4(Float agrTotalWifeNetincome4) {
+        this.agrTotalWifeNetincome4 = agrTotalWifeNetincome4;
     }
     public Set<E1> getE1s() {
         return this.e1s;

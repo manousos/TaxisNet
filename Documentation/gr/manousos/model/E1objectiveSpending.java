@@ -1,5 +1,5 @@
 package gr.manousos.model;
-// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 18 Μαρ 2013 12:42:56 πμ by Hibernate Tools 3.4.0.CR1
 
 
 import java.util.HashSet;
@@ -14,6 +14,7 @@ public class E1objectiveSpending  implements java.io.Serializable {
      private Integer idE1objectiveSpending;
      private String 205;
      private String houseAddr1;
+     private String floor1;
      private Integer 203;
      private Integer 240;
      private Float 211;
@@ -23,6 +24,7 @@ public class E1objectiveSpending  implements java.io.Serializable {
      private Integer 215;
      private Float 216;
      private String houseAddr2;
+     private String floor2;
      private Integer 207;
      private Integer 241;
      private Float 218;
@@ -32,6 +34,7 @@ public class E1objectiveSpending  implements java.io.Serializable {
      private Integer 222;
      private Float 223;
      private String houseAddr3;
+     private String floor3;
      private Integer 209;
      private Integer 242;
      private Float 225;
@@ -134,9 +137,10 @@ public class E1objectiveSpending  implements java.io.Serializable {
     public E1objectiveSpending() {
     }
 
-    public E1objectiveSpending(String 205, String houseAddr1, Integer 203, Integer 240, Float 211, Float 212, Float 213, Float 214, Integer 215, Float 216, String houseAddr2, Integer 207, Integer 241, Float 218, Float 219, Float 220, Float 221, Integer 222, Float 223, String houseAddr3, Integer 209, Integer 242, Float 225, Float 226, Float 227, Float 228, Integer 229, Float 230, Float 707, Float 708, String afm1, String 750, Integer 703, Integer 761, Float 771, Integer 775, String afm2, String 751, Integer 704, Integer 762, Float 772, Integer 776, String afm3, String 752, Integer 705, Integer 763, Float 773, Integer 777, String afm4, String 753, Integer 706, Integer 764, Float 774, Integer 778, Float 851, Float 852, Float 853, Float 854, Float 855, Float 856, Float 857, Float 858, String shippingName1, String shippingRegister1, String shippingCountry1, Integer sailShip1, Integer accommodationSpace1, Float percentPrincipalCoOwner1, Float percentWifeCoOwner1, Integer firstRegister1, Integer ownershipMonths1, Float 747, String shippingName2, String shippingRegister2, String shippingCountry2, Integer sailShip2, Integer accommodationSpace2, Float percentPrincipalCoOwner2, Float percentWifeCoOwner2, Integer firstRegister2, Integer ownershipMonths2, Float 748, Float 711, Float 712, Float 713, Float 714, Float 731, Float 732, String aircraftRegisterData, String aircraftType, String aircraftSn, String airportBase, Integer aircraftOwnerShip, Integer aircraftPowerLibres, Integer aircraftFirstRegister, Float 715, Float 716, Float 767, Float poolPrincipalCoOwnerOutdoor, Float poolWifeCoOwnerOutdoor, Float 768, Float poolPrincipalCoOwnerIndoor, Float poolWifeCoOwnerIndoor, Float 765, Float 766, Float 769, Float 770, Float 719, Float 720, Float 721, Float 722, Float 723, Float 724, Float 725, Float 726, Float 727, Float 728, Set<E1> e1s) {
+    public E1objectiveSpending(String 205, String houseAddr1, String floor1, Integer 203, Integer 240, Float 211, Float 212, Float 213, Float 214, Integer 215, Float 216, String houseAddr2, String floor2, Integer 207, Integer 241, Float 218, Float 219, Float 220, Float 221, Integer 222, Float 223, String houseAddr3, String floor3, Integer 209, Integer 242, Float 225, Float 226, Float 227, Float 228, Integer 229, Float 230, Float 707, Float 708, String afm1, String 750, Integer 703, Integer 761, Float 771, Integer 775, String afm2, String 751, Integer 704, Integer 762, Float 772, Integer 776, String afm3, String 752, Integer 705, Integer 763, Float 773, Integer 777, String afm4, String 753, Integer 706, Integer 764, Float 774, Integer 778, Float 851, Float 852, Float 853, Float 854, Float 855, Float 856, Float 857, Float 858, String shippingName1, String shippingRegister1, String shippingCountry1, Integer sailShip1, Integer accommodationSpace1, Float percentPrincipalCoOwner1, Float percentWifeCoOwner1, Integer firstRegister1, Integer ownershipMonths1, Float 747, String shippingName2, String shippingRegister2, String shippingCountry2, Integer sailShip2, Integer accommodationSpace2, Float percentPrincipalCoOwner2, Float percentWifeCoOwner2, Integer firstRegister2, Integer ownershipMonths2, Float 748, Float 711, Float 712, Float 713, Float 714, Float 731, Float 732, String aircraftRegisterData, String aircraftType, String aircraftSn, String airportBase, Integer aircraftOwnerShip, Integer aircraftPowerLibres, Integer aircraftFirstRegister, Float 715, Float 716, Float 767, Float poolPrincipalCoOwnerOutdoor, Float poolWifeCoOwnerOutdoor, Float 768, Float poolPrincipalCoOwnerIndoor, Float poolWifeCoOwnerIndoor, Float 765, Float 766, Float 769, Float 770, Float 719, Float 720, Float 721, Float 722, Float 723, Float 724, Float 725, Float 726, Float 727, Float 728, Set<E1> e1s) {
        this.205 = 205;
        this.houseAddr1 = houseAddr1;
+       this.floor1 = floor1;
        this.203 = 203;
        this.240 = 240;
        this.211 = 211;
@@ -146,6 +150,7 @@ public class E1objectiveSpending  implements java.io.Serializable {
        this.215 = 215;
        this.216 = 216;
        this.houseAddr2 = houseAddr2;
+       this.floor2 = floor2;
        this.207 = 207;
        this.241 = 241;
        this.218 = 218;
@@ -155,6 +160,7 @@ public class E1objectiveSpending  implements java.io.Serializable {
        this.222 = 222;
        this.223 = 223;
        this.houseAddr3 = houseAddr3;
+       this.floor3 = floor3;
        this.209 = 209;
        this.242 = 242;
        this.225 = 225;
@@ -276,6 +282,13 @@ public class E1objectiveSpending  implements java.io.Serializable {
     public void setHouseAddr1(String houseAddr1) {
         this.houseAddr1 = houseAddr1;
     }
+    public String getFloor1() {
+        return this.floor1;
+    }
+    
+    public void setFloor1(String floor1) {
+        this.floor1 = floor1;
+    }
     public Integer get203() {
         return this.203;
     }
@@ -339,6 +352,13 @@ public class E1objectiveSpending  implements java.io.Serializable {
     public void setHouseAddr2(String houseAddr2) {
         this.houseAddr2 = houseAddr2;
     }
+    public String getFloor2() {
+        return this.floor2;
+    }
+    
+    public void setFloor2(String floor2) {
+        this.floor2 = floor2;
+    }
     public Integer get207() {
         return this.207;
     }
@@ -401,6 +421,13 @@ public class E1objectiveSpending  implements java.io.Serializable {
     
     public void setHouseAddr3(String houseAddr3) {
         this.houseAddr3 = houseAddr3;
+    }
+    public String getFloor3() {
+        return this.floor3;
+    }
+    
+    public void setFloor3(String floor3) {
+        this.floor3 = floor3;
     }
     public Integer get209() {
         return this.209;

@@ -1,6 +1,6 @@
 package gr.manousos.model;
 
-// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 18 Μαρ 2013 12:42:56 πμ by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,111 +10,111 @@ import java.util.Set;
  */
 public class Taxpayer implements java.io.Serializable {
 
-	private Integer id;
-	private Contact contact;
-	private User user;
-	private String afm;
-	private String fname;
-	private String lname;
-	private String fatherName;
-	private Set<E2> e2s = new HashSet<E2>(0);
-	private Set<E1> e1s = new HashSet<E1>(0);
+    private Integer id;
+    private Contact contact;
+    private User user;
+    private String afm;
+    private String fname;
+    private String lname;
+    private String fatherName;
+    private Set<E2> e2s = new HashSet<E2>(0);
+    private Set<E1> e1s = new HashSet<E1>(0);
 
-	public Taxpayer() {
-	}
+    public Taxpayer() {
+    }
 
-	public Taxpayer(Contact contact, User user, String afm, String fname,
-			String lname, String fatherName) {
-		this.contact = contact;
-		this.user = user;
-		this.afm = afm;
-		this.fname = fname;
-		this.lname = lname;
-		this.fatherName = fatherName;
-	}
+    public Taxpayer(Contact contact, User user, String afm, String fname,
+	    String lname, String fatherName) {
+	this.contact = contact;
+	this.user = user;
+	this.afm = afm;
+	this.fname = fname;
+	this.lname = lname;
+	this.fatherName = fatherName;
+    }
 
-	public Taxpayer(Contact contact, User user, String afm, String fname,
-			String lname, String fatherName, Set<E2> e2s, Set<E1> e1s) {
-		this.contact = contact;
-		this.user = user;
-		this.afm = afm;
-		this.fname = fname;
-		this.lname = lname;
-		this.fatherName = fatherName;
-		this.e2s = e2s;
-		this.e1s = e1s;
-	}
+    public Taxpayer(Contact contact, User user, String afm, String fname,
+	    String lname, String fatherName, Set<E2> e2s, Set<E1> e1s) {
+	this.contact = contact;
+	this.user = user;
+	this.afm = afm;
+	this.fname = fname;
+	this.lname = lname;
+	this.fatherName = fatherName;
+	this.e2s = e2s;
+	this.e1s = e1s;
+    }
 
-	public Integer getId() {
-		return this.id;
-	}
+    public Integer getId() {
+	return this.id;
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public void setId(Integer id) {
+	this.id = id;
+    }
 
-	public Contact getContact() {
-		return this.contact;
-	}
+    public Contact getContact() {
+	return this.contact;
+    }
 
-	public void setContact(Contact contact) {
-		this.contact = contact;
-	}
+    public void setContact(Contact contact) {
+	this.contact = contact;
+    }
 
-	public User getUser() {
-		return this.user;
-	}
+    public User getUser() {
+	return this.user;
+    }
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    public void setUser(User user) {
+	this.user = user;
+    }
 
-	public String getAfm() {
-		return this.afm;
-	}
+    public String getAfm() {
+	return this.afm;
+    }
 
-	public void setAfm(String afm) {
-		this.afm = afm;
-	}
+    public void setAfm(String afm) {
+	this.afm = afm;
+    }
 
-	public String getFname() {
-		return this.fname;
-	}
+    public String getFname() {
+	return this.fname;
+    }
 
-	public void setFname(String fname) {
-		this.fname = fname;
-	}
+    public void setFname(String fname) {
+	this.fname = fname;
+    }
 
-	public String getLname() {
-		return this.lname;
-	}
+    public String getLname() {
+	return this.lname;
+    }
 
-	public void setLname(String lname) {
-		this.lname = lname;
-	}
+    public void setLname(String lname) {
+	this.lname = lname;
+    }
 
-	public String getFatherName() {
-		return this.fatherName;
-	}
+    public String getFatherName() {
+	return this.fatherName;
+    }
 
-	public void setFatherName(String fatherName) {
-		this.fatherName = fatherName;
-	}
+    public void setFatherName(String fatherName) {
+	this.fatherName = fatherName;
+    }
 
-	public Set<E2> getE2s() {
-		return this.e2s;
-	}
+    public Set<E2> getE2s() {
+	return this.e2s;
+    }
 
-	public void setE2s(Set<E2> e2s) {
-		this.e2s = e2s;
-	}
+    public void setE2s(Set<E2> e2s) {
+	this.e2s = e2s;
+    }
 
-	public Set<E1> getE1s() {
-		return this.e1s;
-	}
+    public Set<E1> getE1s() {
+	return this.e1s;
+    }
 
-	public void setE1s(Set<E1> e1s) {
-		this.e1s = e1s;
-	}
+    public void setE1s(Set<E1> e1s) {
+	this.e1s = e1s;
+    }
 
 }

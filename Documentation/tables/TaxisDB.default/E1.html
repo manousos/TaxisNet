@@ -459,6 +459,81 @@
 							false
 						</td>
 					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_DOY">
+								DOY
+							</a>
+						</td>
+						<td>
+							varchar(45)
+						</td>
+						<td>
+							45
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							false
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_Marriage">
+								Marriage
+							</a>
+						</td>
+						<td>
+							integer
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_idE1NauticalIncomes">
+								idE1NauticalIncomes
+							</a>
+						</td>
+						<td>
+							integer
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							19
+						</td>
+						<td>
+							2
+						</td>
+						<td>
+							true
+						</td>
+						<td>
+							true
+						</td>
+					</tr>
 			</tbody>
 		</table>
 
@@ -667,6 +742,21 @@
 						</tr>
 						<tr>
 							<td>
+								fk_E1_NauticalIncomes
+							</td>
+							<td>
+								<a href="E1NAUTICALINCOMES.html" target="generalFrame">
+									E1NAUTICALINCOMES
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_idE1NauticalIncomes">
+										idE1NauticalIncomes
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
 								fk_E1_PrepaidTaxes
 							</td>
 							<td>
@@ -737,6 +827,21 @@
 							<td>
 									<a href="#column_detail_idE1ObjectiveSpending">
 										idE1ObjectiveSpending
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								FK88C5464D6BA
+							</td>
+							<td>
+								<a href="E1NAUTICALINCOMES.html" target="generalFrame">
+									E1NAUTICALINCOMES
+								</a>
+							</td>
+							<td>
+									<a href="#column_detail_idE1NauticalIncomes">
+										idE1NauticalIncomes
 									</a>
 							</td>
 						</tr>
@@ -935,6 +1040,16 @@
 							<td>
 									<a href="#column_detail_E1InfoDataID">
 										E1InfoDataID
+									</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								idE1NauticalIncomes_UNIQUE
+							</td>
+							<td>
+									<a href="#column_detail_idE1NauticalIncomes">
+										idE1NauticalIncomes
 									</a>
 							</td>
 						</tr>
@@ -1555,6 +1670,90 @@
 					</li>
 					<li>
 						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_DOY">DOY</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> varchar(45)
+					</li>
+					<li>
+						<strong>Length:</strong> 45
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> false
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_Marriage">Marriage</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> integer
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_idE1NauticalIncomes">idE1NauticalIncomes</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> integer
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 19
+					</li>
+					<li>
+						<strong>Scale:</strong> 2
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> true
 					</li>
 					<li>
 						<strong>Comment:</strong> 

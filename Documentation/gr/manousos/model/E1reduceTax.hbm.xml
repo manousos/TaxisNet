@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 3 ?????? 2013 10:07:01 ???? by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 18 ?????? 2013 12:42:57 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.E1reduceTax" table="E1ReduceTax" catalog="TaxisDB">
         <id name="idE1reduceTax" type="java.lang.Integer">
@@ -9,22 +9,22 @@
             <generator class="identity" />
         </id>
         <property name="001" type="java.lang.Integer">
-            <column name="001" />
+            <column name="_001" />
         </property>
         <property name="002" type="java.lang.Integer">
-            <column name="002" />
+            <column name="_002" />
         </property>
         <property name="003" type="java.lang.Integer">
-            <column name="003" />
+            <column name="_003" />
         </property>
         <property name="004" type="java.lang.Integer">
-            <column name="004" />
+            <column name="_004" />
         </property>
         <property name="005" type="java.lang.Integer">
-            <column name="005" />
+            <column name="_005" />
         </property>
         <property name="006" type="java.lang.Integer">
-            <column name="006" />
+            <column name="_006" />
         </property>
         <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
             <key>

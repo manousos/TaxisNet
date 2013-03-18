@@ -5,6 +5,12 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.c3p0.acquire_increment">1</property>
+        <property name="hibernate.c3p0.idle_test_period">3000</property>
+        <property name="hibernate.c3p0.max_size">1000</property>
+        <property name="hibernate.c3p0.max_statements">50</property>
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.timeout">300</property>
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.password">root</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/TaxisDB</property>
@@ -16,7 +22,6 @@
         <property name="hibernate.show_sql">true</property>
         <mapping resource="gr/manousos/model/E1reduceTax.hbm.xml" />
         <mapping resource="gr/manousos/model/E1taxableIncomes.hbm.xml" />
-        <mapping resource="gr/manousos/model/E1incomeFromAgricularCompanyData.hbm.xml" />
         <mapping resource="gr/manousos/model/E1objectiveSpending.hbm.xml" />
         <mapping resource="gr/manousos/model/E1personDataBorneTaxpayer.hbm.xml" />
         <mapping resource="gr/manousos/model/E2.hbm.xml" />
@@ -26,7 +31,6 @@
         <mapping resource="gr/manousos/model/E1expensesRemovedFromTotalIncome.hbm.xml" />
         <mapping resource="gr/manousos/model/RelatePerson.hbm.xml" />
         <mapping resource="gr/manousos/model/E2estate.hbm.xml" />
-        <mapping resource="gr/manousos/model/E1relatePersons.hbm.xml" />
         <mapping resource="gr/manousos/model/E2coOwner.hbm.xml" />
         <mapping resource="gr/manousos/model/E1prepaidTaxes.hbm.xml" />
         <mapping resource="gr/manousos/model/E2otherEstate.hbm.xml" />
@@ -34,6 +38,7 @@
         <mapping resource="gr/manousos/model/E1taxPayerBankAccount.hbm.xml" />
         <mapping resource="gr/manousos/model/E1dataFromTaxPayerFolder.hbm.xml" />
         <mapping resource="gr/manousos/model/Contact.hbm.xml" />
+        <mapping resource="gr/manousos/model/E1nauticalincomes.hbm.xml" />
         <mapping resource="gr/manousos/model/Taxpayer.hbm.xml" />
     </session-factory>
 </hibernate-configuration>

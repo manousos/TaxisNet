@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 3 ?????? 2013 10:07:01 ???? by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 18 ?????? 2013 12:42:57 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.E1objectiveSpending" table="E1ObjectiveSpending" catalog="TaxisDB">
         <id name="idE1objectiveSpending" type="java.lang.Integer">
@@ -9,190 +9,199 @@
             <generator class="identity" />
         </id>
         <property name="205" type="string">
-            <column name="205" length="45" />
+            <column name="_205" length="45" />
         </property>
         <property name="houseAddr1" type="string">
             <column name="HouseAddr1" length="200" />
         </property>
+        <property name="floor1" type="string">
+            <column name="Floor1" length="45" />
+        </property>
         <property name="203" type="java.lang.Integer">
-            <column name="203" />
+            <column name="_203" />
         </property>
         <property name="240" type="java.lang.Integer">
-            <column name="240" />
+            <column name="_240" />
         </property>
         <property name="211" type="java.lang.Float">
-            <column name="211" precision="12" scale="0" />
+            <column name="_211" precision="12" scale="0" />
         </property>
         <property name="212" type="java.lang.Float">
-            <column name="212" precision="12" scale="0" />
+            <column name="_212" precision="12" scale="0" />
         </property>
         <property name="213" type="java.lang.Float">
-            <column name="213" precision="12" scale="0" />
+            <column name="_213" precision="12" scale="0" />
         </property>
         <property name="214" type="java.lang.Float">
-            <column name="214" precision="12" scale="0" />
+            <column name="_214" precision="12" scale="0" />
         </property>
         <property name="215" type="java.lang.Integer">
-            <column name="215" />
+            <column name="_215" />
         </property>
         <property name="216" type="java.lang.Float">
-            <column name="216" precision="12" scale="0" />
+            <column name="_216" precision="12" scale="0" />
         </property>
         <property name="houseAddr2" type="string">
             <column name="HouseAddr2" length="200" />
         </property>
+        <property name="floor2" type="string">
+            <column name="Floor2" length="45" />
+        </property>
         <property name="207" type="java.lang.Integer">
-            <column name="207" />
+            <column name="_207" />
         </property>
         <property name="241" type="java.lang.Integer">
-            <column name="241" />
+            <column name="_241" />
         </property>
         <property name="218" type="java.lang.Float">
-            <column name="218" precision="12" scale="0" />
+            <column name="_218" precision="12" scale="0" />
         </property>
         <property name="219" type="java.lang.Float">
-            <column name="219" precision="12" scale="0" />
+            <column name="_219" precision="12" scale="0" />
         </property>
         <property name="220" type="java.lang.Float">
-            <column name="220" precision="12" scale="0" />
+            <column name="_220" precision="12" scale="0" />
         </property>
         <property name="221" type="java.lang.Float">
-            <column name="221" precision="12" scale="0" />
+            <column name="_221" precision="12" scale="0" />
         </property>
         <property name="222" type="java.lang.Integer">
-            <column name="222" />
+            <column name="_222" />
         </property>
         <property name="223" type="java.lang.Float">
-            <column name="223" precision="12" scale="0" />
+            <column name="_223" precision="12" scale="0" />
         </property>
         <property name="houseAddr3" type="string">
             <column name="HouseAddr3" length="200" />
         </property>
+        <property name="floor3" type="string">
+            <column name="Floor3" length="45" />
+        </property>
         <property name="209" type="java.lang.Integer">
-            <column name="209" />
+            <column name="_209" />
         </property>
         <property name="242" type="java.lang.Integer">
-            <column name="242" />
+            <column name="_242" />
         </property>
         <property name="225" type="java.lang.Float">
-            <column name="225" precision="12" scale="0" />
+            <column name="_225" precision="12" scale="0" />
         </property>
         <property name="226" type="java.lang.Float">
-            <column name="226" precision="12" scale="0" />
+            <column name="_226" precision="12" scale="0" />
         </property>
         <property name="227" type="java.lang.Float">
-            <column name="227" precision="12" scale="0" />
+            <column name="_227" precision="12" scale="0" />
         </property>
         <property name="228" type="java.lang.Float">
-            <column name="228" precision="12" scale="0" />
+            <column name="_228" precision="12" scale="0" />
         </property>
         <property name="229" type="java.lang.Integer">
-            <column name="229" />
+            <column name="_229" />
         </property>
         <property name="230" type="java.lang.Float">
-            <column name="230" precision="12" scale="0" />
+            <column name="_230" precision="12" scale="0" />
         </property>
         <property name="707" type="java.lang.Float">
-            <column name="707" precision="12" scale="0" />
+            <column name="_707" precision="12" scale="0" />
         </property>
         <property name="708" type="java.lang.Float">
-            <column name="708" precision="12" scale="0" />
+            <column name="_708" precision="12" scale="0" />
         </property>
         <property name="afm1" type="string">
             <column name="AFM1" length="10" />
         </property>
         <property name="750" type="string">
-            <column name="750" length="7" />
+            <column name="_750" length="7" />
         </property>
         <property name="703" type="java.lang.Integer">
-            <column name="703" />
+            <column name="_703" />
         </property>
         <property name="761" type="java.lang.Integer">
-            <column name="761" />
+            <column name="_761" />
         </property>
         <property name="771" type="java.lang.Float">
-            <column name="771" precision="12" scale="0" />
+            <column name="_771" precision="12" scale="0" />
         </property>
         <property name="775" type="java.lang.Integer">
-            <column name="775" />
+            <column name="_775" />
         </property>
         <property name="afm2" type="string">
             <column name="AFM2" length="10" />
         </property>
         <property name="751" type="string">
-            <column name="751" length="7" />
+            <column name="_751" length="7" />
         </property>
         <property name="704" type="java.lang.Integer">
-            <column name="704" />
+            <column name="_704" />
         </property>
         <property name="762" type="java.lang.Integer">
-            <column name="762" />
+            <column name="_762" />
         </property>
         <property name="772" type="java.lang.Float">
-            <column name="772" precision="12" scale="0" />
+            <column name="_772" precision="12" scale="0" />
         </property>
         <property name="776" type="java.lang.Integer">
-            <column name="776" />
+            <column name="_776" />
         </property>
         <property name="afm3" type="string">
             <column name="AFM3" length="10" />
         </property>
         <property name="752" type="string">
-            <column name="752" length="7" />
+            <column name="_752" length="7" />
         </property>
         <property name="705" type="java.lang.Integer">
-            <column name="705" />
+            <column name="_705" />
         </property>
         <property name="763" type="java.lang.Integer">
-            <column name="763" />
+            <column name="_763" />
         </property>
         <property name="773" type="java.lang.Float">
-            <column name="773" precision="12" scale="0" />
+            <column name="_773" precision="12" scale="0" />
         </property>
         <property name="777" type="java.lang.Integer">
-            <column name="777" />
+            <column name="_777" />
         </property>
         <property name="afm4" type="string">
             <column name="AFM4" length="10" />
         </property>
         <property name="753" type="string">
-            <column name="753" length="7" />
+            <column name="_753" length="7" />
         </property>
         <property name="706" type="java.lang.Integer">
-            <column name="706" />
+            <column name="_706" />
         </property>
         <property name="764" type="java.lang.Integer">
-            <column name="764" />
+            <column name="_764" />
         </property>
         <property name="774" type="java.lang.Float">
-            <column name="774" precision="12" scale="0" />
+            <column name="_774" precision="12" scale="0" />
         </property>
         <property name="778" type="java.lang.Integer">
-            <column name="778" />
+            <column name="_778" />
         </property>
         <property name="851" type="java.lang.Float">
-            <column name="851" precision="12" scale="0" />
+            <column name="_851" precision="12" scale="0" />
         </property>
         <property name="852" type="java.lang.Float">
-            <column name="852" precision="12" scale="0" />
+            <column name="_852" precision="12" scale="0" />
         </property>
         <property name="853" type="java.lang.Float">
-            <column name="853" precision="12" scale="0" />
+            <column name="_853" precision="12" scale="0" />
         </property>
         <property name="854" type="java.lang.Float">
-            <column name="854" precision="12" scale="0" />
+            <column name="_854" precision="12" scale="0" />
         </property>
         <property name="855" type="java.lang.Float">
-            <column name="855" precision="12" scale="0" />
+            <column name="_855" precision="12" scale="0" />
         </property>
         <property name="856" type="java.lang.Float">
-            <column name="856" precision="12" scale="0" />
+            <column name="_856" precision="12" scale="0" />
         </property>
         <property name="857" type="java.lang.Float">
-            <column name="857" precision="12" scale="0" />
+            <column name="_857" precision="12" scale="0" />
         </property>
         <property name="858" type="java.lang.Float">
-            <column name="858" precision="12" scale="0" />
+            <column name="_858" precision="12" scale="0" />
         </property>
         <property name="shippingName1" type="string">
             <column name="ShippingName1" length="45" />
@@ -222,7 +231,7 @@
             <column name="OwnershipMonths1" />
         </property>
         <property name="747" type="java.lang.Float">
-            <column name="747" precision="12" scale="0" />
+            <column name="_747" precision="12" scale="0" />
         </property>
         <property name="shippingName2" type="string">
             <column name="ShippingName2" length="45" />
@@ -252,25 +261,25 @@
             <column name="OwnershipMonths2" />
         </property>
         <property name="748" type="java.lang.Float">
-            <column name="748" precision="12" scale="0" />
+            <column name="_748" precision="12" scale="0" />
         </property>
         <property name="711" type="java.lang.Float">
-            <column name="711" precision="12" scale="0" />
+            <column name="_711" precision="12" scale="0" />
         </property>
         <property name="712" type="java.lang.Float">
-            <column name="712" precision="12" scale="0" />
+            <column name="_712" precision="12" scale="0" />
         </property>
         <property name="713" type="java.lang.Float">
-            <column name="713" precision="12" scale="0" />
+            <column name="_713" precision="12" scale="0" />
         </property>
         <property name="714" type="java.lang.Float">
-            <column name="714" precision="12" scale="0" />
+            <column name="_714" precision="12" scale="0" />
         </property>
         <property name="731" type="java.lang.Float">
-            <column name="731" precision="12" scale="0" />
+            <column name="_731" precision="12" scale="0" />
         </property>
         <property name="732" type="java.lang.Float">
-            <column name="732" precision="12" scale="0" />
+            <column name="_732" precision="12" scale="0" />
         </property>
         <property name="aircraftRegisterData" type="string">
             <column name="AircraftRegisterData" length="100" />
@@ -294,13 +303,13 @@
             <column name="AircraftFirstRegister" />
         </property>
         <property name="715" type="java.lang.Float">
-            <column name="715" precision="12" scale="0" />
+            <column name="_715" precision="12" scale="0" />
         </property>
         <property name="716" type="java.lang.Float">
-            <column name="716" precision="12" scale="0" />
+            <column name="_716" precision="12" scale="0" />
         </property>
         <property name="767" type="java.lang.Float">
-            <column name="767" precision="12" scale="0" />
+            <column name="_767" precision="12" scale="0" />
         </property>
         <property name="poolPrincipalCoOwnerOutdoor" type="java.lang.Float">
             <column name="PoolPrincipalCoOwnerOutdoor" precision="12" scale="0" />
@@ -309,7 +318,7 @@
             <column name="PoolWifeCoOwnerOutdoor" precision="12" scale="0" />
         </property>
         <property name="768" type="java.lang.Float">
-            <column name="768" precision="12" scale="0" />
+            <column name="_768" precision="12" scale="0" />
         </property>
         <property name="poolPrincipalCoOwnerIndoor" type="java.lang.Float">
             <column name="PoolPrincipalCoOwnerIndoor" precision="12" scale="0" />
@@ -318,46 +327,46 @@
             <column name="PoolWifeCoOwnerIndoor" precision="12" scale="0" />
         </property>
         <property name="765" type="java.lang.Float">
-            <column name="765" precision="12" scale="0" />
+            <column name="_765" precision="12" scale="0" />
         </property>
         <property name="766" type="java.lang.Float">
-            <column name="766" precision="12" scale="0" />
+            <column name="_766" precision="12" scale="0" />
         </property>
         <property name="769" type="java.lang.Float">
-            <column name="769" precision="12" scale="0" />
+            <column name="_769" precision="12" scale="0" />
         </property>
         <property name="770" type="java.lang.Float">
-            <column name="770" precision="12" scale="0" />
+            <column name="_770" precision="12" scale="0" />
         </property>
         <property name="719" type="java.lang.Float">
-            <column name="719" precision="12" scale="0" />
+            <column name="_719" precision="12" scale="0" />
         </property>
         <property name="720" type="java.lang.Float">
-            <column name="720" precision="12" scale="0" />
+            <column name="_720" precision="12" scale="0" />
         </property>
         <property name="721" type="java.lang.Float">
-            <column name="721" precision="12" scale="0" />
+            <column name="_721" precision="12" scale="0" />
         </property>
         <property name="722" type="java.lang.Float">
-            <column name="722" precision="12" scale="0" />
+            <column name="_722" precision="12" scale="0" />
         </property>
         <property name="723" type="java.lang.Float">
-            <column name="723" precision="12" scale="0" />
+            <column name="_723" precision="12" scale="0" />
         </property>
         <property name="724" type="java.lang.Float">
-            <column name="724" precision="12" scale="0" />
+            <column name="_724" precision="12" scale="0" />
         </property>
         <property name="725" type="java.lang.Float">
-            <column name="725" precision="12" scale="0" />
+            <column name="_725" precision="12" scale="0" />
         </property>
         <property name="726" type="java.lang.Float">
-            <column name="726" precision="12" scale="0" />
+            <column name="_726" precision="12" scale="0" />
         </property>
         <property name="727" type="java.lang.Float">
-            <column name="727" precision="12" scale="0" />
+            <column name="_727" precision="12" scale="0" />
         </property>
         <property name="728" type="java.lang.Float">
-            <column name="728" precision="12" scale="0" />
+            <column name="_728" precision="12" scale="0" />
         </property>
         <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
             <key>

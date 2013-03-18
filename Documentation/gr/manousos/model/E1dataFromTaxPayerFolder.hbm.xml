@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 3 ?????? 2013 10:07:01 ???? by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 18 ?????? 2013 12:42:57 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.E1dataFromTaxPayerFolder" table="E1DataFromTaxPayerFolder" catalog="TaxisDB">
         <id name="idE1dataFromTaxPayerFolder" type="java.lang.Integer">
@@ -9,88 +9,25 @@
             <generator class="identity" />
         </id>
         <property name="901" type="java.lang.Float">
-            <column name="901" precision="12" scale="0" />
+            <column name="_901" precision="12" scale="0" />
         </property>
         <property name="902" type="java.lang.Float">
-            <column name="902" precision="12" scale="0" />
+            <column name="_902" precision="12" scale="0" />
         </property>
         <property name="903" type="java.lang.Float">
-            <column name="903" precision="12" scale="0" />
+            <column name="_903" precision="12" scale="0" />
         </property>
         <property name="904" type="java.lang.Float">
-            <column name="904" precision="12" scale="0" />
+            <column name="_904" precision="12" scale="0" />
         </property>
         <property name="341" type="java.lang.Float">
-            <column name="341" precision="12" scale="0" />
-        </property>
-        <property name="342" type="java.lang.Float">
-            <column name="342" precision="12" scale="0" />
-        </property>
-        <property name="745" type="java.lang.Float">
-            <column name="745" precision="12" scale="0" />
-        </property>
-        <property name="746" type="java.lang.Float">
-            <column name="746" precision="12" scale="0" />
+            <column name="_341" precision="12" scale="0" />
         </property>
         <property name="995" type="java.lang.Float">
-            <column name="995" precision="12" scale="0" />
+            <column name="_995" precision="12" scale="0" />
         </property>
         <property name="996" type="java.lang.Float">
-            <column name="996" precision="12" scale="0" />
-        </property>
-        <property name="997" type="java.lang.Float">
-            <column name="997" precision="12" scale="0" />
-        </property>
-        <property name="998" type="java.lang.Float">
-            <column name="998" precision="12" scale="0" />
-        </property>
-        <property name="959" type="java.lang.Float">
-            <column name="959" precision="12" scale="0" />
-        </property>
-        <property name="960" type="java.lang.Float">
-            <column name="960" precision="12" scale="0" />
-        </property>
-        <property name="743" type="java.lang.Float">
-            <column name="743" precision="12" scale="0" />
-        </property>
-        <property name="744" type="java.lang.Float">
-            <column name="744" precision="12" scale="0" />
-        </property>
-        <property name="323" type="java.lang.Float">
-            <column name="323" precision="12" scale="0" />
-        </property>
-        <property name="324" type="java.lang.Float">
-            <column name="324" precision="12" scale="0" />
-        </property>
-        <property name="399" type="java.lang.Float">
-            <column name="399" precision="12" scale="0" />
-        </property>
-        <property name="400" type="java.lang.Float">
-            <column name="400" precision="12" scale="0" />
-        </property>
-        <property name="907" type="java.lang.Float">
-            <column name="907" precision="12" scale="0" />
-        </property>
-        <property name="908" type="java.lang.Float">
-            <column name="908" precision="12" scale="0" />
-        </property>
-        <property name="985" type="java.lang.Float">
-            <column name="985" precision="12" scale="0" />
-        </property>
-        <property name="986" type="java.lang.Float">
-            <column name="986" precision="12" scale="0" />
-        </property>
-        <property name="987" type="java.lang.Float">
-            <column name="987" precision="12" scale="0" />
-        </property>
-        <property name="988" type="java.lang.Float">
-            <column name="988" precision="12" scale="0" />
-        </property>
-        <property name="989" type="java.lang.Float">
-            <column name="989" precision="12" scale="0" />
-        </property>
-        <property name="990" type="java.lang.Float">
-            <column name="990" precision="12" scale="0" />
+            <column name="_996" precision="12" scale="0" />
         </property>
         <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
             <key>

@@ -1,5 +1,5 @@
 package gr.manousos.model;
-// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 18 Μαρ 2013 12:42:56 πμ by Hibernate Tools 3.4.0.CR1
 
 
 import java.util.HashSet;
@@ -73,6 +73,9 @@ public class E1expensesRemovedFromTotalIncome  implements java.io.Serializable {
      private Float 088;
      private Float 079;
      private Float 080;
+     private Float 081;
+     private Float 082;
+     private Float 083;
      private Float 084;
      private Float 085;
      private Float 077;
@@ -88,7 +91,7 @@ public class E1expensesRemovedFromTotalIncome  implements java.io.Serializable {
     public E1expensesRemovedFromTotalIncome() {
     }
 
-    public E1expensesRemovedFromTotalIncome(Float 049, Float 051, Float 052, Float 053, Float 054, Float 057, Float 058, Float 031, Float 032, Float 059, Float 060, Float 075, Float 076, Float 061, Float 062, Float 071, Float 063, Float 064, Float 069, Float 070, String rentalForFamilyOwnerName1, String 801, Integer 092, Float 091, Integer 097, Float 811, Float 812, String rentalForFamilyOwnerName2, String 802, Integer 094, Float 093, Integer 098, Float 813, Float 814, String rentalForFamilyOwnerName3, String 803, Integer 096, Float 095, Float 099, Float 815, Float 816, String rentalForStudyOwnerName1, String 804, Float 817, String rentalForStudyOwnerName2, String 805, Float 819, String rentalForStudyOwnerName3, String 806, Float 821, String rentalForStudyOwnerName4, String 807, Float 823, Float 073, Float 074, Float 089, Float 090, Float 087, Float 088, Float 079, Float 080, Float 084, Float 085, Float 077, Float 078, Float 663, Float 664, Integer 033, Integer 034, Integer 035, Integer 036, Set<E1> e1s) {
+    public E1expensesRemovedFromTotalIncome(Float 049, Float 051, Float 052, Float 053, Float 054, Float 057, Float 058, Float 031, Float 032, Float 059, Float 060, Float 075, Float 076, Float 061, Float 062, Float 071, Float 063, Float 064, Float 069, Float 070, String rentalForFamilyOwnerName1, String 801, Integer 092, Float 091, Integer 097, Float 811, Float 812, String rentalForFamilyOwnerName2, String 802, Integer 094, Float 093, Integer 098, Float 813, Float 814, String rentalForFamilyOwnerName3, String 803, Integer 096, Float 095, Float 099, Float 815, Float 816, String rentalForStudyOwnerName1, String 804, Float 817, String rentalForStudyOwnerName2, String 805, Float 819, String rentalForStudyOwnerName3, String 806, Float 821, String rentalForStudyOwnerName4, String 807, Float 823, Float 073, Float 074, Float 089, Float 090, Float 087, Float 088, Float 079, Float 080, Float 081, Float 082, Float 083, Float 084, Float 085, Float 077, Float 078, Float 663, Float 664, Integer 033, Integer 034, Integer 035, Integer 036, Set<E1> e1s) {
        this.049 = 049;
        this.051 = 051;
        this.052 = 052;
@@ -150,6 +153,9 @@ public class E1expensesRemovedFromTotalIncome  implements java.io.Serializable {
        this.088 = 088;
        this.079 = 079;
        this.080 = 080;
+       this.081 = 081;
+       this.082 = 082;
+       this.083 = 083;
        this.084 = 084;
        this.085 = 085;
        this.077 = 077;
@@ -596,6 +602,27 @@ public class E1expensesRemovedFromTotalIncome  implements java.io.Serializable {
     
     public void set080(Float 080) {
         this.080 = 080;
+    }
+    public Float get081() {
+        return this.081;
+    }
+    
+    public void set081(Float 081) {
+        this.081 = 081;
+    }
+    public Float get082() {
+        return this.082;
+    }
+    
+    public void set082(Float 082) {
+        this.082 = 082;
+    }
+    public Float get083() {
+        return this.083;
+    }
+    
+    public void set083(Float 083) {
+        this.083 = 083;
     }
     public Float get084() {
         return this.084;

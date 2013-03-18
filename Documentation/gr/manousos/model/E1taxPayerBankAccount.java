@@ -1,6 +1,6 @@
 package gr.manousos.model;
 
-// Generated 3 Μαρ 2013 10:07:00 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 18 Μαρ 2013 12:42:56 πμ by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,50 +10,50 @@ import java.util.Set;
  */
 public class E1taxPayerBankAccount implements java.io.Serializable {
 
-	private Integer idE1taxPayerBankAccount;
-	private String bic;
-	private String iban;
-	private Set<E1> e1s = new HashSet<E1>(0);
+    private Integer idE1taxPayerBankAccount;
+    private String bic;
+    private String iban;
+    private Set<E1> e1s = new HashSet<E1>(0);
 
-	public E1taxPayerBankAccount() {
-	}
+    public E1taxPayerBankAccount() {
+    }
 
-	public E1taxPayerBankAccount(String bic, String iban, Set<E1> e1s) {
-		this.bic = bic;
-		this.iban = iban;
-		this.e1s = e1s;
-	}
+    public E1taxPayerBankAccount(String bic, String iban, Set<E1> e1s) {
+	this.bic = bic;
+	this.iban = iban;
+	this.e1s = e1s;
+    }
 
-	public Integer getIdE1taxPayerBankAccount() {
-		return this.idE1taxPayerBankAccount;
-	}
+    public Integer getIdE1taxPayerBankAccount() {
+	return this.idE1taxPayerBankAccount;
+    }
 
-	public void setIdE1taxPayerBankAccount(Integer idE1taxPayerBankAccount) {
-		this.idE1taxPayerBankAccount = idE1taxPayerBankAccount;
-	}
+    public void setIdE1taxPayerBankAccount(Integer idE1taxPayerBankAccount) {
+	this.idE1taxPayerBankAccount = idE1taxPayerBankAccount;
+    }
 
-	public String getBic() {
-		return this.bic;
-	}
+    public String getBic() {
+	return this.bic;
+    }
 
-	public void setBic(String bic) {
-		this.bic = bic;
-	}
+    public void setBic(String bic) {
+	this.bic = bic;
+    }
 
-	public String getIban() {
-		return this.iban;
-	}
+    public String getIban() {
+	return this.iban;
+    }
 
-	public void setIban(String iban) {
-		this.iban = iban;
-	}
+    public void setIban(String iban) {
+	this.iban = iban;
+    }
 
-	public Set<E1> getE1s() {
-		return this.e1s;
-	}
+    public Set<E1> getE1s() {
+	return this.e1s;
+    }
 
-	public void setE1s(Set<E1> e1s) {
-		this.e1s = e1s;
-	}
+    public void setE1s(Set<E1> e1s) {
+	this.e1s = e1s;
+    }
 
 }
