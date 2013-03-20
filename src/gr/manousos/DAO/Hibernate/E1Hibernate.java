@@ -11,6 +11,7 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.NonUniqueObjectException;
 
 import gr.manousos.DAO.E1DAO;
+import gr.manousos.model.Contact;
 import gr.manousos.model.E1;
 import gr.manousos.model.E1Id;
 import gr.manousos.model.E1relatePersons;
@@ -20,7 +21,7 @@ import gr.manousos.model.RelatePerson;
 public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 	E1DAO {
 
-    private static Log log = LogFactory.getLog(TaxpayerHibernate.class);
+    private static Log log = LogFactory.getLog(E1Hibernate.class);
 
     @Override
     public E1 findById(Serializable id, boolean lock) {
@@ -44,59 +45,31 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
     public E1 makePersistent(E1 entity) {
 	try {
 	    getSession().beginTransaction();
-	    
-	    Set<RelatePerson> tmpRelPers = entity.getRelatePersons();
-	    entity.setRelatePersons(null);
-
+	    /*
+	     * Set<RelatePerson> tmpRelPers = entity.getRelatePersons();
+	     * getSession().beginTransaction(); for (RelatePerson rp :
+	     * tmpRelPers) { getSession().save(rp.getContact());
+	     * rp.setContact(null); getSession().save(rp); }
+	     * getSession().getTransaction().commit();
+	     * getSession().beginTransaction(); entity.setRelatePersons(null);
+	     * getSession().save(entity);
+	     * getSession().getTransaction().commit();
+	     */
 	    super.makePersistent(entity);
 	    getSession().getTransaction().commit();
-	    
-	    saveRelatePeron(tmpRelPers);
+	    /*
+	     * super.makePersistent(entity); if (saveRelatePerson(tmpRelPers,
+	     * entity)) getSession().getTransaction().commit(); else
+	     * getSession().getTransaction().rollback();
+	     */
 	} catch (Exception e) {
-	    log.error("E1 makePersistent error. " + e.getMessage(), e);
 	    getSession().getTransaction().rollback();
+	    log.error("E1 makePersistent error. " + e.getMessage(), e);
 	} finally {
 	    if (getSession().isOpen())
 		getSession().close();
 	}
 	return entity;
-    }
-
-    private boolean saveRelatePeron(Set<RelatePerson> RelPers) {
-	// E1 e1 = new E1();
-	// e1.setId(key);
-	// e1.setRelatePersons(RelPers);
-
-	RelatePerson wife = null;
-	RelatePerson delegate = null;
-
-	for (RelatePerson rp : RelPers) {
-	    if (rp.getType() == 1)
-		wife = rp;
-	    if (rp.getType() == 2)
-		delegate = rp;
-	}
-	E1relatePersons rlpH = new E1relatePersons();
-	E1relatePersons rlpD = new E1relatePersons();
-
-	if (wife != null)
-	    rlpH.setRelatePerson(wife);	
-	if (delegate != null)
-	    rlpD.setRelatePerson(delegate);
-
-	try {
-	    getSession().beginTransaction();
-	    getSession().saveOrUpdate(rlpH);
-	    getSession().saveOrUpdate(rlpD);
-	    getSession().getTransaction().commit();
-	} catch (Exception e) {
-	    log.error("E1 RelatePersons persist error. " + e.getMessage(), e);
-	    getSession().getTransaction().rollback();
-	} finally {
-	    if (getSession().isOpen())
-		getSession().close();
-	}
-	return false;
     }
 
     @Override

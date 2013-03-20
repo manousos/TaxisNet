@@ -23,7 +23,7 @@ import gr.manousos.model.*;
 public class E2Hibernate extends GenericDAOImpl<E2, Serializable> implements
 		E2DAO {
 
-	private static Log log = LogFactory.getLog(TaxpayerHibernate.class);
+	private static Log log = LogFactory.getLog(E2Hibernate.class);
 
 	/*
 	 * (non-Javadoc)

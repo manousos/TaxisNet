@@ -780,10 +780,8 @@ CREATE TABLE `E2OtherEstate` (
 
 delimiter $$
 
-delimiter $$
-
 CREATE TABLE `RelatePerson` (
-  `idRelatePerson` int(11) NOT NULL,
+  `idRelatePerson` int(11) NOT NULL AUTO_INCREMENT,
   `Type` int(1) DEFAULT NULL COMMENT '1: WIFE\n2: DELEGATE',
   `Address` varchar(500) DEFAULT NULL,
   `AFM` varchar(45) DEFAULT NULL,
@@ -793,17 +791,10 @@ CREATE TABLE `RelatePerson` (
   `FatherName` varchar(10) DEFAULT NULL,
   `ATID` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`idRelatePerson`),
-  KEY `fk_RelatePerson_Address_idx` (`Address`),
+  KEY `fk_RelatePerson_Address_idx` (`Address`(255)),
   KEY `fk_RelatePerson_1_idx` (`ContactID`),
-  CONSTRAINT `fk_RelatePerson_1` FOREIGN KEY (`ContactID`) REFERENCES `Contact` (`ContactID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_RelatePerson_Contact` FOREIGN KEY (`ContactID`) REFERENCES `Contact` (`ContactID`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-
-
-
-delimiter $$
-
-delimiter $$
 
 delimiter $$
 

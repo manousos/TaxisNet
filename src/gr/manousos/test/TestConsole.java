@@ -65,23 +65,23 @@ public class TestConsole {
 	Contact delegateContact = new Contact("2111231236", "", "");
 
 	RelatePerson wife = new RelatePerson();
-	wife.setAddress("κάπου 43");
+	wife.setAddress("LALAL 43");
 	wife.setAfm("9876546544");
-	wife.setAtid("Γ123456");
+	wife.setAtid("W123456");
 	wife.setContact(wifeContact);
 	// wife.setE1relatePersonses(e1relatePersonses)
-	wife.setFatherName("Νώντας");
-	wife.setFname("Ασπασία");
-	wife.setLname("Μαρκουλάκη");
+	wife.setFatherName("Nontas");
+	wife.setFname("ASpasia");
+	wife.setLname("Markoulaki");
 	// wife.setIdRelatePerson(idRelatePerson)
 	wife.setType(1);
 
 	RelatePerson delegate = new RelatePerson();
-	delegate.setAddress("Έβου 22");
+	delegate.setAddress("EVROU 22");
 	delegate.setAfm("9876546548");
-	delegate.setFatherName("Ανέστης");
-	delegate.setFname("Νίκος");
-	delegate.setLname("Νικολάου");
+	delegate.setFatherName("Anestis");
+	delegate.setFname("Nikos");
+	delegate.setLname("Nikolaou");
 	delegate.setContact(delegateContact);
 	delegate.setType(2);
 
