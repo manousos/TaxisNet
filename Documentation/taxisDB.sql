@@ -515,8 +515,8 @@ CREATE TABLE `E1RelatePersons` (
   PRIMARY KEY (`TaxpayerID`,`Year`,`idRelatePerson`),
   KEY `fk_E1RelatePersons_1_idx` (`idRelatePerson`),
   KEY `fk_E1RelatePersons_E1_idx` (`TaxpayerID`,`Year`),
-  CONSTRAINT `fk_E1RelatePersons_E1` FOREIGN KEY (`TaxpayerID`, `Year`) REFERENCES `E1` (`TaxpayerID`, `Year`),
-  CONSTRAINT `fk_E1RelatePersons_RelatePerson` FOREIGN KEY (`idRelatePerson`) REFERENCES `RelatePerson` (`idRelatePerson`)
+  CONSTRAINT `fk_E1RelatePersons_E1` FOREIGN KEY (`TaxpayerID`, `Year`) REFERENCES `E1` (`TaxpayerID`, `Year`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_E1RelatePersons_RelatePerson` FOREIGN KEY (`idRelatePerson`) REFERENCES `RelatePerson` (`idRelatePerson`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 delimiter $$
@@ -777,7 +777,6 @@ CREATE TABLE `E2OtherEstate` (
   CONSTRAINT `FK_E2_OtherEstate` FOREIGN KEY (`TaxpayerID`, `Year`) REFERENCES `E2` (`TaxierID`, `Year`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
-
 delimiter $$
 
 CREATE TABLE `RelatePerson` (
@@ -793,8 +792,8 @@ CREATE TABLE `RelatePerson` (
   PRIMARY KEY (`idRelatePerson`),
   KEY `fk_RelatePerson_Address_idx` (`Address`(255)),
   KEY `fk_RelatePerson_1_idx` (`ContactID`),
-  CONSTRAINT `fk_RelatePerson_Contact` FOREIGN KEY (`ContactID`) REFERENCES `Contact` (`ContactID`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
+  CONSTRAINT `fk_RelatePerson_Contact` FOREIGN KEY (`ContactID`) REFERENCES `Contact` (`ContactID`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8$$
 
 delimiter $$
 
