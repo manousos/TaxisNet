@@ -218,7 +218,7 @@ CREATE TABLE `E1IncomesReduceTaxes` (
   `_793` float DEFAULT NULL,
   `_794` float DEFAULT NULL,
   `_615` float DEFAULT NULL,
-  `_616` varchar(45) DEFAULT NULL,
+  `_616` float DEFAULT NULL,
   `LassorNameForStudent` varchar(45) DEFAULT NULL,
   `_417` varchar(10) DEFAULT NULL,
   `AreaStudentHouse` float DEFAULT NULL,

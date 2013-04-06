@@ -92,7 +92,7 @@ public class UserSrv {
 	@Path("/getTaxPayerByUserName/{username}")
 	@GET
 	@Produces("application/json")
-	public Taxpayer getTaxPayerById(@PathParam("username") String username) {
+	public Taxpayer getTaxPayerByUserName(@PathParam("username") String username) {
 		return dao.getTaxpayerDAO().getTaxpayerByUserName(username);
 
 	}
