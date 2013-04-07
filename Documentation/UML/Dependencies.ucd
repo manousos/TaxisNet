@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Dependencies" size="1187,461" id="." metadata="uml2-1.0" initialized="true" tag="10" key="32303037303533312D31302054617869734E6574">
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.service" location="345,30" size="87,31" id="gr.manousos.service">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service-Soyatec::Access->gr.manousos.DAO*gr.manousos.service-Soyatec::Import->gr.manousos.DAO" source="//@children.0" target="//@children.3" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import, Access»" size="99,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="20,31" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="54,0"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.service.rest" location="75,30" size="64,31" id="gr.manousos.service.rest">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest-Soyatec::Import->gr.manousos.DAO*gr.manousos.service.rest-Soyatec::Access->gr.manousos.DAO" source="//@children.1" target="//@children.3" targetEnd="//@children.1/@sourceConnections.0/@children.2" label="//@children.1/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Access, Import»" size="99,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="48,31" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="18,0"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.DAO.Hibernate" location="169,255" size="108,31" id="gr.manousos.DAO.Hibernate">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate-Soyatec::Implement->gr.manousos.DAO*gr.manousos.DAO.Hibernate-Soyatec::Import->gr.manousos.DAO" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import, Implement»" size="119,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="33,31"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.2/@sourceConnections.0 //@children.1/@sourceConnections.0" name="gr.manousos.DAO" location="189,148" size="67,31" id="gr.manousos.DAO"/>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" properties="libraryFilter=;ModelFrozen=true;ComputedContent=true;displayOptions=1;open=gr.manousos.test,gr.manousos.service,gr.manousos.DAO.Hibernate,gr.manousos.service.rest,gr.manousos.DAO;Product=eDepend;link=gr.manousos.service-Soyatec::Access->gr.manousos.DAO,gr.manousos.DAO.Hibernate-Soyatec::Implement->gr.manousos.DAO,gr.manousos.test-Soyatec::Import->gr.manousos.DAO,gr.manousos.service-Soyatec::Import->gr.manousos.DAO,gr.manousos.service.rest-Soyatec::Import->gr.manousos.DAO,gr.manousos.service.rest-Soyatec::Access->gr.manousos.DAO,gr.manousos.DAO.Hibernate-Soyatec::Import->gr.manousos.DAO,gr.manousos.test-Soyatec::Access->gr.manousos.DAO;dependencyFilter=Standard::Derive,Soyatec::Implement,Standard::Instantiate,Standard::Create,Standard::Call,Standard::Send,Soyatec::Access,Soyatec::Import,;wireOptions=4"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" shortPackageNameFormat="true" showDependencyStereotype="true" showEnumerationStereotype="false" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+</editmodel:ClassDiagramEditModel>

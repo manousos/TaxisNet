@@ -823,7 +823,7 @@ delimiter $$
 CREATE TABLE `User` (
   `UserID` int(11) NOT NULL AUTO_INCREMENT,
   `UserName` varchar(50) NOT NULL,
-  `Password` varchar(21844) NOT NULL,
+  `Password` varchar(2048) NOT NULL,
   `Active` int(11) NOT NULL DEFAULT '0',
   `OTP` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`UserID`),

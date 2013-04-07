@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="PackagesFull" size="1015,771" id="." metadata="uml2-1.0" initialized="true" tag="10" key="32303037303533312D31302054617869734E6574">
+  <children xsi:type="editmodel:PackageEditModel" targetConnections="//@children.3/@sourceConnections.0" name="org.hibernate.cfg" location="223,720" size="59,31" id="org.hibernate.cfg"/>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.test" location="681,80" size="64,31" id="gr.manousos.test">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test-Soyatec::Import->gr.manousos.model" source="//@children.1" target="//@children.8" targetEnd="//@children.1/@sourceConnections.0/@children.2" label="//@children.1/@sourceConnections.0/@children.0" sourceEnd="//@children.1/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="31,31" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" targetConnections="//@children.3/@sourceConnections.1 //@children.9/@sourceConnections.3" name="org.hibernate" location="141,392" size="106,31" id="org.hibernate"/>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.persistence" location="192,635" size="121,31" id="gr.manousos.persistence">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.persistence-Soyatec::Import->org.hibernate.cfg" source="//@children.3" target="//@children.0" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,31" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="29,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.persistence-Soyatec::Import->org.hibernate" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.1/@children.2" label="//@children.3/@sourceConnections.1/@children.0" sourceEnd="//@children.3/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="27,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,31"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.persistence-Soyatec::Import->org.apache.commons.logging" source="//@children.3" target="//@children.5" targetEnd="//@children.3/@sourceConnections.2/@children.2" label="//@children.3/@sourceConnections.2/@children.0" sourceEnd="//@children.3/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="23,31"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.service.jaxws" location="919,314" size="76,31" id="gr.manousos.service.jaxws">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws-Soyatec::Import->gr.manousos.model" source="//@children.4" target="//@children.8" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,20" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,10"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" targetConnections="//@children.10/@sourceConnections.0 //@children.9/@sourceConnections.1 //@children.6/@sourceConnections.0 //@children.11/@sourceConnections.0 //@children.3/@sourceConnections.2" name="org.apache.commons.logging" location="360,525" size="91,31" id="org.apache.commons.logging"/>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.service" location="540,450" size="87,31" id="gr.manousos.service">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service-Soyatec::Import->org.apache.commons.logging" source="//@children.6" target="//@children.5" targetEnd="//@children.6/@sourceConnections.0/@children.2" label="//@children.6/@sourceConnections.0/@children.0" sourceEnd="//@children.6/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="5,31" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service-Soyatec::Import->gr.manousos.model" source="//@children.6" target="//@children.8" targetEnd="//@children.6/@sourceConnections.1/@children.2" label="//@children.6/@sourceConnections.1/@children.0" sourceEnd="//@children.6/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="24,31"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" targetConnections="//@children.9/@sourceConnections.2" name="org.hibernate.criterion" location="281,50" size="96,31" id="org.hibernate.criterion"/>
+  <children xsi:type="editmodel:PackageEditModel" targetConnections="//@children.1/@sourceConnections.0 //@children.9/@sourceConnections.0 //@children.4/@sourceConnections.0 //@children.10/@sourceConnections.1 //@children.6/@sourceConnections.1 //@children.11/@sourceConnections.1" name="gr.manousos.model" location="672,324" size="81,31" id="gr.manousos.model"/>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.DAO.Hibernate" location="315,294" size="108,31" id="gr.manousos.DAO.Hibernate">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate-Soyatec::Import->gr.manousos.model" source="//@children.9" target="//@children.8" targetEnd="//@children.9/@sourceConnections.0/@children.2" label="//@children.9/@sourceConnections.0/@children.0" sourceEnd="//@children.9/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,30" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate-Soyatec::Import->org.apache.commons.logging" source="//@children.9" target="//@children.5" targetEnd="//@children.9/@sourceConnections.1/@children.2" label="//@children.9/@sourceConnections.1/@children.0" sourceEnd="//@children.9/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,31" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="31,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate-Soyatec::Import->org.hibernate.criterion" source="//@children.9" target="//@children.7" targetEnd="//@children.9/@sourceConnections.2/@children.2" label="//@children.9/@sourceConnections.2/@children.0" sourceEnd="//@children.9/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="30,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="64,31"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate-Soyatec::Import->org.hibernate*gr.manousos.DAO.Hibernate-Soyatec::Access->org.hibernate" source="//@children.9" target="//@children.2" targetEnd="//@children.9/@sourceConnections.3/@children.2" label="//@children.9/@sourceConnections.3/@children.0" sourceEnd="//@children.9/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Access, Import»" size="99,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="25,31" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="80,0"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.service.rest" location="512,365" size="64,31" id="gr.manousos.service.rest">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest-Soyatec::Import->org.apache.commons.logging" source="//@children.10" target="//@children.5" targetEnd="//@children.10/@sourceConnections.0/@children.2" label="//@children.10/@sourceConnections.0/@children.0" sourceEnd="//@children.10/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="18,31" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest-Soyatec::Import->gr.manousos.model" source="//@children.10" target="//@children.8" targetEnd="//@children.10/@sourceConnections.1/@children.2" label="//@children.10/@sourceConnections.1/@children.0" sourceEnd="//@children.10/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="64,7" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,25"/>
+    </sourceConnections>
+  </children>
+  <children xsi:type="editmodel:PackageEditModel" name="gr.manousos.DAO" location="699,544" size="67,31" id="gr.manousos.DAO">
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO-Soyatec::Import->org.apache.commons.logging" source="//@children.11" target="//@children.5" targetEnd="//@children.11/@sourceConnections.0/@children.2" label="//@children.11/@sourceConnections.0/@children.0" sourceEnd="//@children.11/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,5" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="91,24"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO-Soyatec::Import->gr.manousos.model" source="//@children.11" target="//@children.8" targetEnd="//@children.11/@sourceConnections.1/@children.2" label="//@children.11/@sourceConnections.1/@children.0" sourceEnd="//@children.11/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="26,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,31"/>
+    </sourceConnections>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" properties="libraryFilter=glassfish-api.jar,bean-validator.jar,javax.annotation.jar,jaxb-api-osgi.jar,webservices-api-osgi.jar,glassfish-api-l10n.jar,glassfish-api.jar,grizzly-comet.jar,grizzly-websockets.jar,ha-api.jar,javax.ejb.jar,javax.el-api.jar,javax.el.jar,javax.enterprise.deploy.jar,javax.faces.jar,javax.jms.jar,javax.mail.jar,javax.management.j2ee.jar,javax.persistence.jar,javax.resource.jar,javax.security.auth.message.jar,javax.security.jacc.jar,javax.servlet-api.jar,javax.servlet.jsp-api.jar,javax.servlet.jsp.jar,javax.servlet.jsp.jstl-api.jar,javax.servlet.jsp.jstl.jar,javax.transaction.jar,jersey-client.jar,jersey-core.jar,jersey-gf-server.jar,jersey-gf-servlet.jar,jersey-gf-statsproviders.jar,jersey-grizzly.jar,jersey-json.jar,jersey-moxy.jar,jersey-multipart.jar,weld-osgi-bundle.jar,org.eclipse.persistence.antlr.jar,org.eclipse.persistence.asm.jar,org.eclipse.persistence.core.jar,org.eclipse.persistence.jpa.jar,org.eclipse.persistence.jpa.modelgen.jar,org.eclipse.persistence.moxy.jar,org.eclipse.persistence.oracle.jar,jaxb-osgi.jar,webservices-connector.jar,webservices-extra-jdk-packages.jar,webservices-osgi.jar,webservices.security.jar,jaxm-api.jar,resources.jar,rt.jar,jsse.jar,jce.jar,charsets.jar,rhino.jar,pulse-java.jar,sunjce_provider.jar,localedata.jar,dnsns.jar,java-atk-wrapper.jar,sunpkcs11.jar,TaxisModel.jar,antlr-2.7.6.jar,asm-3.1.jar,c3p0-0.9.1.jar,commons-collections-3.1.jar,commons-discovery-0.2.jar,commons-logging-1.1.1.jar,dom4j-1.6.1.jar,hibernate3.jar,jackson-core-asl-1.9.2.jar,javassist-3.9.0.GA.jar,jersey-bundle-1.17.jar,jta-1.1.jar,log4j-1.2.17.jar,mysql-connector-java-5.1.22-bin.jar,slf4j-api-1.5.8.jar,slf4j-jdk14-1.5.8.jar,;ModelFrozen=true;compute_weights=true;ComputedContent=true;displayOptions=1;open=gr.manousos.test,org.hibernate,gr.manousos.model,org.hibernate.criterion,org.apache.commons.logging,gr.manousos.service.jaxws,gr.manousos.service,gr.manousos.DAO.Hibernate,gr.manousos.service.rest,gr.manousos.persistence,gr.manousos.DAO,org.hibernate.cfg;Product=eDepend;circulatrity=true;link=gr.manousos.test-Soyatec::Import->gr.manousos.model,gr.manousos.DAO.Hibernate-Soyatec::Import->gr.manousos.model,gr.manousos.persistence-Soyatec::Import->org.hibernate.cfg,gr.manousos.service.rest-Soyatec::Import->org.apache.commons.logging,gr.manousos.service.jaxws-Soyatec::Import->gr.manousos.model,gr.manousos.service.rest-Soyatec::Import->gr.manousos.model,gr.manousos.DAO.Hibernate-Soyatec::Import->org.apache.commons.logging,gr.manousos.persistence-Soyatec::Import->org.hibernate,gr.manousos.service-Soyatec::Import->org.apache.commons.logging,gr.manousos.DAO-Soyatec::Import->org.apache.commons.logging,gr.manousos.DAO.Hibernate-Soyatec::Import->org.hibernate.criterion,gr.manousos.persistence-Soyatec::Import->org.apache.commons.logging,gr.manousos.service-Soyatec::Import->gr.manousos.model,gr.manousos.DAO-Soyatec::Import->gr.manousos.model,gr.manousos.DAO.Hibernate-Soyatec::Import->org.hibernate,gr.manousos.DAO.Hibernate-Soyatec::Access->org.hibernate;dependencyFilter=Standard::Derive,Soyatec::Implement,Standard::Instantiate,Standard::Create,Standard::Call,Standard::Send,Soyatec::Access,Soyatec::Import,;shadowedElements=org.hibernate,gr.manousos.model,org.hibernate.criterion,org.apache.commons.logging,org.hibernate.cfg;wireOptions=4"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" shortPackageNameFormat="true" showDependencyStereotype="true" showEnumerationStereotype="false" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+</editmodel:ClassDiagramEditModel>

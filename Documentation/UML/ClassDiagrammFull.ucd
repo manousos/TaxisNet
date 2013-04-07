@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="Dependencies2" size="6618,6758" id="." metadata="uml2-1.0" initialized="true" scrolledX="2547" scrolledY="6140" tag="10" key="32303037303533312D31302054617869734E6574">
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.15" name="E1dataFromTaxPayerFolder" location="775,1076" size="242,43" id="gr.manousos.model/E1dataFromTaxPayerFolder">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.50/@sourceConnections.1 //@children.45/@sourceConnections.5 //@children.26/@sourceConnections.2 //@children.62/@sourceConnections.2 //@children.28/@sourceConnections.7" name="List" location="2192,3547" size="104,43" id="java.util/List">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="FinalSubmitE2Response" location="4764,955" size="219,43" id="gr.manousos.service.jaxws/FinalSubmitE2Response">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/FinalSubmitE2Response-Soyatec::Import->gr.manousos.model/E2" source="//@children.2" target="//@children.39" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="UserSrv" location="3170,4342" size="170,43" id="gr.manousos.service.rest/UserSrv">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/UserSrv-Soyatec::Import->gr.manousos.model/User" source="//@children.3" target="//@children.53" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="59,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="93,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/UserSrv-Soyatec::Import->java.lang/Exception" source="//@children.3" target="//@children.31" targetEnd="//@children.3/@sourceConnections.1/@children.2" label="//@children.3/@sourceConnections.1/@children.0" sourceEnd="//@children.3/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="97,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="44,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/UserSrv-Soyatec::Import->java.lang/String" source="//@children.3" target="//@children.64" targetEnd="//@children.3/@sourceConnections.2/@children.2" label="//@children.3/@sourceConnections.2/@children.0" sourceEnd="//@children.3/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="72,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="57,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/UserSrv-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.3" target="//@children.48" targetEnd="//@children.3/@sourceConnections.3/@children.2" label="//@children.3/@sourceConnections.3/@children.0" sourceEnd="//@children.3/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="79,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="74,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/UserSrv-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.3" target="//@children.41" targetEnd="//@children.3/@sourceConnections.4/@children.2" label="//@children.3/@sourceConnections.4/@children.0" sourceEnd="//@children.3/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="107,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="UserSrvImpl" location="3402,4238" size="143,43" id="gr.manousos.service/UserSrvImpl">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/UserSrvImpl-Soyatec::Import->java.lang/Exception" source="//@children.4" target="//@children.31" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="50,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/UserSrvImpl-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.4" target="//@children.48" targetEnd="//@children.4/@sourceConnections.1/@children.2" label="//@children.4/@sourceConnections.1/@children.0" sourceEnd="//@children.4/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/UserSrvImpl-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.4" target="//@children.41" targetEnd="//@children.4/@sourceConnections.2/@children.2" label="//@children.4/@sourceConnections.2/@children.0" sourceEnd="//@children.4/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="89,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/UserSrvImpl-Soyatec::Import->java.lang/String" source="//@children.4" target="//@children.64" targetEnd="//@children.4/@sourceConnections.3/@children.2" label="//@children.4/@sourceConnections.3/@children.0" sourceEnd="//@children.4/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.28/@sourceConnections.2" name="Example" location="417,4918" size="294,201" id="org.hibernate.criterion/Example">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="271,128">
+      <children xsi:type="editmodel:ClassEditModel" name="AllPropertySelector" size="184,30" id="org.hibernate.criterion/Example$AllPropertySelector" runTimeClassModel="">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+      </children>
+      <children xsi:type="editmodel:ClassEditModel" name="NotNullOrZeroPropertySelector" size="271,30" id="org.hibernate.criterion/Example$NotNullOrZeroPropertySelector" runTimeClassModel="">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+      </children>
+      <children xsi:type="editmodel:ClassEditModel" name="NotNullPropertySelector" size="220,30" id="org.hibernate.criterion/Example$NotNullPropertySelector" runTimeClassModel="">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+      </children>
+      <children xsi:type="editmodel:InterfaceEditModel" name="PropertySelector" size="166,30" id="org.hibernate.criterion/Example$PropertySelector" runTimeClassModel="">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="UserDAO" location="1306,3654" size="126,43" id="gr.manousos.DAO/UserDAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/UserDAO-Soyatec::Import->gr.manousos.model/User" source="//@children.6" target="//@children.53" targetEnd="//@children.6/@sourceConnections.0/@children.2" label="//@children.6/@sourceConnections.0/@children.0" sourceEnd="//@children.6/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="54,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/UserDAO-Soyatec::Import->java.lang/Boolean" source="//@children.6" target="//@children.57" targetEnd="//@children.6/@sourceConnections.1/@children.2" label="//@children.6/@sourceConnections.1/@children.0" sourceEnd="//@children.6/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="59,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/UserDAO-Soyatec::Import->java.lang/String" source="//@children.6" target="//@children.64" targetEnd="//@children.6/@sourceConnections.2/@children.2" label="//@children.6/@sourceConnections.2/@children.0" sourceEnd="//@children.6/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="112,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,40"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DocumentSrv" location="3227,2637" size="170,43" id="gr.manousos.service.rest/DocumentSrv">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/DocumentSrv-Soyatec::Import->gr.manousos.model/E2" source="//@children.7" target="//@children.39" targetEnd="//@children.7/@sourceConnections.0/@children.2" label="//@children.7/@sourceConnections.0/@children.0" sourceEnd="//@children.7/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="91,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="62,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/DocumentSrv-Soyatec::Import->java.lang/Exception" source="//@children.7" target="//@children.31" targetEnd="//@children.7/@sourceConnections.1/@children.2" label="//@children.7/@sourceConnections.1/@children.0" sourceEnd="//@children.7/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="93,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/DocumentSrv-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.7" target="//@children.41" targetEnd="//@children.7/@sourceConnections.2/@children.2" label="//@children.7/@sourceConnections.2/@children.0" sourceEnd="//@children.7/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="101,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/DocumentSrv-Soyatec::Import->java.lang/String" source="//@children.7" target="//@children.64" targetEnd="//@children.7/@sourceConnections.3/@children.2" label="//@children.7/@sourceConnections.3/@children.0" sourceEnd="//@children.7/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="75,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.rest/DocumentSrv-Soyatec::Import->gr.manousos.model/E1" source="//@children.7" target="//@children.61" targetEnd="//@children.7/@sourceConnections.4/@children.2" label="//@children.7/@sourceConnections.4/@children.0" sourceEnd="//@children.7/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="17,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="137,42"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.28/@sourceConnections.0" name="Session" location="88,3936" size="160,105" id="org.hibernate/Session">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,32">
+      <children xsi:type="editmodel:InterfaceEditModel" name="LockRequest" size="137,30" id="org.hibernate/Session$LockRequest" runTimeClassModel="">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TestResponse" location="3873,3182" size="179,43" id="gr.manousos.service.jaxws/TestResponse">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/TestResponse-Soyatec::Import->java.lang/String" source="//@children.9" target="//@children.64" targetEnd="//@children.9/@sourceConnections.0/@children.2" label="//@children.9/@sourceConnections.0/@children.0" sourceEnd="//@children.9/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,13" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,29"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.0" name="E1taxableIncomes" location="2588,451" size="176,43" id="gr.manousos.model/E1taxableIncomes">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.26/@sourceConnections.0 //@children.50/@sourceConnections.0 //@children.28/@sourceConnections.1 //@children.45/@sourceConnections.6 //@children.62/@sourceConnections.0" name="Serializable" location="2445,3608" size="127,43" id="java.io/Serializable">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="HibernateDAOFactory" location="4515,4315" size="201,43" id="gr.manousos.DAO.Hibernate/HibernateDAOFactory">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/HibernateDAOFactory-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.12" target="//@children.41" targetEnd="//@children.12/@sourceConnections.0/@children.2" label="//@children.12/@sourceConnections.0/@children.0" sourceEnd="//@children.12/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="115,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/HibernateDAOFactory-Soyatec::Import->java.lang/Class" source="//@children.12" target="//@children.63" targetEnd="//@children.12/@sourceConnections.1/@children.2" label="//@children.12/@sourceConnections.1/@children.0" sourceEnd="//@children.12/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="64,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="160,3"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/HibernateDAOFactory-Soyatec::Import->java.lang/Exception" source="//@children.12" target="//@children.31" targetEnd="//@children.12/@sourceConnections.2/@children.2" label="//@children.12/@sourceConnections.2/@children.0" sourceEnd="//@children.12/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="72,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.21/@sourceConnections.3" name="SessionFactory" location="6446,3978" size="152,43" id="org.hibernate/SessionFactory">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.50/@sourceConnections.10 //@children.15/@sourceConnections.21" name="E2coOwner" location="2577,1811" size="137,43" id="gr.manousos.model/E2coOwner">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TestConsole" location="2040,1553" size="129,43" id="gr.manousos.test/TestConsole">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1taxableIncomes" source="//@children.15" target="//@children.10" targetEnd="//@children.15/@sourceConnections.0/@children.2" label="//@children.15/@sourceConnections.0/@children.0" sourceEnd="//@children.15/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="75,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->java.util/Set" source="//@children.15" target="//@children.66" targetEnd="//@children.15/@sourceConnections.1/@children.2" label="//@children.15/@sourceConnections.1/@children.0" sourceEnd="//@children.15/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="124,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,39"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1prepaidTaxes" source="//@children.15" target="//@children.37" targetEnd="//@children.15/@sourceConnections.2/@children.2" label="//@children.15/@sourceConnections.2/@children.0" sourceEnd="//@children.15/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,38" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="158,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/Contact" source="//@children.15" target="//@children.47" targetEnd="//@children.15/@sourceConnections.3/@children.2" label="//@children.15/@sourceConnections.3/@children.0" sourceEnd="//@children.15/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="92,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="36,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1infoData" source="//@children.15" target="//@children.16" targetEnd="//@children.15/@sourceConnections.4/@children.2" label="//@children.15/@sourceConnections.4/@children.0" sourceEnd="//@children.15/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2estate" source="//@children.15" target="//@children.19" targetEnd="//@children.15/@sourceConnections.5/@children.2" label="//@children.15/@sourceConnections.5/@children.0" sourceEnd="//@children.15/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="129,28" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,14"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1objectiveSpending" source="//@children.15" target="//@children.36" targetEnd="//@children.15/@sourceConnections.6/@children.2" label="//@children.15/@sourceConnections.6/@children.0" sourceEnd="//@children.15/@sourceConnections.6/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="124,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2Id" source="//@children.15" target="//@children.20" targetEnd="//@children.15/@sourceConnections.7/@children.2" label="//@children.15/@sourceConnections.7/@children.0" sourceEnd="//@children.15/@sourceConnections.7/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="129,1" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,42"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1nauticalincomes" source="//@children.15" target="//@children.54" targetEnd="//@children.15/@sourceConnections.8/@children.2" label="//@children.15/@sourceConnections.8/@children.0" sourceEnd="//@children.15/@sourceConnections.8/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="45,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/RelatePerson" source="//@children.15" target="//@children.25" targetEnd="//@children.15/@sourceConnections.9/@children.2" label="//@children.15/@sourceConnections.9/@children.0" sourceEnd="//@children.15/@sourceConnections.9/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,17" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="140,25"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2" source="//@children.15" target="//@children.39" targetEnd="//@children.15/@sourceConnections.10/@children.2" label="//@children.15/@sourceConnections.10/@children.0" sourceEnd="//@children.15/@sourceConnections.10/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="129,15" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,27"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1" source="//@children.15" target="//@children.61" targetEnd="//@children.15/@sourceConnections.11/@children.2" label="//@children.15/@sourceConnections.11/@children.0" sourceEnd="//@children.15/@sourceConnections.11/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="54,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1expensesRemovedFromTotalIncome" source="//@children.15" target="//@children.67" targetEnd="//@children.15/@sourceConnections.12/@children.2" label="//@children.15/@sourceConnections.12/@children.0" sourceEnd="//@children.15/@sourceConnections.12/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,42" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="323,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1Id" source="//@children.15" target="//@children.40" targetEnd="//@children.15/@sourceConnections.13/@children.2" label="//@children.15/@sourceConnections.13/@children.0" sourceEnd="//@children.15/@sourceConnections.13/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="43,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="88,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2otherEstate" source="//@children.15" target="//@children.68" targetEnd="//@children.15/@sourceConnections.14/@children.2" label="//@children.15/@sourceConnections.14/@children.0" sourceEnd="//@children.15/@sourceConnections.14/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="129,34" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,7"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1dataFromTaxPayerFolder" source="//@children.15" target="//@children.0" targetEnd="//@children.15/@sourceConnections.15/@children.2" label="//@children.15/@sourceConnections.15/@children.0" sourceEnd="//@children.15/@sourceConnections.15/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="11,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="177,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->java.lang/String" source="//@children.15" target="//@children.64" targetEnd="//@children.15/@sourceConnections.16/@children.2" label="//@children.15/@sourceConnections.16/@children.0" sourceEnd="//@children.15/@sourceConnections.16/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="69,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="38,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1taxPayerBankAccount" source="//@children.15" target="//@children.60" targetEnd="//@children.15/@sourceConnections.17/@children.2" label="//@children.15/@sourceConnections.17/@children.0" sourceEnd="//@children.15/@sourceConnections.17/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="69,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1personDataBorneTaxpayer" source="//@children.15" target="//@children.59" targetEnd="//@children.15/@sourceConnections.18/@children.2" label="//@children.15/@sourceConnections.18/@children.0" sourceEnd="//@children.15/@sourceConnections.18/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="22,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="171,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1reduceTax" source="//@children.15" target="//@children.35" targetEnd="//@children.15/@sourceConnections.19/@children.2" label="//@children.15/@sourceConnections.19/@children.0" sourceEnd="//@children.15/@sourceConnections.19/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="72,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1incomesReduceTaxes" source="//@children.15" target="//@children.23" targetEnd="//@children.15/@sourceConnections.20/@children.2" label="//@children.15/@sourceConnections.20/@children.0" sourceEnd="//@children.15/@sourceConnections.20/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="121,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2coOwner" source="//@children.15" target="//@children.14" targetEnd="//@children.15/@sourceConnections.21/@children.2" label="//@children.15/@sourceConnections.21/@children.0" sourceEnd="//@children.15/@sourceConnections.21/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="24,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.4" name="E1infoData" location="1404,476" size="137,43" id="gr.manousos.model/E1infoData">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.45/@sourceConnections.8" name="Query" location="4146,5085" size="100,43" id="org.hibernate/Query">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.52/@sourceConnections.2 //@children.28/@sourceConnections.5" name="LockMode" location="1348,5170" size="117,43" id="org.hibernate/LockMode">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.5 //@children.50/@sourceConnections.6" name="E2estate" location="3135,1567" size="137,43" id="gr.manousos.model/E2estate">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.46/@sourceConnections.0 //@children.15/@sourceConnections.7 //@children.50/@sourceConnections.9" name="E2Id" location="3225,1181" size="137,43" id="gr.manousos.model/E2Id">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="HibernateUtil" location="5333,3737" size="169,43" id="gr.manousos.persistence/HibernateUtil">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.persistence/HibernateUtil-Soyatec::Import->org.hibernate.cfg/Configuration" source="//@children.21" target="//@children.58" targetEnd="//@children.21/@sourceConnections.0/@children.2" label="//@children.21/@sourceConnections.0/@children.0" sourceEnd="//@children.21/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="104,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.persistence/HibernateUtil-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.21" target="//@children.41" targetEnd="//@children.21/@sourceConnections.1/@children.2" label="//@children.21/@sourceConnections.1/@children.0" sourceEnd="//@children.21/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,13" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="192,30"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.persistence/HibernateUtil-Soyatec::Import->java.lang/Throwable" source="//@children.21" target="//@children.56" targetEnd="//@children.21/@sourceConnections.2/@children.2" label="//@children.21/@sourceConnections.2/@children.0" sourceEnd="//@children.21/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="130,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.persistence/HibernateUtil-Soyatec::Import->org.hibernate/SessionFactory" source="//@children.21" target="//@children.13" targetEnd="//@children.21/@sourceConnections.3/@children.2" label="//@children.21/@sourceConnections.3/@children.0" sourceEnd="//@children.21/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="169,40" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,4"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="GetE2DocByIdResponse" location="3776,50" size="218,43" id="gr.manousos.service.jaxws/GetE2DocByIdResponse">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/GetE2DocByIdResponse-Soyatec::Import->gr.manousos.model/E2" source="//@children.22" target="//@children.39" targetEnd="//@children.22/@sourceConnections.0/@children.2" label="//@children.22/@sourceConnections.0/@children.0" sourceEnd="//@children.22/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.20" name="E1incomesReduceTaxes" location="1572,817" size="216,43" id="gr.manousos.model/E1incomesReduceTaxes">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="GetTaxPayerByIdResponse" location="3224,6665" size="237,43" id="gr.manousos.service.jaxws/GetTaxPayerByIdResponse">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/GetTaxPayerByIdResponse-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.24" target="//@children.48" targetEnd="//@children.24/@sourceConnections.0/@children.2" label="//@children.24/@sourceConnections.0/@children.0" sourceEnd="//@children.24/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.9" name="RelatePerson" location="616,1472" size="140,43" id="gr.manousos.model/RelatePerson">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="E1Hibernate" location="2743,2915" size="185,43" id="gr.manousos.DAO.Hibernate/E1Hibernate">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->java.io/Serializable" source="//@children.26" target="//@children.11" targetEnd="//@children.26/@sourceConnections.0/@children.2" label="//@children.26/@sourceConnections.0/@children.0" sourceEnd="//@children.26/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->java.lang/Exception" source="//@children.26" target="//@children.31" targetEnd="//@children.26/@sourceConnections.1/@children.2" label="//@children.26/@sourceConnections.1/@children.0" sourceEnd="//@children.26/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="119,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="31,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->java.util/List" source="//@children.26" target="//@children.1" targetEnd="//@children.26/@sourceConnections.2/@children.2" label="//@children.26/@sourceConnections.2/@children.0" sourceEnd="//@children.26/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="72,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->gr.manousos.model/E1" source="//@children.26" target="//@children.61" targetEnd="//@children.26/@sourceConnections.3/@children.2" label="//@children.26/@sourceConnections.3/@children.0" sourceEnd="//@children.26/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="98,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->gr.manousos.model/E1Id" source="//@children.26" target="//@children.40" targetEnd="//@children.26/@sourceConnections.4/@children.2" label="//@children.26/@sourceConnections.4/@children.0" sourceEnd="//@children.26/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="48,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="114,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.26" target="//@children.41" targetEnd="//@children.26/@sourceConnections.5/@children.2" label="//@children.26/@sourceConnections.5/@children.0" sourceEnd="//@children.26/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="129,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->java.lang/String" source="//@children.26" target="//@children.64" targetEnd="//@children.26/@sourceConnections.6/@children.2" label="//@children.26/@sourceConnections.6/@children.0" sourceEnd="//@children.26/@sourceConnections.6/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="RegisterTaxPayer" location="3838,6453" size="179,43" id="gr.manousos.service.jaxws/RegisterTaxPayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/RegisterTaxPayer-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.27" target="//@children.48" targetEnd="//@children.27/@sourceConnections.0/@children.2" label="//@children.27/@sourceConnections.0/@children.0" sourceEnd="//@children.27/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="66,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="92,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="GenericDAOImpl" location="1481,4101" size="215,43" id="gr.manousos.DAO.Hibernate/GenericDAOImpl">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->org.hibernate/Session" source="//@children.28" target="//@children.8" targetEnd="//@children.28/@sourceConnections.0/@children.2" label="//@children.28/@sourceConnections.0/@children.0" sourceEnd="//@children.28/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,11" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="160,60"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->java.io/Serializable" source="//@children.28" target="//@children.11" targetEnd="//@children.28/@sourceConnections.1/@children.2" label="//@children.28/@sourceConnections.1/@children.0" sourceEnd="//@children.28/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="146,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="22,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->org.hibernate.criterion/Example" source="//@children.28" target="//@children.5" targetEnd="//@children.28/@sourceConnections.2/@children.2" label="//@children.28/@sourceConnections.2/@children.0" sourceEnd="//@children.28/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="261,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->java.lang/Class" source="//@children.28" target="//@children.63" targetEnd="//@children.28/@sourceConnections.3/@children.2" label="//@children.28/@sourceConnections.3/@children.0" sourceEnd="//@children.28/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="139,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="5,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->org.hibernate/Criteria" source="//@children.28" target="//@children.32" targetEnd="//@children.28/@sourceConnections.4/@children.2" label="//@children.28/@sourceConnections.4/@children.0" sourceEnd="//@children.28/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="114,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="43,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Access->org.hibernate/LockMode" source="//@children.28" target="//@children.18" targetEnd="//@children.28/@sourceConnections.5/@children.2" label="//@children.28/@sourceConnections.5/@children.0" sourceEnd="//@children.28/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Access»" size="54,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="103,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="62,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->org.hibernate.criterion/Criterion" source="//@children.28" target="//@children.51" targetEnd="//@children.28/@sourceConnections.6/@children.2" label="//@children.28/@sourceConnections.6/@children.0" sourceEnd="//@children.28/@sourceConnections.6/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="10,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="151,4"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->java.util/List" source="//@children.28" target="//@children.1" targetEnd="//@children.28/@sourceConnections.7/@children.2" label="//@children.28/@sourceConnections.7/@children.0" sourceEnd="//@children.28/@sourceConnections.7/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="132,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="26,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->java.lang/String" source="//@children.28" target="//@children.64" targetEnd="//@children.28/@sourceConnections.8/@children.2" label="//@children.28/@sourceConnections.8/@children.0" sourceEnd="//@children.28/@sourceConnections.8/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="128,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="22,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="FinalSubmitE2" location="4510,567" size="179,43" id="gr.manousos.service.jaxws/FinalSubmitE2">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/FinalSubmitE2-Soyatec::Import->gr.manousos.model/E2" source="//@children.29" target="//@children.39" targetEnd="//@children.29/@sourceConnections.0/@children.2" label="//@children.29/@sourceConnections.0/@children.0" sourceEnd="//@children.29/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="91,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.50/@sourceConnections.3" name="Transaction" location="4830,2204" size="126,43" id="org.hibernate/Transaction">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.49/@sourceConnections.0 //@children.26/@sourceConnections.1 //@children.4/@sourceConnections.0 //@children.3/@sourceConnections.1 //@children.7/@sourceConnections.1 //@children.12/@sourceConnections.2 //@children.52/@sourceConnections.3 //@children.50/@sourceConnections.7 //@children.33/@sourceConnections.1 //@children.45/@sourceConnections.9" name="Exception" location="3620,3603" size="114,43" id="java.lang/Exception">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.45/@sourceConnections.3 //@children.28/@sourceConnections.4 //@children.52/@sourceConnections.6" name="Criteria" location="1866,5160" size="100,43" id="org.hibernate/Criteria">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DAOFactory" location="4352,4581" size="128,43" id="gr.manousos.DAO/DAOFactory">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/DAOFactory-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.33" target="//@children.41" targetEnd="//@children.33/@sourceConnections.0/@children.2" label="//@children.33/@sourceConnections.0/@children.0" sourceEnd="//@children.33/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="55,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="105,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/DAOFactory-Soyatec::Import->java.lang/Exception" source="//@children.33" target="//@children.31" targetEnd="//@children.33/@sourceConnections.1/@children.2" label="//@children.33/@sourceConnections.1/@children.0" sourceEnd="//@children.33/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="48,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="74,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/DAOFactory-Soyatec::Import->java.lang/Class" source="//@children.33" target="//@children.63" targetEnd="//@children.33/@sourceConnections.2/@children.2" label="//@children.33/@sourceConnections.2/@children.0" sourceEnd="//@children.33/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="19,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="160,13"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="RegisterResponse" location="1942,6544" size="179,43" id="gr.manousos.service.jaxws/RegisterResponse">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/RegisterResponse-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.34" target="//@children.48" targetEnd="//@children.34/@sourceConnections.0/@children.2" label="//@children.34/@sourceConnections.0/@children.0" sourceEnd="//@children.34/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="107,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.19" name="E1reduceTax" location="1807,334" size="137,43" id="gr.manousos.model/E1reduceTax">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.6" name="E1objectiveSpending" location="1055,734" size="197,43" id="gr.manousos.model/E1objectiveSpending">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.2" name="E1prepaidTaxes" location="702,1909" size="158,43" id="gr.manousos.model/E1prepaidTaxes">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Register" location="2560,6695" size="179,43" id="gr.manousos.service.jaxws/Register">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/Register-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.38" target="//@children.48" targetEnd="//@children.38/@sourceConnections.0/@children.2" label="//@children.38/@sourceConnections.0/@children.0" sourceEnd="//@children.38/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="94,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.49/@sourceConnections.1 //@children.46/@sourceConnections.1 //@children.7/@sourceConnections.0 //@children.43/@sourceConnections.0 //@children.29/@sourceConnections.0 //@children.50/@sourceConnections.8 //@children.15/@sourceConnections.10 //@children.22/@sourceConnections.0 //@children.2/@sourceConnections.0" name="E2" location="3598,1415" size="137,43" id="gr.manousos.model/E2">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.44/@sourceConnections.0 //@children.26/@sourceConnections.4 //@children.15/@sourceConnections.13" name="E1Id" location="1376,2244" size="137,43" id="gr.manousos.model/E1Id">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.12/@sourceConnections.0 //@children.52/@sourceConnections.0 //@children.7/@sourceConnections.2 //@children.21/@sourceConnections.1 //@children.33/@sourceConnections.0 //@children.3/@sourceConnections.4 //@children.49/@sourceConnections.3 //@children.4/@sourceConnections.2 //@children.45/@sourceConnections.10 //@children.50/@sourceConnections.11 //@children.26/@sourceConnections.5" name="Log" location="3919,3611" size="192,43" id="org.apache.commons.logging/Log">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.45/@sourceConnections.1" name="Iterator" location="3742,5347" size="133,43" id="java.util/Iterator">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="DocumentSrv" location="3737,2336" size="143,43" id="gr.manousos.service/DocumentSrv">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/DocumentSrv-Soyatec::Import->gr.manousos.model/E2" source="//@children.43" target="//@children.39" targetEnd="//@children.43/@sourceConnections.0/@children.2" label="//@children.43/@sourceConnections.0/@children.0" sourceEnd="//@children.43/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="68,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/DocumentSrv-Soyatec::Import->java.lang/String" source="//@children.43" target="//@children.64" targetEnd="//@children.43/@sourceConnections.1/@children.2" label="//@children.43/@sourceConnections.1/@children.0" sourceEnd="//@children.43/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="36,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="E1DAO" location="50,2178" size="126,43" id="gr.manousos.DAO/E1DAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/E1DAO-Soyatec::Import->gr.manousos.model/E1Id" source="//@children.44" target="//@children.40" targetEnd="//@children.44/@sourceConnections.0/@children.2" label="//@children.44/@sourceConnections.0/@children.0" sourceEnd="//@children.44/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="126,24" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,18"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/E1DAO-Soyatec::Import->gr.manousos.model/E1" source="//@children.44" target="//@children.61" targetEnd="//@children.44/@sourceConnections.1/@children.2" label="//@children.44/@sourceConnections.1/@children.0" sourceEnd="//@children.44/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="126,17" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,24"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="TaxpayerHibernate" location="2943,4288" size="185,43" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.45" target="//@children.48" targetEnd="//@children.45/@sourceConnections.0/@children.2" label="//@children.45/@sourceConnections.0/@children.0" sourceEnd="//@children.45/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="17,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="118,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.util/Iterator" source="//@children.45" target="//@children.42" targetEnd="//@children.45/@sourceConnections.1/@children.2" label="//@children.45/@sourceConnections.1/@children.0" sourceEnd="//@children.45/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="108,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="51,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.lang/String" source="//@children.45" target="//@children.64" targetEnd="//@children.45/@sourceConnections.2/@children.2" label="//@children.45/@sourceConnections.2/@children.0" sourceEnd="//@children.45/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->org.hibernate/Criteria" source="//@children.45" target="//@children.32" targetEnd="//@children.45/@sourceConnections.3/@children.2" label="//@children.45/@sourceConnections.3/@children.0" sourceEnd="//@children.45/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="64,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->gr.manousos.model/User" source="//@children.45" target="//@children.53" targetEnd="//@children.45/@sourceConnections.4/@children.2" label="//@children.45/@sourceConnections.4/@children.0" sourceEnd="//@children.45/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.util/List" source="//@children.45" target="//@children.1" targetEnd="//@children.45/@sourceConnections.5/@children.2" label="//@children.45/@sourceConnections.5/@children.0" sourceEnd="//@children.45/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="70,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="75,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.io/Serializable" source="//@children.45" target="//@children.11" targetEnd="//@children.45/@sourceConnections.6/@children.2" label="//@children.45/@sourceConnections.6/@children.0" sourceEnd="//@children.45/@sourceConnections.6/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="80,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->gr.manousos.model/Contact" source="//@children.45" target="//@children.47" targetEnd="//@children.45/@sourceConnections.7/@children.2" label="//@children.45/@sourceConnections.7/@children.0" sourceEnd="//@children.45/@sourceConnections.7/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="80,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="80,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->org.hibernate/Query" source="//@children.45" target="//@children.17" targetEnd="//@children.45/@sourceConnections.8/@children.2" label="//@children.45/@sourceConnections.8/@children.0" sourceEnd="//@children.45/@sourceConnections.8/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="124,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="19,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.lang/Exception" source="//@children.45" target="//@children.31" targetEnd="//@children.45/@sourceConnections.9/@children.2" label="//@children.45/@sourceConnections.9/@children.0" sourceEnd="//@children.45/@sourceConnections.9/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="112,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="36,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.45" target="//@children.41" targetEnd="//@children.45/@sourceConnections.10/@children.2" label="//@children.45/@sourceConnections.10/@children.0" sourceEnd="//@children.45/@sourceConnections.10/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="122,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="64,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="E2DAO" location="4058,373" size="126,43" id="gr.manousos.DAO/E2DAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/E2DAO-Soyatec::Import->gr.manousos.model/E2Id" source="//@children.46" target="//@children.20" targetEnd="//@children.46/@sourceConnections.0/@children.2" label="//@children.46/@sourceConnections.0/@children.0" sourceEnd="//@children.46/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="40,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="90,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/E2DAO-Soyatec::Import->gr.manousos.model/E2" source="//@children.46" target="//@children.39" targetEnd="//@children.46/@sourceConnections.1/@children.2" label="//@children.46/@sourceConnections.1/@children.0" sourceEnd="//@children.46/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.3 //@children.45/@sourceConnections.7" name="Contact" location="2096,2742" size="137,43" id="gr.manousos.model/Contact">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.45/@sourceConnections.0 //@children.38/@sourceConnections.0 //@children.65/@sourceConnections.0 //@children.3/@sourceConnections.3 //@children.4/@sourceConnections.1 //@children.24/@sourceConnections.0 //@children.69/@sourceConnections.0 //@children.34/@sourceConnections.0 //@children.27/@sourceConnections.0" name="Taxpayer" location="2842,5513" size="137,43" id="gr.manousos.model/Taxpayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="DocumentSrvImpl" location="3970,2695" size="172,43" id="gr.manousos.service/DocumentSrvImpl">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/DocumentSrvImpl-Soyatec::Import->java.lang/Exception" source="//@children.49" target="//@children.31" targetEnd="//@children.49/@sourceConnections.0/@children.2" label="//@children.49/@sourceConnections.0/@children.0" sourceEnd="//@children.49/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="66,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/DocumentSrvImpl-Soyatec::Import->gr.manousos.model/E2" source="//@children.49" target="//@children.39" targetEnd="//@children.49/@sourceConnections.1/@children.2" label="//@children.49/@sourceConnections.1/@children.0" sourceEnd="//@children.49/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="80,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="75,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/DocumentSrvImpl-Soyatec::Import->java.lang/String" source="//@children.49" target="//@children.64" targetEnd="//@children.49/@sourceConnections.2/@children.2" label="//@children.49/@sourceConnections.2/@children.0" sourceEnd="//@children.49/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="13,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,8"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/DocumentSrvImpl-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.49" target="//@children.41" targetEnd="//@children.49/@sourceConnections.3/@children.2" label="//@children.49/@sourceConnections.3/@children.0" sourceEnd="//@children.49/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="70,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="121,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="E2Hibernate" location="3387,2483" size="185,43" id="gr.manousos.DAO.Hibernate/E2Hibernate">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.io/Serializable" source="//@children.50" target="//@children.11" targetEnd="//@children.50/@sourceConnections.0/@children.2" label="//@children.50/@sourceConnections.0/@children.0" sourceEnd="//@children.50/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.util/List" source="//@children.50" target="//@children.1" targetEnd="//@children.50/@sourceConnections.1/@children.2" label="//@children.50/@sourceConnections.1/@children.0" sourceEnd="//@children.50/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="66,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2otherEstate" source="//@children.50" target="//@children.68" targetEnd="//@children.50/@sourceConnections.2/@children.2" label="//@children.50/@sourceConnections.2/@children.0" sourceEnd="//@children.50/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="77,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="88,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->org.hibernate/Transaction" source="//@children.50" target="//@children.30" targetEnd="//@children.50/@sourceConnections.3/@children.2" label="//@children.50/@sourceConnections.3/@children.0" sourceEnd="//@children.50/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="185,3" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,33"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.lang/String" source="//@children.50" target="//@children.64" targetEnd="//@children.50/@sourceConnections.4/@children.2" label="//@children.50/@sourceConnections.4/@children.0" sourceEnd="//@children.50/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="60,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.util/Set" source="//@children.50" target="//@children.66" targetEnd="//@children.50/@sourceConnections.5/@children.2" label="//@children.50/@sourceConnections.5/@children.0" sourceEnd="//@children.50/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="62,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2estate" source="//@children.50" target="//@children.19" targetEnd="//@children.50/@sourceConnections.6/@children.2" label="//@children.50/@sourceConnections.6/@children.0" sourceEnd="//@children.50/@sourceConnections.6/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="75,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.lang/Exception" source="//@children.50" target="//@children.31" targetEnd="//@children.50/@sourceConnections.7/@children.2" label="//@children.50/@sourceConnections.7/@children.0" sourceEnd="//@children.50/@sourceConnections.7/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="96,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="53,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2" source="//@children.50" target="//@children.39" targetEnd="//@children.50/@sourceConnections.8/@children.2" label="//@children.50/@sourceConnections.8/@children.0" sourceEnd="//@children.50/@sourceConnections.8/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="96,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="64,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2Id" source="//@children.50" target="//@children.20" targetEnd="//@children.50/@sourceConnections.9/@children.2" label="//@children.50/@sourceConnections.9/@children.0" sourceEnd="//@children.50/@sourceConnections.9/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="89,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2coOwner" source="//@children.50" target="//@children.14" targetEnd="//@children.50/@sourceConnections.10/@children.2" label="//@children.50/@sourceConnections.10/@children.0" sourceEnd="//@children.50/@sourceConnections.10/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="66,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="95,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.50" target="//@children.41" targetEnd="//@children.50/@sourceConnections.11/@children.2" label="//@children.50/@sourceConnections.11/@children.0" sourceEnd="//@children.50/@sourceConnections.11/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="102,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.28/@sourceConnections.6" name="Criterion" location="176,4404" size="151,43" id="org.hibernate.criterion/Criterion">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="UserHibernate" location="2470,4110" size="185,43" id="gr.manousos.DAO.Hibernate/UserHibernate">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->org.apache.commons.logging/Log" source="//@children.52" target="//@children.41" targetEnd="//@children.52/@sourceConnections.0/@children.2" label="//@children.52/@sourceConnections.0/@children.0" sourceEnd="//@children.52/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="153,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="32,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->gr.manousos.model/User" source="//@children.52" target="//@children.53" targetEnd="//@children.52/@sourceConnections.1/@children.2" label="//@children.52/@sourceConnections.1/@children.0" sourceEnd="//@children.52/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="87,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="72,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Access->org.hibernate/LockMode" source="//@children.52" target="//@children.18" targetEnd="//@children.52/@sourceConnections.2/@children.2" label="//@children.52/@sourceConnections.2/@children.0" sourceEnd="//@children.52/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Access»" size="54,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="68,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->java.lang/Exception" source="//@children.52" target="//@children.31" targetEnd="//@children.52/@sourceConnections.3/@children.2" label="//@children.52/@sourceConnections.3/@children.0" sourceEnd="//@children.52/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="138,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="9,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->java.lang/String" source="//@children.52" target="//@children.64" targetEnd="//@children.52/@sourceConnections.4/@children.2" label="//@children.52/@sourceConnections.4/@children.0" sourceEnd="//@children.52/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="36,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="48,43"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->java.lang/Boolean" source="//@children.52" target="//@children.57" targetEnd="//@children.52/@sourceConnections.5/@children.2" label="//@children.52/@sourceConnections.5/@children.0" sourceEnd="//@children.52/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="20,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="101,5"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->org.hibernate/Criteria" source="//@children.52" target="//@children.32" targetEnd="//@children.52/@sourceConnections.6/@children.2" label="//@children.52/@sourceConnections.6/@children.0" sourceEnd="//@children.52/@sourceConnections.6/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.6/@sourceConnections.0 //@children.52/@sourceConnections.1 //@children.3/@sourceConnections.0 //@children.45/@sourceConnections.4" name="User" location="2289,5093" size="137,43" id="gr.manousos.model/User">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.8" name="E1nauticalincomes" location="2077,612" size="179,43" id="gr.manousos.model/E1nauticalincomes">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Test" location="3230,3300" size="179,43" id="gr.manousos.service.jaxws/Test">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service.jaxws/Test-Soyatec::Import->java.lang/String" source="//@children.55" target="//@children.64" targetEnd="//@children.55/@sourceConnections.0/@children.2" label="//@children.55/@sourceConnections.0/@children.0" sourceEnd="//@children.55/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,6" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="86,28"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.21/@sourceConnections.2" name="Throwable" location="6453,3241" size="118,43" id="java.lang/Throwable">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.6/@sourceConnections.1 //@children.52/@sourceConnections.5" name="Boolean" location="896,4606" size="101,43" id="java.lang/Boolean">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.21/@sourceConnections.0" name="Configuration" location="6195,4687" size="268,105" id="org.hibernate.cfg/Configuration">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="245,32">
+      <children xsi:type="editmodel:ClassEditModel" name="ObjectNameNormalizerImpl" size="245,30" id="org.hibernate.cfg/Configuration$ObjectNameNormalizerImpl" runTimeClassModel="">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.18" name="E1personDataBorneTaxpayer" location="1173,1152" size="254,43" id="gr.manousos.model/E1personDataBorneTaxpayer">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.17" name="E1taxPayerBankAccount" location="2273,306" size="221,43" id="gr.manousos.model/E1taxPayerBankAccount">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.26/@sourceConnections.3 //@children.15/@sourceConnections.11 //@children.44/@sourceConnections.1 //@children.7/@sourceConnections.4" name="E1" location="1746,2171" size="137,43" id="gr.manousos.model/E1">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="GenericDAO" location="1349,3173" size="183,43" id="gr.manousos.DAO/GenericDAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/GenericDAO-Soyatec::Import->java.io/Serializable" source="//@children.62" target="//@children.11" targetEnd="//@children.62/@sourceConnections.0/@children.2" label="//@children.62/@sourceConnections.0/@children.0" sourceEnd="//@children.62/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="145,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="11,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/GenericDAO-Soyatec::Import->java.lang/String" source="//@children.62" target="//@children.64" targetEnd="//@children.62/@sourceConnections.1/@children.2" label="//@children.62/@sourceConnections.1/@children.0" sourceEnd="//@children.62/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="183,17" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,24"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/GenericDAO-Soyatec::Import->java.util/List" source="//@children.62" target="//@children.1" targetEnd="//@children.62/@sourceConnections.2/@children.2" label="//@children.62/@sourceConnections.2/@children.0" sourceEnd="//@children.62/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="138,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="7,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.12/@sourceConnections.1 //@children.28/@sourceConnections.3 //@children.33/@sourceConnections.2" name="Class" location="3081,5167" size="160,105" id="java.lang/Class">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="137,32">
+      <children xsi:type="editmodel:ClassEditModel" name="MethodArray" size="137,30" id="java.lang/Class$MethodArray" runTimeClassModel="">
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+        <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+      </children>
+    </children>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.45/@sourceConnections.2 //@children.49/@sourceConnections.2 //@children.6/@sourceConnections.2 //@children.3/@sourceConnections.2 //@children.50/@sourceConnections.4 //@children.52/@sourceConnections.4 //@children.62/@sourceConnections.1 //@children.65/@sourceConnections.1 //@children.69/@sourceConnections.1 //@children.9/@sourceConnections.0 //@children.55/@sourceConnections.0 //@children.7/@sourceConnections.3 //@children.4/@sourceConnections.3 //@children.43/@sourceConnections.1 //@children.15/@sourceConnections.16 //@children.28/@sourceConnections.8 //@children.26/@sourceConnections.6" name="String" location="2458,3166" size="86,43" id="java.lang/String">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="UserSrv" location="1915,4325" size="143,43" id="gr.manousos.service/UserSrv">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/UserSrv-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.65" target="//@children.48" targetEnd="//@children.65/@sourceConnections.0/@children.2" label="//@children.65/@sourceConnections.0/@children.0" sourceEnd="//@children.65/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="88,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="52,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.service/UserSrv-Soyatec::Import->java.lang/String" source="//@children.65" target="//@children.64" targetEnd="//@children.65/@sourceConnections.1/@children.2" label="//@children.65/@sourceConnections.1/@children.0" sourceEnd="//@children.65/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="80,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="33,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.15/@sourceConnections.1 //@children.50/@sourceConnections.5" name="Set" location="2843,1276" size="102,43" id="java.util/Set">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.15/@sourceConnections.12" name="E1expensesRemovedFromTotalIncome" location="932,1595" size="323,43" id="gr.manousos.model/E1expensesRemovedFromTotalIncome">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.50/@sourceConnections.2 //@children.15/@sourceConnections.14" name="E2otherEstate" location="2778,1580" size="146,43" id="gr.manousos.model/E2otherEstate">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" name="TaxpayerDAO" location="2217,4434" size="139,43" id="gr.manousos.DAO/TaxpayerDAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/TaxpayerDAO-Soyatec::Import->gr.manousos.model/Taxpayer" source="//@children.69" target="//@children.48" targetEnd="//@children.69/@sourceConnections.0/@children.2" label="//@children.69/@sourceConnections.0/@children.0" sourceEnd="//@children.69/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="82,43" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="56,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="gr.manousos.DAO/TaxpayerDAO-Soyatec::Import->java.lang/String" source="//@children.69" target="//@children.64" targetEnd="//@children.69/@sourceConnections.1/@children.2" label="//@children.69/@sourceConnections.1/@children.0" sourceEnd="//@children.69/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="51,13" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="73,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="39,43"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" interactive="false" level="-1" properties="libraryFilter=glassfish-api.jar,bean-validator.jar,javax.annotation.jar,jaxb-api-osgi.jar,webservices-api-osgi.jar,glassfish-api-l10n.jar,glassfish-api.jar,grizzly-comet.jar,grizzly-websockets.jar,ha-api.jar,javax.ejb.jar,javax.el-api.jar,javax.el.jar,javax.enterprise.deploy.jar,javax.faces.jar,javax.jms.jar,javax.mail.jar,javax.management.j2ee.jar,javax.persistence.jar,javax.resource.jar,javax.security.auth.message.jar,javax.security.jacc.jar,javax.servlet-api.jar,javax.servlet.jsp-api.jar,javax.servlet.jsp.jar,javax.servlet.jsp.jstl-api.jar,javax.servlet.jsp.jstl.jar,javax.transaction.jar,jersey-client.jar,jersey-core.jar,jersey-gf-server.jar,jersey-gf-servlet.jar,jersey-gf-statsproviders.jar,jersey-grizzly.jar,jersey-json.jar,jersey-moxy.jar,jersey-multipart.jar,weld-osgi-bundle.jar,org.eclipse.persistence.antlr.jar,org.eclipse.persistence.asm.jar,org.eclipse.persistence.core.jar,org.eclipse.persistence.jpa.jar,org.eclipse.persistence.jpa.modelgen.jar,org.eclipse.persistence.moxy.jar,org.eclipse.persistence.oracle.jar,jaxb-osgi.jar,webservices-connector.jar,webservices-extra-jdk-packages.jar,webservices-osgi.jar,webservices.security.jar,jaxm-api.jar,resources.jar,rt.jar,jsse.jar,jce.jar,charsets.jar,rhino.jar,pulse-java.jar,sunjce_provider.jar,localedata.jar,dnsns.jar,java-atk-wrapper.jar,sunpkcs11.jar,TaxisModel.jar,antlr-2.7.6.jar,asm-3.1.jar,c3p0-0.9.1.jar,commons-collections-3.1.jar,commons-discovery-0.2.jar,commons-logging-1.1.1.jar,dom4j-1.6.1.jar,hibernate3.jar,jackson-core-asl-1.9.2.jar,javassist-3.9.0.GA.jar,jersey-bundle-1.17.jar,jta-1.1.jar,log4j-1.2.17.jar,mysql-connector-java-5.1.22-bin.jar,slf4j-api-1.5.8.jar,slf4j-jdk14-1.5.8.jar,;ModelFrozen=true;ComputedContent=true;displayOptions=1;open=org.hibernate/Session,gr.manousos.test/TestConsole,gr.manousos.model/E2Id,gr.manousos.service/UserSrv,java.io/Serializable,java.util/Iterator,gr.manousos.model/E1prepaidTaxes,gr.manousos.model/E1taxPayerBankAccount,gr.manousos.service.jaxws/GetTaxPayerByIdResponse,gr.manousos.model/Contact,gr.manousos.DAO/DAOFactory,org.hibernate/Criteria,org.hibernate.criterion/Example,gr.manousos.DAO/UserDAO,java.util/Set,gr.manousos.model/E1incomesReduceTaxes,gr.manousos.model/E1,gr.manousos.service/DocumentSrv,gr.manousos.model/E2,gr.manousos.model/E2estate,org.hibernate/SessionFactory,gr.manousos.model/E1dataFromTaxPayerFolder,gr.manousos.model/E2otherEstate,gr.manousos.DAO.Hibernate/E2Hibernate,gr.manousos.DAO/TaxpayerDAO,gr.manousos.DAO.Hibernate/HibernateDAOFactory,gr.manousos.service.jaxws/RegisterResponse,gr.manousos.model/E1expensesRemovedFromTotalIncome,gr.manousos.DAO.Hibernate/E1Hibernate,gr.manousos.model/RelatePerson,gr.manousos.DAO/E2DAO,gr.manousos.service.jaxws/FinalSubmitE2,gr.manousos.DAO.Hibernate/UserHibernate,org.hibernate/LockMode,gr.manousos.service/DocumentSrvImpl,gr.manousos.model/E1reduceTax,gr.manousos.service.rest/UserSrv,org.hibernate.criterion/Criterion,gr.manousos.service.rest/DocumentSrv,gr.manousos.model/E2coOwner,gr.manousos.model/E1nauticalincomes,org.hibernate/Transaction,java.lang/Boolean,gr.manousos.DAO.Hibernate/TaxpayerHibernate,java.util/List,org.hibernate/Query,gr.manousos.model/E1infoData,gr.manousos.service.jaxws/GetE2DocByIdResponse,org.hibernate.cfg/Configuration,java.lang/String,gr.manousos.service.jaxws/FinalSubmitE2Response,gr.manousos.DAO/E1DAO,gr.manousos.model/E1personDataBorneTaxpayer,gr.manousos.model/E1Id,gr.manousos.service/UserSrvImpl,java.lang/Exception,gr.manousos.DAO/GenericDAO,gr.manousos.service.jaxws/Register,gr.manousos.model/User,gr.manousos.model/E1objectiveSpending,gr.manousos.service.jaxws/RegisterTaxPayer,java.lang/Class,org.apache.commons.logging/Log,gr.manousos.service.jaxws/TestResponse,gr.manousos.model/Taxpayer,gr.manousos.service.jaxws/Test,gr.manousos.DAO.Hibernate/GenericDAOImpl,java.lang/Throwable,gr.manousos.model/E1taxableIncomes,gr.manousos.persistence/HibernateUtil;Product=eDepend;link=gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->java.io/Serializable,gr.manousos.service/DocumentSrvImpl-Soyatec::Import->java.lang/Exception,gr.manousos.service/DocumentSrvImpl-Soyatec::Import->gr.manousos.model/E2,gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->java.lang/Exception,gr.manousos.DAO.Hibernate/HibernateDAOFactory-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.io/Serializable,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.util/List,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2otherEstate,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->org.hibernate/Transaction,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->org.hibernate/Session,gr.manousos.DAO/UserDAO-Soyatec::Import->gr.manousos.model/User,gr.manousos.service/UserSrvImpl-Soyatec::Import->java.lang/Exception,gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.DAO/E2DAO-Soyatec::Import->gr.manousos.model/E2Id,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.util/Iterator,gr.manousos.service.jaxws/Register-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->java.io/Serializable,gr.manousos.DAO.Hibernate/HibernateDAOFactory-Soyatec::Import->java.lang/Class,gr.manousos.DAO/UserDAO-Soyatec::Import->java.lang/Boolean,gr.manousos.DAO/E2DAO-Soyatec::Import->gr.manousos.model/E2,gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->gr.manousos.model/User,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.lang/String,gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Access->org.hibernate/LockMode,gr.manousos.service.rest/DocumentSrv-Soyatec::Import->gr.manousos.model/E2,gr.manousos.service.rest/UserSrv-Soyatec::Import->gr.manousos.model/User,gr.manousos.service/DocumentSrvImpl-Soyatec::Import->java.lang/String,gr.manousos.persistence/HibernateUtil-Soyatec::Import->org.hibernate.cfg/Configuration,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->org.hibernate/Criteria,gr.manousos.service.rest/UserSrv-Soyatec::Import->java.lang/Exception,gr.manousos.service.rest/DocumentSrv-Soyatec::Import->java.lang/Exception,gr.manousos.service.rest/DocumentSrv-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1taxableIncomes,gr.manousos.service/UserSrv-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->gr.manousos.model/User,gr.manousos.DAO/UserDAO-Soyatec::Import->java.lang/String,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->org.hibernate.criterion/Example,gr.manousos.test/TestConsole-Soyatec::Import->java.util/Set,gr.manousos.service.rest/UserSrv-Soyatec::Import->java.lang/String,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1prepaidTaxes,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/Contact,gr.manousos.service.rest/UserSrv-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.util/List,gr.manousos.DAO.Hibernate/HibernateDAOFactory-Soyatec::Import->java.lang/Exception,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.lang/String,gr.manousos.persistence/HibernateUtil-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->java.lang/Exception,gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->java.util/List,gr.manousos.service/UserSrvImpl-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->java.lang/String,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.io/Serializable,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.util/Set,gr.manousos.DAO/GenericDAO-Soyatec::Import->java.io/Serializable,gr.manousos.DAO/DAOFactory-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.DAO/GenericDAO-Soyatec::Import->java.lang/String,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->java.lang/Class,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1infoData,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2estate,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->org.hibernate/Criteria,gr.manousos.service/DocumentSrv-Soyatec::Import->gr.manousos.model/E2,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->gr.manousos.model/Contact,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1objectiveSpending,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2Id,gr.manousos.service/UserSrv-Soyatec::Import->java.lang/String,gr.manousos.service.jaxws/GetTaxPayerByIdResponse-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.DAO/TaxpayerDAO-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1nauticalincomes,gr.manousos.DAO/TaxpayerDAO-Soyatec::Import->java.lang/String,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2estate,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/RelatePerson,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->java.lang/Exception,gr.manousos.DAO/GenericDAO-Soyatec::Import->java.util/List,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Access->org.hibernate/LockMode,gr.manousos.service.jaxws/FinalSubmitE2-Soyatec::Import->gr.manousos.model/E2,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2,gr.manousos.service.rest/UserSrv-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.DAO/E1DAO-Soyatec::Import->gr.manousos.model/E1Id,gr.manousos.DAO/DAOFactory-Soyatec::Import->java.lang/Exception,gr.manousos.service.jaxws/GetE2DocByIdResponse-Soyatec::Import->gr.manousos.model/E2,gr.manousos.service.jaxws/TestResponse-Soyatec::Import->java.lang/String,gr.manousos.service/DocumentSrvImpl-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.service.jaxws/Test-Soyatec::Import->java.lang/String,gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->gr.manousos.model/E1,gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->gr.manousos.model/E1Id,gr.manousos.service/UserSrvImpl-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.service.rest/DocumentSrv-Soyatec::Import->java.lang/String,gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->java.lang/Boolean,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2Id,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1,gr.manousos.service/UserSrvImpl-Soyatec::Import->java.lang/String,gr.manousos.service/DocumentSrv-Soyatec::Import->java.lang/String,gr.manousos.service.jaxws/FinalSubmitE2Response-Soyatec::Import->gr.manousos.model/E2,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->org.hibernate.criterion/Criterion,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->java.util/List,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->gr.manousos.model/E2coOwner,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->org.hibernate/Query,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1expensesRemovedFromTotalIncome,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1Id,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->java.lang/Exception,gr.manousos.DAO.Hibernate/TaxpayerHibernate-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2otherEstate,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1dataFromTaxPayerFolder,gr.manousos.DAO.Hibernate/E2Hibernate-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.test/TestConsole-Soyatec::Import->java.lang/String,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1taxPayerBankAccount,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1personDataBorneTaxpayer,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1reduceTax,gr.manousos.service.jaxws/RegisterResponse-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E1incomesReduceTaxes,gr.manousos.service.jaxws/RegisterTaxPayer-Soyatec::Import->gr.manousos.model/Taxpayer,gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->org.apache.commons.logging/Log,gr.manousos.DAO/E1DAO-Soyatec::Import->gr.manousos.model/E1,gr.manousos.DAO/DAOFactory-Soyatec::Import->java.lang/Class,gr.manousos.DAO.Hibernate/GenericDAOImpl-Soyatec::Import->java.lang/String,gr.manousos.service.rest/DocumentSrv-Soyatec::Import->gr.manousos.model/E1,gr.manousos.DAO.Hibernate/E1Hibernate-Soyatec::Import->java.lang/String,gr.manousos.DAO.Hibernate/UserHibernate-Soyatec::Import->org.hibernate/Criteria,gr.manousos.persistence/HibernateUtil-Soyatec::Import->java.lang/Throwable,gr.manousos.persistence/HibernateUtil-Soyatec::Import->org.hibernate/SessionFactory,gr.manousos.test/TestConsole-Soyatec::Import->gr.manousos.model/E2coOwner;dependencyFilter=Standard::Derive,Soyatec::Implement,Standard::Instantiate,Standard::Create,Standard::Call,Standard::Send,Soyatec::Access,Soyatec::Import,;shadowedElements=gr.manousos.model/E1nauticalincomes,org.hibernate/Transaction,java.lang/Boolean,org.hibernate/Session,java.util/List,org.hibernate/Query,gr.manousos.model/E2Id,gr.manousos.model/E1infoData,org.hibernate.cfg/Configuration,java.util/Iterator,java.io/Serializable,gr.manousos.model/E1prepaidTaxes,java.lang/String,gr.manousos.model/E1taxPayerBankAccount,gr.manousos.model/Contact,gr.manousos.model/E1personDataBorneTaxpayer,gr.manousos.model/E1Id,org.hibernate/Criteria,org.hibernate.criterion/Example,java.util/Set,gr.manousos.model/E1incomesReduceTaxes,gr.manousos.model/E1,gr.manousos.model/E2,gr.manousos.model/E2estate,org.hibernate/SessionFactory,java.lang/Exception,gr.manousos.model/E1dataFromTaxPayerFolder,gr.manousos.model/E2otherEstate,gr.manousos.model/User,gr.manousos.model/E1objectiveSpending,org.apache.commons.logging/Log,java.lang/Class,gr.manousos.model/E1expensesRemovedFromTotalIncome,gr.manousos.model/RelatePerson,gr.manousos.model/Taxpayer,java.lang/Throwable,gr.manousos.model/E1taxableIncomes,org.hibernate/LockMode,gr.manousos.model/E1reduceTax,org.hibernate.criterion/Criterion,gr.manousos.model/E2coOwner;wireOptions=4"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" shortPackageNameFormat="true" showDependencyStereotype="true" showEnumerationStereotype="false" innerClassSorter="Natural" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3"/>
+</editmodel:ClassDiagramEditModel>
