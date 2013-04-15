@@ -1,5 +1,5 @@
 package gr.manousos.model;
-// Generated 20 Μαρ 2013 11:40:46 μμ by Hibernate Tools 3.4.0.CR1
+// Generated Apr 16, 2013 12:57:37 AM by Hibernate Tools 3.4.0.CR1
 
 
 import java.util.HashSet;
@@ -39,7 +39,7 @@ public class E1incomesReduceTaxes  implements java.io.Serializable {
      private Float 793;
      private Float 794;
      private Float 615;
-     private String 616;
+     private Float 616;
      private String lassorNameForStudent;
      private String 417;
      private Float areaStudentHouse;
@@ -58,7 +58,7 @@ public class E1incomesReduceTaxes  implements java.io.Serializable {
     public E1incomesReduceTaxes() {
     }
 
-    public E1incomesReduceTaxes(Float 655, Float 656, Float 693, Float 694, Float 659, Float 660, Float 657, Float 658, Float 661, Float 662, Float 431, Float 432, Float 433, Float 434, Float 305, Float 306, Float 477, Float 478, String lessorName1, String 790, Float 795, String lassorName2, String 791, Float 796, Float 793, Float 794, Float 615, String 616, String lassorNameForStudent, String 417, Float areaStudentHouse, Float 419, Float 420, Float 735, Float 736, Float 781, Float 782, Float 783, Float 784, Float 787, Float 788, Set<E1> e1s) {
+    public E1incomesReduceTaxes(Float 655, Float 656, Float 693, Float 694, Float 659, Float 660, Float 657, Float 658, Float 661, Float 662, Float 431, Float 432, Float 433, Float 434, Float 305, Float 306, Float 477, Float 478, String lessorName1, String 790, Float 795, String lassorName2, String 791, Float 796, Float 793, Float 794, Float 615, Float 616, String lassorNameForStudent, String 417, Float areaStudentHouse, Float 419, Float 420, Float 735, Float 736, Float 781, Float 782, Float 783, Float 784, Float 787, Float 788, Set<E1> e1s) {
        this.655 = 655;
        this.656 = 656;
        this.693 = 693;
@@ -299,11 +299,11 @@ public class E1incomesReduceTaxes  implements java.io.Serializable {
     public void set615(Float 615) {
         this.615 = 615;
     }
-    public String get616() {
+    public Float get616() {
         return this.616;
     }
     
-    public void set616(String 616) {
+    public void set616(Float 616) {
         this.616 = 616;
     }
     public String getLassorNameForStudent() {

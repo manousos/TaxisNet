@@ -8,7 +8,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import org.hibernate.Criteria;
-import org.hibernate.LockMode;
 import org.hibernate.Query;
 import static org.hibernate.criterion.Restrictions.eq;
 
@@ -98,7 +97,7 @@ public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 	List<?> result = query.list();
 	Iterator<?> it = result.iterator();
 	while (it.hasNext()) {
-	    Taxpayer user = (Taxpayer) it.next();
+	    //Taxpayer user = (Taxpayer) it.next();
 	    // s = String
 	    // .format("USER ID : %s , ADDRESS  : %s , DATE OF BIRTH  : %s  , CONTACT NO  :  %s",
 	    // user.getID(), user.getAddress(), user.getDOB()

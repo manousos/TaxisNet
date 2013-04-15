@@ -1,22 +1,14 @@
 package gr.manousos.DAO.Hibernate;
 
+import gr.manousos.DAO.E1DAO;
+import gr.manousos.model.E1;
+import gr.manousos.model.E1Id;
+
 import java.io.Serializable;
 import java.util.List;
-import java.util.Set;
-
-import javax.transaction.Transaction;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.hibernate.NonUniqueObjectException;
-
-import gr.manousos.DAO.E1DAO;
-import gr.manousos.model.Contact;
-import gr.manousos.model.E1;
-import gr.manousos.model.E1Id;
-import gr.manousos.model.E1relatePersons;
-import gr.manousos.model.E1relatePersonsId;
-import gr.manousos.model.RelatePerson;
 
 public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 	E1DAO {
@@ -45,23 +37,10 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
     public E1 makePersistent(E1 entity) {
 	try {
 	    getSession().beginTransaction();
-	    /*
-	     * Set<RelatePerson> tmpRelPers = entity.getRelatePersons();
-	     * getSession().beginTransaction(); for (RelatePerson rp :
-	     * tmpRelPers) { getSession().save(rp.getContact());
-	     * rp.setContact(null); getSession().save(rp); }
-	     * getSession().getTransaction().commit();
-	     * getSession().beginTransaction(); entity.setRelatePersons(null);
-	     * getSession().save(entity);
-	     * getSession().getTransaction().commit();
-	     */
+
 	    super.makePersistent(entity);
 	    getSession().getTransaction().commit();
-	    /*
-	     * super.makePersistent(entity); if (saveRelatePerson(tmpRelPers,
-	     * entity)) getSession().getTransaction().commit(); else
-	     * getSession().getTransaction().rollback();
-	     */
+	 
 	} catch (Exception e) {
 	    getSession().getTransaction().rollback();
 	    log.error("E1 makePersistent error. " + e.getMessage(), e);
