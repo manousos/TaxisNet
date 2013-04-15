@@ -21,4 +21,192 @@ public class CalculateTaxSrv {
 
 	return 0;
     }
+
+    // Life taxes
+    private float lifeObjTax(boolean marriage, boolean retired65YearOld) {
+
+	if (marriage && retired65YearOld)
+	    return 5000 - 5000 * 0.3f;
+	if (marriage)
+	    return 5000f;
+	if (retired65YearOld)
+	    return 3000 - 3000 * 0.3f;
+
+	return 3000f;
+    }
+
+    // End Life taxes
+
+    // House taxes
+    private float applyHouseZonePrice(float zonePrice, float houseObjTax) {
+	if (zonePrice > 5000)
+	    return houseObjTax * 0.7f;
+	if (zonePrice > 2800 && houseObjTax < 4900)
+	    return houseObjTax * 0.4f;
+
+	return houseObjTax;
+    }
+
+    private float zeroFloorAdditionalTax(float houseObjTax, boolean hasZeroFloor) {
+	if (hasZeroFloor)
+	    return houseObjTax * 0.2f;
+
+	return houseObjTax;
+    }
+
+    private float calckPrimaryHouseObj(float area, float zonePrice,
+	    boolean zeroFloor, float ownPercent) {
+
+	if (area < 80)
+	    return zeroFloorAdditionalTax(
+		    applyHouseZonePrice(zonePrice, area * 40), zeroFloor)
+		    * ownPercent;
+	if (area < 120)
+	    return zeroFloorAdditionalTax(
+		    applyHouseZonePrice(zonePrice, 3200 + (area - 80) * 65),
+		    zeroFloor) * ownPercent;
+	if (area < 200)
+	    return zeroFloorAdditionalTax(
+		    applyHouseZonePrice(zonePrice, 7800 + (area * 110)),
+		    zeroFloor) * ownPercent;
+	if (area < 300)
+	    return zeroFloorAdditionalTax(
+		    applyHouseZonePrice(zonePrice, 2200 + (area * 200)),
+		    zeroFloor) * ownPercent;
+	if (area > 300)
+	    return zeroFloorAdditionalTax(
+		    applyHouseZonePrice(zonePrice, 60000 + (area * 400)),
+		    zeroFloor) * ownPercent;
+
+	return 0;
+    }
+
+    private float calckOtherHouseObj(float area, float zonePrice,
+	    boolean zeroFloor, float ownPercent) {
+	return calckPrimaryHouseObj(area, zonePrice, zeroFloor, ownPercent) / 2;
+    }
+
+    private float calckHelpAreaObj(float area, float zonePrice,
+	    boolean zeroFloor) {
+	return zeroFloorAdditionalTax(
+		applyHouseZonePrice(zonePrice, 40 * area), zeroFloor);
+    }
+
+    private float calckOtherHelpAreaObj(float area, float zonePrice,
+	    boolean zeroFloor) {
+	return zeroFloorAdditionalTax(
+		applyHouseZonePrice(zonePrice, 40 * area), zeroFloor) / 2;
+    }
+
+    // End House taxes
+
+    // Car taxes
+    private float carOldestReduceTax(float tax, int years) {
+	if (years > 5 && years < 10)
+	    return tax - tax * 0.3f;
+	if (years > 10)
+	    return tax - tax * 0.5f;
+
+	return tax;
+    }
+
+    private float clakCarObj(int years, float engineVolume, float ownPercent) {
+	if (engineVolume < 1200)
+	    return carOldestReduceTax(4000, years) * ownPercent;
+	if (engineVolume < 2000)
+	    return carOldestReduceTax(4000 + 600 * (engineVolume - 1200), years)
+		    * ownPercent;
+	if (engineVolume < 3000)
+	    return carOldestReduceTax(4000 + 900 * (engineVolume - 2000), years)
+		    * ownPercent;
+	if (engineVolume > 3000)
+	    return carOldestReduceTax(4000 + 1200 * (engineVolume - 3000),
+		    years) * ownPercent;
+
+	return 0;
+    }
+
+    // End Car taxes
+
+    // Boats
+
+    enum BoatType {
+	MachineWithAccommodation, Machine, SailingOrGreekTraditional
+    }
+
+    private float calckBoatObj(int years, float meters, BoatType type,
+	    float totalCrewPayments, float ownPercent) {
+
+	switch (type) {
+	case Machine:
+	    if (meters < 5)
+		return totalCrewPayments + 4000f * ownPercent;
+	    else
+		return totalCrewPayments + 4000 + 2000 * (meters - 5)
+			* ownPercent;
+	case MachineWithAccommodation:
+	    return totalCrewPayments
+		    + bigBoatReduceByYear(bigBoatCalck(meters), years)
+		    * ownPercent;
+
+	case SailingOrGreekTraditional:
+	    return (totalCrewPayments + bigBoatReduceByYear(
+		    bigBoatCalck(meters), years)) / 2 * ownPercent;
+
+	}
+	return 0;
+    }
+
+    private float bigBoatReduceByYear(float tax, int years) {
+	if (years > 10)
+	    return tax - tax * 0.3f;
+	if (years > 5)
+	    return tax - tax * 0.15f;
+
+	return tax;
+    }
+
+    private float bigBoatCalck(float meters) {
+	if (meters < 7)
+	    return 12000f;
+	if (meters < 10)
+	    return 12000 + (meters - 7) * 3000;
+	if (meters < 12)
+	    return 21000 + (meters - 10) * 7500;
+	if (meters < 15)
+	    return 36000 + (meters - 12) * 15000;
+	if (meters < 18)
+	    return 81000 + (meters - 15) * 22500;
+	if (meters < 22)
+	    return 148500 + (meters - 18) * 30000;
+	if (meters > 22)
+	    return 268500 + (meters - 22) * 50000;
+
+	return 0;
+    }
+
+    // END BAOT TAX
+
+    // POOL TAX
+    private float calckPoolObj(boolean isInside, float area) {
+	if (isInside)
+	    return poolObjByAreaCalck(area) * 2;
+	else
+	    return poolObjByAreaCalck(area);
+    }
+
+    private float poolObjByAreaCalck(float area) {
+	if (area < 60)
+	    return area * 160;
+	else
+	    return 9600 + (area - 60) * 320;
+    }
+
+    // END POOL TAX
+
+    // Other taxes
+    private float privateSchool(float totalPayment) {
+	return totalPayment * 0.1f + totalPayment;
+    }
+    // End Other taxes
 }
