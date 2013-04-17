@@ -49,9 +49,20 @@ public class TestConsole {
 	// User u = dao.getUserDAO().getUserByUserName("manousos1");
 	// Taxpayer t = dao.getTaxpayerDAO().getTaxpayerByID(9);
 	// System.out.println("AFM : " + t == null ? "einai null" : t.getAfm());
-	testE1DAO(9, dao);
+	// testE1DAO(9, dao);
 	// testSaveE2(dao);
+	testE1Get(dao);
 
+    }
+
+    private static void testE1Get(DAOFactory dao) {
+	E1Id key = new E1Id(9, 2013);
+	E1 e1 = dao.getE1DAO().findById(key, false);
+
+	System.out.println("id="
+		+ e1.getE1objectiveSpending().getIdE1objectiveSpending());
+	E1objectiveSpending o = e1.getE1objectiveSpending();// dao.getE1DAO().getObjectiveSpendingById(id)
+	System.out.println("203=" + o);
     }
 
     private static void testE1DAO(int TaxPayerId, DAOFactory dao) {
@@ -115,7 +126,7 @@ public class TestConsole {
 	E1nauticalincomes nautical = new E1nauticalincomes();
 	nautical.set_201(201.01f);
 
-	E1 e1 = new E1();	
+	E1 e1 = new E1();
 	e1.setId(key);
 	e1.setIsComplete(0);
 	e1.setAtid("X900157");
@@ -134,7 +145,7 @@ public class TestConsole {
 	e1.setE1reduceTax(reduceTaxObj);
 	e1.setE1taxableIncomes(taxableIncomeObj);
 	e1.setE1taxPayerBankAccount(taxPayerBankAccountObj);
-	e1.setE1nauticalincomes(nautical);	
+	e1.setE1nauticalincomes(nautical);
 	e1.setRelatePersons(relatePersons); // Many to Many
 
 	// e1.getRelatePersons().add(delegate);

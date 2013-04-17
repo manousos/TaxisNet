@@ -3,7 +3,9 @@ package gr.manousos.service.rest;
 public class CalculateTaxSrv {
 
     public float tax(float totalIncome) {
-
+	//getE1
+	//getObj()
+	//getFinalIncome
 	if (totalIncome > 5000 && totalIncome < 12000)
 	    return (totalIncome - 5000) * 0.1f;
 	if (totalIncome > 12000 && totalIncome < 16000)
@@ -204,9 +206,41 @@ public class CalculateTaxSrv {
 
     // END POOL TAX
 
+    // Airplane TAX
+    enum AirplaneType {
+	Windplanes, Propeller, Jet
+    }
+
+    private float calckAirplaneObj(int power, AirplaneType type) {
+	switch (type) {
+	case Windplanes:
+	    return 8.000f;
+	case Propeller:
+	    if (power < 150)
+		return 65000f;
+	    else
+		return 65000 + (power - 150) * 500;
+	case Jet:
+	    return power * 200;
+	default:
+	    return 0;
+	}
+    }
+
+    // END Airplane TAX
+
     // Other taxes
-    private float privateSchool(float totalPayment) {
-	return totalPayment * 0.1f + totalPayment;
+    // private float privateSchool(float totalPayment) {
+    // return totalPayment * 0.1f + totalPayment;
+    // }
+
+    private float calckOtherObj(float housekeeping, float carLeasing,
+	    float boatLeasing, float pool, float estateLeasing,
+	    float mobGraterThan10Th, float charity, float loanDepreciation,
+	    float privateSchool) {
+	return housekeeping + carLeasing + boatLeasing + pool + estateLeasing
+		+ mobGraterThan10Th + charity + loanDepreciation
+		+ privateSchool + privateSchool * 0.1f;
     }
     // End Other taxes
 }
