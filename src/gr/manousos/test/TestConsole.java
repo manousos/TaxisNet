@@ -30,6 +30,7 @@ import gr.manousos.model.Taxpayer;
 import gr.manousos.model.E2Id;
 import gr.manousos.model.User;
 import gr.manousos.service.UserSrv;
+import gr.manousos.service.rest.CalculateTaxSrv;
 
 public class TestConsole {
 
@@ -57,12 +58,12 @@ public class TestConsole {
 
     private static void testE1Get(DAOFactory dao) {
 	E1Id key = new E1Id(9, 2013);
-	E1 e1 = dao.getE1DAO().findById(key, false);
 
-	System.out.println("id="
-		+ e1.getE1objectiveSpending().getIdE1objectiveSpending());
-	E1objectiveSpending o = e1.getE1objectiveSpending();// dao.getE1DAO().getObjectiveSpendingById(id)
-	System.out.println("203=" + o);
+	E1objectiveSpending o = dao.getE1DAO().getObjectiveSpendingByE1Id(key);// dao.getE1DAO().getObjectiveSpendingById(id)
+	System.out.println("203=" + o.get_203());
+	
+	CalculateTaxSrv t  =new CalculateTaxSrv();
+	t.tax(1);
     }
 
     private static void testE1DAO(int TaxPayerId, DAOFactory dao) {

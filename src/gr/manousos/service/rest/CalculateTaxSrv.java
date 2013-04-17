@@ -1,11 +1,56 @@
 package gr.manousos.service.rest;
 
+import gr.manousos.model.E1objectiveSpending;
+import gr.manousos.model.Taxpayer;
+
+import java.net.URI;
+import java.util.Properties;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
+import com.sun.jersey.api.client.config.ClientConfig;
+import com.sun.jersey.api.client.config.DefaultClientConfig;
+
+@Path("/TaxCalkService")
 public class CalculateTaxSrv {
 
+    Properties config = new Properties();
+    
+    @Path("/tax")
+    @GET
+    @Produces("application/json")
     public float tax(float totalIncome) {
-	//getE1
-	//getObj()
-	//getFinalIncome
+	// getE1
+	// getObj()
+	// getFinalIncome
+
+	E1objectiveSpending objSpend = null;
+
+	ClientConfig wsConfig = new DefaultClientConfig();
+	Client client = Client.create(wsConfig);
+
+	try {
+	    config.load(getClass().getClassLoader().getResourceAsStream(
+		    "config.properties"));
+
+	    WebResource restSrv = client.resource(new URI("http://localhost:"
+		    + wsConfig.getProperty("web_port") + "/TaxisNet/rest/"));
+	    objSpend = (E1objectiveSpending) restSrv
+		    .path("DocumentService/getObjectiveSpendingByE1Id")
+		    .queryParam("year", "2013").queryParam("tId", "9")
+		    .accept(MediaType.APPLICATION_JSON)
+		    .get(E1objectiveSpending.class);
+	} catch (Exception ex) {
+	    // this.error = ex.toString();
+	}
+	if (objSpend != null) {
+	}
+	
 	if (totalIncome > 5000 && totalIncome < 12000)
 	    return (totalIncome - 5000) * 0.1f;
 	if (totalIncome > 12000 && totalIncome < 16000)

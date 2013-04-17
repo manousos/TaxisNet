@@ -11,5 +11,5 @@ public interface E1DAO extends GenericDAO<E1, Serializable> {
 
     public E1 getE1ById(E1Id id);
 
-    public E1objectiveSpending getObjectiveSpendingById(int id);
+    public E1objectiveSpending getObjectiveSpendingByE1Id(E1Id id);
 }

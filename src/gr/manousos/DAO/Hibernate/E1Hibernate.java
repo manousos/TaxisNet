@@ -101,38 +101,25 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
     }
 
     @Override
-    public E1objectiveSpending getObjectiveSpendingById(int id) {
+    public E1objectiveSpending getObjectiveSpendingByE1Id(E1Id id) {
 	E1objectiveSpending objSpend = null;
 	try {
 	    getSession().beginTransaction();
-	    String q = "select E1.e1objectiveSpending from E1 where E1.year=:year and E1.taxpayerId:taxpID";
+	    String q = "select e1.e1objectiveSpending from E1 e1 where e1.id.year=:year and e1.id.taxpayerId=:taxpayerId";
 	    Query query = getSession().createQuery(q);
-	    query.setInteger("taxpID", 9);
-	    query.setLong("year", 2013);
-	    //int objID = (int) query.uniqueResult();
-	    Criteria criteria = getSession().createCriteria(E1.class, "E1")
-		    .createAlias("objSp", "objSpedings")
+	    query.setInteger("taxpayerId", id.getTaxpayerId());
+	    query.setInteger("year", id.getYear());
 
-		    .add(Restrictions.eq("E1.e1objectiveSpending", id))
-		    .add(Restrictions.eq("objSp.idE1objectiveSpending", id));
-	    objSpend = (E1objectiveSpending) criteria.uniqueResult();
+	    Object rec = query.uniqueResult();
+	    if (rec != null)
+		objSpend = (E1objectiveSpending) rec;
+
 	    getSession().getTransaction().commit();
 	} catch (Exception e) {
 	    getSession().getTransaction().rollback();
-	    log.error("E1 Hibernate Submit error ", e);
+	    log.error("E1 Hibernate getObjectiveSpendingByE1Id error ", e);
 	}
-
-	String hql = "select E1objectiveSpending.* from E1objectiveSpending inner join E1 as e1";
-	Query query = getSession().createQuery(hql);
-
+	
 	return objSpend;
-	//
-	// DetachedCriteria todaysBook = DetachedCriteria.forClass(Book.class)
-	// .setProjection( (Projection)
-	// Property.forName("publishDate").eq("current_timestamp") );
-	// List =manager.createCriteria(Publisher.class)
-	// .add( Property.forName("publisherCode").eq(todaysBook) )
-	// .list();
-
     }
 }
