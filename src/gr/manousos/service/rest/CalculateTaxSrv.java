@@ -45,21 +45,14 @@ public class CalculateTaxSrv {
 	E1objectiveSpending objSpend = dao.getE1DAO()
 		.getObjectiveSpendingByE1Id(key);
 
+	Boolean isMarriage = IntToBoolean(dao.getE1DAO().getE1ById(key)
+		.getMarriage());
+	Boolean is65YearOldRetired = IntToBoolean(dao.getE1DAO()
+		.getE1InfoDataByE1Id(key).get_013());
+
 	if (objSpend != null) {
 	    float total = 0f;
-	    total = getHousesObjValue(objSpend)
-		    + getCarObjValue(objSpend)
-		    + getBoatObjValue(objSpend)
-		    + calckAirplaneObj(objSpend.getAircraftPowerLibres(),
-			    getAirplaneType(objSpend.getAircraftType()))
-		    + getPoolObjValue(objSpend)
-		    + calckOtherObj(objSpend.get_707(), objSpend.get_719()
-			    + objSpend.get_720(),
-			    objSpend.get_721() + objSpend.get_722(),
-			    objSpend.get_723() + objSpend.get_724(),
-			    objSpend.get_725() + objSpend.get_726(),
-			    objSpend.get_727() + objSpend.get_728(),
-			    objSpend.get_769());
+
 	}
 
 	if (totalIncome > 5000 && totalIncome < 12000)
@@ -78,6 +71,36 @@ public class CalculateTaxSrv {
 	    return 32420 + (totalIncome - 100000) * 0.45f;
 
 	return 0;
+    }
+
+    private float getTotalIncome() {
+	return 0f;
+    }
+
+    private float getTotalAnnualStrictCost(E1Id key) {
+	E1objectiveSpending objSpend = dao.getE1DAO()
+		.getObjectiveSpendingByE1Id(key);
+
+	Boolean isMarriage = IntToBoolean(dao.getE1DAO().getE1ById(key)
+		.getMarriage());
+
+	return getHousesObjValue(objSpend)
+		+ getCarObjValue(objSpend)
+		+ getBoatObjValue(objSpend)
+		+ calckAirplaneObj(objSpend.getAircraftPowerLibres(),
+			getAirplaneType(objSpend.getAircraftType()))
+		+ getPoolObjValue(objSpend)
+		+ calckOtherObj(objSpend.get_707(), objSpend.get_719()
+			+ objSpend.get_720(),
+			objSpend.get_721() + objSpend.get_722(),
+			objSpend.get_723() + objSpend.get_724(),
+			objSpend.get_725() + objSpend.get_726(),
+			objSpend.get_727() + objSpend.get_728(),
+			objSpend.get_769())
+		+ lifeObjTax(isMarriage, IntToBoolean(dao.getE1DAO()
+			.getE1InfoDataByE1Id(key).get_013()))
+		+ lifeObjTax(isMarriage, IntToBoolean(dao.getE1DAO()
+			.getE1InfoDataByE1Id(key).get_014()));
     }
 
     private float getPoolObjValue(E1objectiveSpending objSpend) {

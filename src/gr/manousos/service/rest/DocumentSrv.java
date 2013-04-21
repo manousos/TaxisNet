@@ -15,6 +15,7 @@ import org.apache.commons.logging.LogFactory;
 import gr.manousos.DAO.DAOFactory;
 import gr.manousos.model.E1;
 import gr.manousos.model.E1Id;
+import gr.manousos.model.E1expensesRemovedFromTotalIncome;
 import gr.manousos.model.E1infoData;
 import gr.manousos.model.E1objectiveSpending;
 import gr.manousos.model.E2;
@@ -91,6 +92,19 @@ public class DocumentSrv {
 	    @QueryParam("year") int year) {
 	E1infoData o = null;
 	o = dao.getE1DAO().getE1InfoDataByE1Id(new E1Id(taxpayerId, year));
+	o.setE1s(null);
+
+	return o;
+    }
+
+    @Path("/getE1ExpensesRemovedByE1Id")
+    @GET
+    @Produces("application/json")
+    public E1expensesRemovedFromTotalIncome getExpensesRemovedFromTotalIncomeByE1Id(
+	    @QueryParam("tId") int taxpayerId, @QueryParam("year") int year) {
+	E1expensesRemovedFromTotalIncome o = null;
+	o = dao.getE1DAO().getE1expensesRemovedFromTotalIncomeByE1Id(
+		new E1Id(taxpayerId, year));
 	o.setE1s(null);
 
 	return o;

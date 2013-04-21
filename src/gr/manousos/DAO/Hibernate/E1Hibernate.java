@@ -3,6 +3,7 @@ package gr.manousos.DAO.Hibernate;
 import gr.manousos.DAO.E1DAO;
 import gr.manousos.model.E1;
 import gr.manousos.model.E1Id;
+import gr.manousos.model.E1expensesRemovedFromTotalIncome;
 import gr.manousos.model.E1infoData;
 import gr.manousos.model.E1objectiveSpending;
 
@@ -144,6 +145,31 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 	    log.error("E1 Hibernate getE1InfoDataByE1Id error ", e);
 	}
 	return infoData;
+    }
+
+    @Override
+    public E1expensesRemovedFromTotalIncome getE1expensesRemovedFromTotalIncomeByE1Id(
+	    E1Id id) {
+	E1expensesRemovedFromTotalIncome expensesRemovedFromTotalIncome = null;
+	try {
+	    getSession().beginTransaction();
+	    String q = "select e1.e1expensesRemovedFromTotalIncome from E1 e1 where e1.id.year=:year and e1.id.taxpayerId=:taxpayerId";
+	    Query query = getSession().createQuery(q);
+	    query.setInteger("taxpayerId", id.getTaxpayerId());
+	    query.setInteger("year", id.getYear());
+
+	    Object rec = query.uniqueResult();
+	    if (rec != null)
+		expensesRemovedFromTotalIncome = (E1expensesRemovedFromTotalIncome) rec;
+
+	    getSession().getTransaction().commit();
+	} catch (Exception e) {
+	    getSession().getTransaction().rollback();
+	    log.error(
+		    "E1 Hibernate getE1expensesRemovedFromTotalIncomeByE1Id error ",
+		    e);
+	}
+	return expensesRemovedFromTotalIncome;
     }
 
 }
