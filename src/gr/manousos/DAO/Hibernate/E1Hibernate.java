@@ -6,6 +6,8 @@ import gr.manousos.model.E1Id;
 import gr.manousos.model.E1expensesRemovedFromTotalIncome;
 import gr.manousos.model.E1infoData;
 import gr.manousos.model.E1objectiveSpending;
+import gr.manousos.model.E1taxableIncomes;
+import gr.manousos.model.E1reduceTax;
 
 import java.io.Serializable;
 import java.util.List;
@@ -126,7 +128,7 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
     }
 
     @Override
-    public E1infoData getE1InfoDataByE1Id(E1Id id) {
+    public E1infoData getInfoDataByE1Id(E1Id id) {
 	E1infoData infoData = null;
 	try {
 	    getSession().beginTransaction();
@@ -148,7 +150,7 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
     }
 
     @Override
-    public E1expensesRemovedFromTotalIncome getE1expensesRemovedFromTotalIncomeByE1Id(
+    public E1expensesRemovedFromTotalIncome getExpensesRemovedFromTotalIncomeByE1Id(
 	    E1Id id) {
 	E1expensesRemovedFromTotalIncome expensesRemovedFromTotalIncome = null;
 	try {
@@ -170,6 +172,52 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 		    e);
 	}
 	return expensesRemovedFromTotalIncome;
+    }
+
+    @Override
+    public E1taxableIncomes getTaxableIncomesByE1Id(E1Id id) {
+	E1taxableIncomes e1taxableIncomes = null;
+
+	try {
+	    getSession().beginTransaction();
+	    String q = "select e1.e1taxableIncomes from E1 e1 where e1.id.year=:year and e1.id.taxpayerId=:taxpayerId";
+	    Query query = getSession().createQuery(q);
+	    query.setInteger("taxpayerId", id.getTaxpayerId());
+	    query.setInteger("year", id.getYear());
+
+	    Object rec = query.uniqueResult();
+	    if (rec != null)
+		e1taxableIncomes = (E1taxableIncomes) rec;
+
+	    getSession().getTransaction().commit();
+	} catch (Exception e) {
+	    getSession().getTransaction().rollback();
+	    log.error("E1 Hibernate getTaxableIncomesByE1Id error ", e);
+	}
+
+	return e1taxableIncomes;
+    }
+
+    @Override
+    public E1reduceTax getReduceTaxByE1Id(E1Id id) {
+	E1reduceTax e1ReduceTax = null;
+	try {
+	    getSession().beginTransaction();
+	    String q = "select e1.e1reduceTax from E1 e1 where e1.id.year=:year and e1.id.taxpayerId=:taxpayerId";
+	    Query query = getSession().createQuery(q);
+	    query.setInteger("taxpayerId", id.getTaxpayerId());
+	    query.setInteger("year", id.getYear());
+
+	    Object rec = query.uniqueResult();
+	    if (rec != null)
+		e1ReduceTax = (E1reduceTax) rec;
+
+	    getSession().getTransaction().commit();
+	} catch (Exception e) {
+	    getSession().getTransaction().rollback();
+	    log.error("E1 Hibernate getReduceTaxByE1Id error ", e);
+	}
+	return e1ReduceTax;
     }
 
 }

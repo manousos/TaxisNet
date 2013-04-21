@@ -59,7 +59,7 @@ public class TestConsole {
     private static void testE1InfoData(DAOFactory dao) {
 	E1Id key = new E1Id(9, 2013);
 
-	E1infoData o = dao.getE1DAO().getE1InfoDataByE1Id(key);// dao.getE1DAO().getObjectiveSpendingById(id)
+	E1infoData o = dao.getE1DAO().getInfoDataByE1Id(key);// dao.getE1DAO().getObjectiveSpendingById(id)
 	System.out.println("022=" + o.get_022());
 
     }

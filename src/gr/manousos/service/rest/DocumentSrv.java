@@ -18,6 +18,8 @@ import gr.manousos.model.E1Id;
 import gr.manousos.model.E1expensesRemovedFromTotalIncome;
 import gr.manousos.model.E1infoData;
 import gr.manousos.model.E1objectiveSpending;
+import gr.manousos.model.E1reduceTax;
+import gr.manousos.model.E1taxableIncomes;
 import gr.manousos.model.E2;
 import gr.manousos.model.E2Id;
 
@@ -91,7 +93,7 @@ public class DocumentSrv {
     public E1infoData getE1InfoDataByE1Id(@QueryParam("tId") int taxpayerId,
 	    @QueryParam("year") int year) {
 	E1infoData o = null;
-	o = dao.getE1DAO().getE1InfoDataByE1Id(new E1Id(taxpayerId, year));
+	o = dao.getE1DAO().getInfoDataByE1Id(new E1Id(taxpayerId, year));
 	o.setE1s(null);
 
 	return o;
@@ -103,8 +105,32 @@ public class DocumentSrv {
     public E1expensesRemovedFromTotalIncome getExpensesRemovedFromTotalIncomeByE1Id(
 	    @QueryParam("tId") int taxpayerId, @QueryParam("year") int year) {
 	E1expensesRemovedFromTotalIncome o = null;
-	o = dao.getE1DAO().getE1expensesRemovedFromTotalIncomeByE1Id(
+	o = dao.getE1DAO().getExpensesRemovedFromTotalIncomeByE1Id(
 		new E1Id(taxpayerId, year));
+	o.setE1s(null);
+
+	return o;
+    }
+
+    @Path("/getE1taxableIncomesByE1Id")
+    @GET
+    @Produces("application/json")
+    public E1taxableIncomes getTaxableIncomesByE1Id(
+	    @QueryParam("tId") int taxpayerId, @QueryParam("year") int year) {
+	E1taxableIncomes o = null;
+	o = dao.getE1DAO().getTaxableIncomesByE1Id(new E1Id(taxpayerId, year));
+	o.setE1s(null);
+
+	return o;
+    }
+
+    @Path("/getE1reduceTaxByE1Id")
+    @GET
+    @Produces("application/json")
+    public E1reduceTax getReducedValuesByE1Id(
+	    @QueryParam("tId") int taxpayerId, @QueryParam("year") int year) {
+	E1reduceTax o = null;
+	o = dao.getE1DAO().getReduceTaxByE1Id(new E1Id(taxpayerId, year));
 	o.setE1s(null);
 
 	return o;
