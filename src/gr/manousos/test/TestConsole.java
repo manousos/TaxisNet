@@ -52,7 +52,15 @@ public class TestConsole {
 	// System.out.println("AFM : " + t == null ? "einai null" : t.getAfm());
 	// testE1DAO(9, dao);
 	// testSaveE2(dao);
-	testE1Get(dao);
+	// testE1Get(dao);
+	testE1InfoData(dao);
+    }
+
+    private static void testE1InfoData(DAOFactory dao) {
+	E1Id key = new E1Id(9, 2013);
+
+	E1infoData o = dao.getE1DAO().getE1InfoDataByE1Id(key);// dao.getE1DAO().getObjectiveSpendingById(id)
+	System.out.println("022=" + o.get_022());
 
     }
 
@@ -61,9 +69,7 @@ public class TestConsole {
 
 	E1objectiveSpending o = dao.getE1DAO().getObjectiveSpendingByE1Id(key);// dao.getE1DAO().getObjectiveSpendingById(id)
 	System.out.println("203=" + o.get_203());
-	
-	CalculateTaxSrv t  =new CalculateTaxSrv();
-	t.tax(1);
+
     }
 
     private static void testE1DAO(int TaxPayerId, DAOFactory dao) {

@@ -3,6 +3,7 @@ package gr.manousos.DAO.Hibernate;
 import gr.manousos.DAO.E1DAO;
 import gr.manousos.model.E1;
 import gr.manousos.model.E1Id;
+import gr.manousos.model.E1infoData;
 import gr.manousos.model.E1objectiveSpending;
 
 import java.io.Serializable;
@@ -119,7 +120,30 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 	    getSession().getTransaction().rollback();
 	    log.error("E1 Hibernate getObjectiveSpendingByE1Id error ", e);
 	}
-	
+
 	return objSpend;
     }
+
+    @Override
+    public E1infoData getE1InfoDataByE1Id(E1Id id) {
+	E1infoData infoData = null;
+	try {
+	    getSession().beginTransaction();
+	    String q = "select e1.e1infoData from E1 e1 where e1.id.year=:year and e1.id.taxpayerId=:taxpayerId";
+	    Query query = getSession().createQuery(q);
+	    query.setInteger("taxpayerId", id.getTaxpayerId());
+	    query.setInteger("year", id.getYear());
+
+	    Object rec = query.uniqueResult();
+	    if (rec != null)
+		infoData = (E1infoData) rec;
+
+	    getSession().getTransaction().commit();
+	} catch (Exception e) {
+	    getSession().getTransaction().rollback();
+	    log.error("E1 Hibernate getE1InfoDataByE1Id error ", e);
+	}
+	return infoData;
+    }
+
 }
