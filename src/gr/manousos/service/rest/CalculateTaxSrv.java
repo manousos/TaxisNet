@@ -1,9 +1,12 @@
 package gr.manousos.service.rest;
 
 import gr.manousos.DAO.DAOFactory;
+import gr.manousos.model.E1;
 import gr.manousos.model.E1Id;
 import gr.manousos.model.E1expensesRemovedFromTotalIncome;
+import gr.manousos.model.E1infoData;
 import gr.manousos.model.E1objectiveSpending;
+import gr.manousos.model.E1reduceTax;
 import gr.manousos.model.E1taxableIncomes;
 import gr.manousos.model.Taxpayer;
 
@@ -23,10 +26,6 @@ import com.sun.jersey.api.client.config.DefaultClientConfig;
 
 /**
  * @author manousos
- *
- */
-/**
- * @author manousos
  * 
  */
 @Path("/TaxCalkService")
@@ -35,13 +34,52 @@ public class CalculateTaxSrv {
     Properties config = new Properties();
     DAOFactory dao = DAOFactory.instance(DAOFactory.HIBERNATE);
 
+    /**
+     * @param key
+     *            - is E1 primary Key
+     * @return a float array. At pos 1 is Tax for principal and at pos 2 is vat
+     *         for wife (if exist)
+     */
     @Path("/tax")
     @GET
     @Produces("application/json")
-    public float calculateTax(float totalIncome) {
+    public float[] calculateTax(E1Id key) {
 	// getE1
 	// getObj()
 	// getFinalIncome
+	// GET CHILD'S & infand from table 3
+	// IS RETIRED
+	// βάζω περιορισμό στο αφορολόγιτο έως >0 && <= 11999€
+	float finalTax[] = new float[2];
+
+	boolean isMarriage = dao.getE1DAO().getE1ById(key).getMarriage() == 1;
+	E1objectiveSpending objSpend = dao.getE1DAO()
+		.getObjectiveSpendingByE1Id(key);
+	E1expensesRemovedFromTotalIncome erfti = dao.getE1DAO()
+		.getExpensesRemovedFromTotalIncomeByE1Id(key);
+	E1infoData info = dao.getE1DAO().getInfoDataByE1Id(key);
+	E1reduceTax reduceTax = dao.getE1DAO().getReduceTaxByE1Id(key);
+	E1taxableIncomes taxable = dao.getE1DAO().getTaxableIncomesByE1Id(key);
+
+	float principalTotalTaxableIncome = getPrincipalTaxableIncome(erfti,
+		taxable, objSpend, isMarriage, info.get_013() == 1);
+	float princepalNoTax = getPrincipalNoTax(reduceTax, info,
+		principalTotalTaxableIncome);
+	float wifeTotalTaxableIncome = getWifeTaxableIncome(erfti, taxable,
+		objSpend, isMarriage, info.get_014() == 1);
+	float wifeNoTax = getWifeNoTax(reduceTax, info, wifeTotalTaxableIncome);
+
+	finalTax[0] = getTax(principalTotalTaxableIncome, princepalNoTax);
+	finalTax[1] = getTax(wifeTotalTaxableIncome, wifeNoTax);
+
+	return finalTax;
+    }
+
+    private float getTax(float totalIncome, float noTax) {
+	if (noTax > 12000)
+	    noTax = 12000;
+	if (noTax > 5000 && totalIncome < 12000)
+	    return (12000 - noTax) * 0.1f;
 
 	if (totalIncome > 5000 && totalIncome < 12000)
 	    return (totalIncome - 5000) * 0.1f;
@@ -57,26 +95,90 @@ public class CalculateTaxSrv {
 	    return 16420 + (totalIncome - 60000) * 0.40f;
 	if (totalIncome > 100000)
 	    return 32420 + (totalIncome - 100000) * 0.45f;
-
+	// ?? ADDITIONAL VAT FROM HOUSES +1.5% AND +3% IF HOUSE>300m2
 	return 0;
     }
 
-    private float getPrincipalTaxableIncome(E1Id key,
-	    E1objectiveSpending spend, E1taxableIncomes taxable) {
-	float removedIncomes = getPrincipalRemovedFromTotalIncome(key);
+    private float getPrincipalNoTax(E1reduceTax rt, E1infoData info,
+	    float totalIncom) {
+	float reduceTaxValue = 0f;
+
+	if (totalIncom <= 9000f && info.get_017() == 1)
+	    totalIncom += 9000f;
+	if (totalIncom <= 9000f && info.get_013() == 1)
+	    totalIncom += 9000f;
+
+	if (rt.get_001() == 1)
+	    reduceTaxValue += 2000f;
+	if (rt.get_003() <= 2)
+	    reduceTaxValue += 2000 * rt.get_003();
+	else
+	    reduceTaxValue += 4000 + (rt.get_003() - 2) * 3000;
+
+	reduceTaxValue += 2000 * rt.get_005();
+
+	return reduceTaxValue;
+    }
+
+    private float getWifeNoTax(E1reduceTax rt, E1infoData info, float totalIncom) {
+	float reduceTaxValue = 0f;
+
+	if (totalIncom <= 9000f && info.get_018() == 1)
+	    totalIncom += 9000f;
+	if (totalIncom <= 9000f && info.get_014() == 1)
+	    totalIncom += 9000f;
+
+	if (rt.get_002() == 1)
+	    reduceTaxValue += 2000f;
+	reduceTaxValue += rt.get_004() + rt.get_006();
+
+	return reduceTaxValue;
+    }
+
+    private float getPrincipalTaxableIncome(
+	    E1expensesRemovedFromTotalIncome erfti, E1taxableIncomes taxable,
+	    E1objectiveSpending objSpend, boolean isMarriage,
+	    boolean isRetired65) {
+
+	float removedIncomes = getPrincipalRemovedFromTotalIncome(erfti);
 	float incomes = getPrincipalTotalTaxableIncome(taxable);
-	float strict = getPrincipalTotalAnnualStrictCost(spend, key);
+	float strict = getPrincipalTotalAnnualStrictCost(objSpend, isMarriage,
+		isRetired65);
+	float finalTaxable = 0;
 
-	return 0f;
+	if ((incomes - removedIncomes) < strict)
+	    finalTaxable = strict;
+	else
+	    finalTaxable = incomes - removedIncomes;
+
+	// αποδείξεις
+	if (erfti.get_049() <= 60000 && finalTaxable * 0.25 > erfti.get_049())
+	    finalTaxable += finalTaxable * 0.1f;
+
+	return finalTaxable;
     }
 
-    private float getWifeTaxableIncome() {
-	return 0f;
+    private float getWifeTaxableIncome(E1expensesRemovedFromTotalIncome erfti,
+	    E1taxableIncomes taxable, E1objectiveSpending objSpend,
+	    boolean isMarriage, boolean isRetired65) {
+
+	float removedIncomes = getWifeRemovedFromTotalIncome(erfti);
+	float incomes = getWifeTotalTaxableIncome(taxable);
+	float strict = getWifeTotalAnnualStrictCost(objSpend, isMarriage,
+		isRetired65);
+	float finalTaxable = 0;
+
+	if ((incomes - removedIncomes) < strict)
+	    finalTaxable = strict;
+	else
+	    finalTaxable = incomes - removedIncomes;
+
+	return finalTaxable;
     }
 
-    private float getWifeRemovedFromTotalIncome(E1Id key) {
-	E1expensesRemovedFromTotalIncome erfti = dao.getE1DAO()
-		.getExpensesRemovedFromTotalIncomeByE1Id(key);
+    private float getWifeRemovedFromTotalIncome(
+	    E1expensesRemovedFromTotalIncome erfti) {
+
 	float total = 0f;
 
 	if (erfti != null)
@@ -92,9 +194,8 @@ public class CalculateTaxSrv {
 	return total;
     }
 
-    private float getPrincipalRemovedFromTotalIncome(E1Id key) {
-	E1expensesRemovedFromTotalIncome erfti = dao.getE1DAO()
-		.getExpensesRemovedFromTotalIncomeByE1Id(key);
+    private float getPrincipalRemovedFromTotalIncome(
+	    E1expensesRemovedFromTotalIncome erfti) {
 	float total = 0f;
 	if (erfti != null)
 	    total = erfti.get_075()
@@ -150,83 +251,74 @@ public class CalculateTaxSrv {
     private float getWifeTotalTaxableIncome(E1taxableIncomes taxable) {
 	float total = 0f;
 
-	total = taxable.get_302() + taxable.get_322() + taxable.get_304()
-		+ taxable.get_318() + taxable.get_462() + taxable.get_922()
-		+ taxable.get_920() + taxable.get_916() + taxable.get_924()
-		+ taxable.get_336() + taxable.get_338() + taxable.get_340()
-		+ taxable.get_466() + taxable.get_468() + taxable.get_476()
-		+ taxable.get_480() + taxable.get_482() + taxable.get_402()
-		+ taxable.get_404() + taxable.get_406() + taxable.get_408()
-		+ taxable.get_414() + taxable.get_416() + taxable.get_426()
-		+ taxable.get_502() + taxable.get_504() + taxable.get_506()
-		+ taxable.get_508() + taxable.get_512() + taxable.get_516()
-		+ taxable.get_518() + taxable.get_104() + taxable.get_122()
-		+ taxable.get_106() + taxable.get_106() + taxable.get_110()
-		+ taxable.get_102() + taxable.get_910() + taxable.get_112()
-		+ taxable.get_114() + taxable.get_130() + taxable.get_144()
-		+ taxable.get_146() + taxable.get_148() + taxable.get_142()
-		+ taxable.get_702() + taxable.get_124() + taxable.get_126()
-		+ taxable.get_152() + taxable.get_164() + taxable.get_166()
-		+ taxable.get_160() + taxable.get_176() + taxable.get_132()
-		+ taxable.get_134() + taxable.get_742() + taxable.get_292()
-		+ taxable.get_390() + taxable.get_392() + taxable.get_464()
-		+ taxable.get_472() + taxable.get_412() + taxable.get_412()
-		+ taxable.get_422() + taxable.get_510() + taxable.get_514()
-		+ taxable.get_296() + taxable.get_172() + taxable.get_172()
-		+ taxable.get_396() + taxable.getAgrTotalWifeNetincome1()
-		+ taxable.getAgrTotalWifeNetincome2()
-		+ taxable.getAgrTotalWifeNetincome3()
-		+ taxable.getAgrTotalWifeNetincome4();
+	if (taxable != null)
+	    total = taxable.get_302() + taxable.get_322() + taxable.get_304()
+		    + taxable.get_318() + taxable.get_462() + taxable.get_922()
+		    + taxable.get_920() + taxable.get_916() + taxable.get_924()
+		    + taxable.get_336() + taxable.get_338() + taxable.get_340()
+		    + taxable.get_466() + taxable.get_468() + taxable.get_476()
+		    + taxable.get_480() + taxable.get_482() + taxable.get_402()
+		    + taxable.get_404() + taxable.get_406() + taxable.get_408()
+		    + taxable.get_414() + taxable.get_416() + taxable.get_426()
+		    + taxable.get_502() + taxable.get_504() + taxable.get_506()
+		    + taxable.get_508() + taxable.get_512() + taxable.get_516()
+		    + taxable.get_518() + taxable.get_104() + taxable.get_122()
+		    + taxable.get_106() + taxable.get_106() + taxable.get_110()
+		    + taxable.get_102() + taxable.get_910() + taxable.get_112()
+		    + taxable.get_114() + taxable.get_130() + taxable.get_144()
+		    + taxable.get_146() + taxable.get_148() + taxable.get_142()
+		    + taxable.get_702() + taxable.get_124() + taxable.get_126()
+		    + taxable.get_152() + taxable.get_164() + taxable.get_166()
+		    + taxable.get_160() + taxable.get_176() + taxable.get_132()
+		    + taxable.get_134() + taxable.get_742() + taxable.get_292()
+		    + taxable.get_390() + taxable.get_392() + taxable.get_464()
+		    + taxable.get_472() + taxable.get_412() + taxable.get_412()
+		    + taxable.get_422() + taxable.get_510() + taxable.get_514()
+		    + taxable.get_296() + taxable.get_172() + taxable.get_172()
+		    + taxable.get_396() + taxable.getAgrTotalWifeNetincome1()
+		    + taxable.getAgrTotalWifeNetincome2()
+		    + taxable.getAgrTotalWifeNetincome3()
+		    + taxable.getAgrTotalWifeNetincome4();
 
 	return total;
     }
 
     private float getWifeTotalAnnualStrictCost(E1objectiveSpending objSpend,
-	    E1Id key) {
-	Boolean isMarriage = IntToBoolean(dao.getE1DAO().getE1ById(key)
-		.getMarriage());
+	    boolean isMarriage, boolean isRetired65) {
+
 	float total = 0f;
 
 	if (objSpend != null)
 	    total = +getWifeCarObjValue(objSpend)
-		    + getBoatWifeObjValue(objSpend)
-		    + objSpend.get_716()
-		    + objSpend.get_766()
-		    + objSpend.get_708()
-		    + objSpend.get_720()
-		    + objSpend.get_722()
-		    + objSpend.get_724()
-		    + objSpend.get_726()
-		    + objSpend.get_728()
-		    + lifeObjTax(isMarriage, IntToBoolean(dao.getE1DAO()
-			    .getInfoDataByE1Id(key).get_014()));
+		    + getBoatWifeObjValue(objSpend) + objSpend.get_716()
+		    + objSpend.get_766() + objSpend.get_708()
+		    + objSpend.get_720() + objSpend.get_722()
+		    + objSpend.get_724() + objSpend.get_726()
+		    + objSpend.get_728() + lifeObjTax(isMarriage, isRetired65);
+
+	if (isRetired65)
+	    return total * 0.3f;
 
 	return total;
     }
 
     private float getPrincipalTotalAnnualStrictCost(
-	    E1objectiveSpending objSpend, E1Id key) {
+	    E1objectiveSpending objSpend, boolean isMarriage,
+	    boolean isRetired65) {
 
 	float total = 0f;
-	Boolean isMarriage = IntToBoolean(dao.getE1DAO().getE1ById(key)
-		.getMarriage());
-
 	if (objSpend != null)
-	    total = getHousesObjValue(objSpend)
+	    total = getPrincipalHousesObjValue(objSpend)
 		    + getPrincipalCarObjValue(objSpend)
-		    + getBoatPrincipalObjValue(objSpend)
-		    + objSpend.get_715()
-		    + objSpend.get_765()
-		    + objSpend.get_707()
-		    + objSpend.get_719()
-		    + objSpend.get_721()
-		    + objSpend.get_723()
-		    + objSpend.get_725()
-		    + objSpend.get_727()
-		    + (objSpend.get_769() * 0.1f)
-		    + objSpend.get_770()
-		    + lifeObjTax(isMarriage, IntToBoolean(dao.getE1DAO()
-			    .getInfoDataByE1Id(key).get_013()));
+		    + getBoatPrincipalObjValue(objSpend) + objSpend.get_715()
+		    + objSpend.get_765() + objSpend.get_707()
+		    + objSpend.get_719() + objSpend.get_721()
+		    + objSpend.get_723() + objSpend.get_725()
+		    + objSpend.get_727() + (objSpend.get_769() * 0.1f)
+		    + objSpend.get_770() + lifeObjTax(isMarriage, isRetired65);
+
+	if (isRetired65)
+	    return total * 0.3f;
 
 	return total;
     }
@@ -304,31 +396,62 @@ public class CalculateTaxSrv {
 	// return fromCars;
     }
 
-    private float getHousesObjValue(E1objectiveSpending objSpend) {
-	float percent = 0f;
+    private float getPrincipalHousesObjValue(E1objectiveSpending objSpend) {
+
 	float fromHouses = 0f;
 
-	percent = objSpend.get_213() + objSpend.get_214();
-	fromHouses += calckPrimaryHouseObj(objSpend.get_211(),
-		objSpend.get_216(), IntToBoolean(objSpend.get_240()), percent);
-	fromHouses += calckHelpAreaObj(objSpend.get_212(), objSpend.get_216(),
-		IntToBoolean(objSpend.get_240()));
+	if (objSpend.get_213() > 0) {
+	    fromHouses += calckPrimaryHouseObj(objSpend.get_211(),
+		    objSpend.get_216(), IntToBoolean(objSpend.get_240()),
+		    objSpend.get_213());
+	    fromHouses += calckHelpAreaObj(objSpend.get_212(),
+		    objSpend.get_216(), IntToBoolean(objSpend.get_240()));
+	}
+	if (objSpend.get_220() > 0) {
+	    fromHouses += calckOtherHouseObj(objSpend.get_218(),
+		    objSpend.get_223(), IntToBoolean(objSpend.get_241()),
+		    objSpend.get_220());
+	    fromHouses += calckOtherHelpAreaObj(objSpend.get_219(),
+		    objSpend.get_223(), IntToBoolean(objSpend.get_241()));
+	}
+	if (objSpend.get_227() > 0) {
+	    fromHouses += calckOtherHouseObj(objSpend.get_225(),
+		    objSpend.get_230(), IntToBoolean(objSpend.get_242()),
+		    objSpend.get_227());
+	    fromHouses += calckOtherHelpAreaObj(objSpend.get_226(),
+		    objSpend.get_230(), IntToBoolean(objSpend.get_242()));
 
-	percent = 0f;
-	percent = objSpend.get_220() + objSpend.get_221();
-	fromHouses += calckOtherHouseObj(objSpend.get_218(),
-		objSpend.get_223(), IntToBoolean(objSpend.get_241()), percent);
-	fromHouses += calckOtherHelpAreaObj(objSpend.get_219(),
-		objSpend.get_223(), IntToBoolean(objSpend.get_241()));
+	    fromHouses += objSpend.get_707();
+	}
+	return fromHouses;
+    }
 
-	percent = 0f;
-	percent = objSpend.get_227() + objSpend.get_228();
-	fromHouses += calckOtherHouseObj(objSpend.get_225(),
-		objSpend.get_230(), IntToBoolean(objSpend.get_242()), percent);
-	fromHouses += calckOtherHelpAreaObj(objSpend.get_226(),
-		objSpend.get_230(), IntToBoolean(objSpend.get_242()));
+    private float getWifeHousesObjValue(E1objectiveSpending objSpend) {
 
-	fromHouses += objSpend.get_707() + objSpend.get_708();
+	float fromHouses = 0f;
+	if (objSpend.get_214() > 0) {
+	    fromHouses += calckPrimaryHouseObj(objSpend.get_211(),
+		    objSpend.get_216(), IntToBoolean(objSpend.get_240()),
+		    objSpend.get_214());
+	    fromHouses += calckHelpAreaObj(objSpend.get_212(),
+		    objSpend.get_216(), IntToBoolean(objSpend.get_240()));
+	}
+	if (objSpend.get_221() > 0) {
+	    fromHouses += calckOtherHouseObj(objSpend.get_218(),
+		    objSpend.get_223(), IntToBoolean(objSpend.get_241()),
+		    objSpend.get_221());
+	    fromHouses += calckOtherHelpAreaObj(objSpend.get_219(),
+		    objSpend.get_223(), IntToBoolean(objSpend.get_241()));
+	}
+	if (objSpend.get_228() > 0) {
+	    fromHouses += calckOtherHouseObj(objSpend.get_225(),
+		    objSpend.get_230(), IntToBoolean(objSpend.get_242()),
+		    objSpend.get_228());
+	    fromHouses += calckOtherHelpAreaObj(objSpend.get_226(),
+		    objSpend.get_230(), IntToBoolean(objSpend.get_242()));
+	}
+
+	fromHouses += objSpend.get_708();
 
 	return fromHouses;
     }
@@ -338,7 +461,7 @@ public class CalculateTaxSrv {
     }
 
     private float addOwnerPercent(float value, float percent) {
-	return value + value * percent;
+	return value * percent;
     }
 
     // Life taxes
