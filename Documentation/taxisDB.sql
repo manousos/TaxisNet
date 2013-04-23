@@ -830,7 +830,16 @@ CREATE TABLE `User` (
   UNIQUE KEY `UserName_UNIQUE` (`UserName`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8$$
 
+delimiter $$
 
+CREATE TABLE `IncomeTax` (
+  `TaxPayerID` int(11) NOT NULL,
+  `Year` int(4) NOT NULL,
+  `PrincipalTax` float DEFAULT NULL,
+  `WifeTax` float DEFAULT NULL,
+  PRIMARY KEY (`TaxPayerId`,`Year`),
+  CONSTRAINT `fk_IncomeTax_E1` FOREIGN KEY (`TaxPayerID`, `Year`) REFERENCES `E1` (`TaxpayerID`, `Year`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
 
 
 USE `TaxisDB` ;
