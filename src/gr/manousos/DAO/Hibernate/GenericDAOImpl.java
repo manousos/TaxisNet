@@ -44,7 +44,7 @@ public abstract class GenericDAOImpl<T, ID extends Serializable> implements
 	T entity;
 	if (lock)
 	    entity = (T) getSession().load(getPersistentClass(), id,
-		    LockMode.PESSIMISTIC_WRITE);
+		    LockMode.READ);
 	else
 	    entity = (T) getSession().load(getPersistentClass(), id,
 		    LockMode.NONE);

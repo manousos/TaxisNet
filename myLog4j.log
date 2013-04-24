@@ -2131,3 +2131,38 @@ org.hibernate.QueryException: could not resolve property: objSp of: gr.manousos.
 	at gr.manousos.DAO.Hibernate.E1Hibernate.getObjectiveSpendingByE1Id(E1Hibernate.java:121)
 	at gr.manousos.test.TestConsole.testE1Get(TestConsole.java:61)
 	at gr.manousos.test.TestConsole.main(TestConsole.java:54)
+22:46:17,850 ERROR E1Hibernate:34 - getE1ByID Error= org.hibernate.TypeMismatchException: Provided id of the wrong type for class gr.manousos.model.IncomeTax. Expected: class gr.manousos.model.IncomeTaxId, got class gr.manousos.model.E1Id
+22:55:22,434 ERROR E1Hibernate:34 - getE1ByID Error= org.hibernate.TypeMismatchException: Provided id of the wrong type for class gr.manousos.model.IncomeTax. Expected: class gr.manousos.model.IncomeTaxId, got class gr.manousos.model.E1Id
+22:56:43,914 ERROR E1Hibernate:34 - getE1ByID Error= org.hibernate.TypeMismatchException: Provided id of the wrong type for class gr.manousos.model.IncomeTax. Expected: class gr.manousos.model.IncomeTaxId, got class gr.manousos.model.E1Id
+23:11:27,077 ERROR E1Hibernate:34 - getE1ByID Error= org.hibernate.TypeMismatchException: Provided id of the wrong type for class gr.manousos.model.IncomeTax. Expected: class gr.manousos.model.IncomeTaxId, got class gr.manousos.model.E1Id
+23:29:49,928 ERROR E1Hibernate:34 - getE1ByID Error= org.hibernate.TypeMismatchException: Provided id of the wrong type for class gr.manousos.model.IncomeTax. Expected: class gr.manousos.model.IncomeTaxId, got class gr.manousos.model.E1Id
+01:51:34,961 ERROR E1Hibernate:35 - getE1ByID Error= org.hibernate.ObjectNotFoundException: No row with the given identifier exists: [gr.manousos.model.E1#gr.manousos.model.E1Id@6409]
+01:52:16,504 ERROR E1Hibernate:35 - getE1ByID Error= org.hibernate.ObjectNotFoundException: No row with the given identifier exists: [gr.manousos.model.E1#gr.manousos.model.E1Id@6409]
+01:54:31,509 ERROR E1Hibernate:35 - getE1ByID Error= org.hibernate.ObjectNotFoundException: No row with the given identifier exists: [gr.manousos.model.E1#gr.manousos.model.E1Id@6409]
+01:56:57,293 ERROR E1Hibernate:35 - getE1ByID Error= org.hibernate.ObjectNotFoundException: No row with the given identifier exists: [gr.manousos.model.E1#gr.manousos.model.E1Id@6409]
+02:01:26,641 ERROR E1Hibernate:35 - getE1ByID Error= org.hibernate.ObjectNotFoundException: No row with the given identifier exists: [gr.manousos.model.E1#gr.manousos.model.E1Id@6409]
+02:02:37,060 ERROR E1Hibernate:35 - getE1ByID Error= org.hibernate.ObjectNotFoundException: No row with the given identifier exists: [gr.manousos.model.E1#gr.manousos.model.E1Id@6409]
+02:04:16,781 ERROR E1Hibernate:35 - getE1ByID Error= org.hibernate.ObjectNotFoundException: No row with the given identifier exists: [gr.manousos.model.E1#gr.manousos.model.E1Id@6409]
+21:30:58,521 ERROR CalculateTaxSrv:106 - Calculate Tax error :
+java.lang.NullPointerException
+	at gr.manousos.service.rest.Utils.toSafeInteger(Utils.java:9)
+	at gr.manousos.service.rest.CalculateTaxSrv.calculateTax(CalculateTaxSrv.java:83)
+	at gr.manousos.test.TestCalculateConsole.main(TestCalculateConsole.java:16)
+21:33:13,989 ERROR CalculateTaxSrv:106 - Calculate Tax error :
+java.lang.NullPointerException
+	at gr.manousos.service.rest.CalculateTaxSrv.getPrincipalRemovedFromTotalIncome(CalculateTaxSrv.java:257)
+	at gr.manousos.service.rest.CalculateTaxSrv.getPrincipalTaxableIncome(CalculateTaxSrv.java:185)
+	at gr.manousos.service.rest.CalculateTaxSrv.calculateTax(CalculateTaxSrv.java:86)
+	at gr.manousos.test.TestCalculateConsole.main(TestCalculateConsole.java:16)
+21:34:36,248 ERROR CalculateTaxSrv:106 - Calculate Tax error :
+java.lang.NullPointerException
+	at gr.manousos.service.rest.CalculateTaxSrv.getPrincipalRemovedFromTotalIncome(CalculateTaxSrv.java:257)
+	at gr.manousos.service.rest.CalculateTaxSrv.getPrincipalTaxableIncome(CalculateTaxSrv.java:185)
+	at gr.manousos.service.rest.CalculateTaxSrv.calculateTax(CalculateTaxSrv.java:86)
+	at gr.manousos.test.TestCalculateConsole.main(TestCalculateConsole.java:16)
+21:35:52,453 ERROR CalculateTaxSrv:106 - Calculate Tax error :
+java.lang.NullPointerException
+	at gr.manousos.service.rest.CalculateTaxSrv.getPrincipalRemovedFromTotalIncome(CalculateTaxSrv.java:257)
+	at gr.manousos.service.rest.CalculateTaxSrv.getPrincipalTaxableIncome(CalculateTaxSrv.java:185)
+	at gr.manousos.service.rest.CalculateTaxSrv.calculateTax(CalculateTaxSrv.java:86)
+	at gr.manousos.test.TestCalculateConsole.main(TestCalculateConsole.java:16)

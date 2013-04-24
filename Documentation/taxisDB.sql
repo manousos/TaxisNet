@@ -172,23 +172,6 @@ CREATE TABLE `E1ExpensesRemovedFromTotalIncome` (
 
 delimiter $$
 
-CREATE TABLE `E1IncomeFromAgricularCompanyData` (
-  `idE1IncomeFromAgricularCompanyID` int(11) NOT NULL AUTO_INCREMENT,
-  `E1TaxableIncomeID` int(11) DEFAULT NULL,
-  `Location` varchar(150) DEFAULT NULL,
-  `ProdKind` int(1) DEFAULT NULL COMMENT '1: Tillage\n2: Stockraising\n3: Other',
-  `Population` float DEFAULT NULL COMMENT 'Στρέμματα,ζώα ...',
-  `LocationType` int(1) DEFAULT NULL COMMENT '1: Ορεινό\n2: Ημιορεινό\n3: Πεδινό',
-  `HasWater` int(1) DEFAULT NULL,
-  `NetIncome` float DEFAULT NULL,
-  PRIMARY KEY (`idE1IncomeFromAgricularCompanyID`),
-  KEY `fk_E1IncomeFromAgricularCompanyData_1_idx` (`E1TaxableIncomeID`),
-  CONSTRAINT `fk_E1IncomeFromAgricularCompanyData_1` FOREIGN KEY (`E1TaxableIncomeID`) REFERENCES `E1TaxableIncomes` (`E1TaxableIncome`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8$$
-
-
-delimiter $$
-
 CREATE TABLE `E1IncomesReduceTaxes` (
   `idE1IncomesReduceTaxes` int(11) NOT NULL AUTO_INCREMENT,
   `_655` float DEFAULT NULL,

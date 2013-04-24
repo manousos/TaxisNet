@@ -29,6 +29,7 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 	try {
 	    getSession().beginTransaction();
 	    e1 = (E1) super.findById(id, lock);
+	    e1.setIncomeTax(null); // Error, maybe wrong relation
 	    getSession().getTransaction().commit();
 	} catch (Exception ex) {
 	    log.error("getE1ByID Error= " + ex.toString());
@@ -97,11 +98,6 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 	    log.error("E1 Hibernate Submit error ", e);
 	}
 	return 0;
-    }
-
-    @Override
-    public E1 getE1ById(E1Id id) {
-	return super.findById(id, false);
     }
 
     @Override

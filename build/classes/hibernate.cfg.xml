@@ -45,5 +45,6 @@
 		<mapping resource="gr/manousos/model/E2estate.hbm.xml" />
 		<mapping resource="gr/manousos/model/E2coOwner.hbm.xml" />
 		<mapping resource="gr/manousos/model/E2otherEstate.hbm.xml" />
+		<mapping resource="gr/manousos/model/IncomeTax.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

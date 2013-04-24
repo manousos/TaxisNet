@@ -53,7 +53,9 @@ public class TestConsole {
 	// testE1DAO(9, dao);
 	// testSaveE2(dao);
 	// testE1Get(dao);
-	testE1InfoData(dao);
+	// testE1InfoData(dao);
+	testE1GetObjectiveSpending(dao);
+	testGetE1(dao);
     }
 
     private static void testE1InfoData(DAOFactory dao) {
@@ -64,11 +66,20 @@ public class TestConsole {
 
     }
 
-    private static void testE1Get(DAOFactory dao) {
+    private static void testGetE1(DAOFactory dao) {
+	E1Id key = new E1Id(9, 2013);
+
+	E1 o = dao.getE1DAO().findById(key, false);// dao.getE1DAO().getObjectiveSpendingById(id)
+	o.setIncomeTax(null);
+	System.out.println("Is Marriage= " + o.getMarriage());
+
+    }
+
+    private static void testE1GetObjectiveSpending(DAOFactory dao) {
 	E1Id key = new E1Id(9, 2013);
 
 	E1objectiveSpending o = dao.getE1DAO().getObjectiveSpendingByE1Id(key);// dao.getE1DAO().getObjectiveSpendingById(id)
-	System.out.println("203=" + o.get_203());
+	System.out.println("203=" + o.get_211());
 
     }
 
