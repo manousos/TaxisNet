@@ -23,7 +23,7 @@
 	</div>
 
 		<h4>Schema TaxisDB.default</h4>
-		<h2>Table E2OtherEstate</h2>
+		<h2>Table IncomeTax</h2>
 
 			<p></p>
 
@@ -59,31 +59,6 @@
 				</tr>
 			</thead>
 			<tbody>
-					<tr>
-						<td>
-							<a href="#column_detail_ID">
-								ID
-							</a>
-						</td>
-						<td>
-							integer
-						</td>
-						<td>
-							255
-						</td>
-						<td>
-							19
-						</td>
-						<td>
-							2
-						</td>
-						<td>
-							false
-						</td>
-						<td>
-							true
-						</td>
-					</tr>
 					<tr>
 						<td>
 							<a href="#column_detail_TaxpayerID">
@@ -136,108 +111,8 @@
 					</tr>
 					<tr>
 						<td>
-							<a href="#column_detail_Title">
-								Title
-							</a>
-						</td>
-						<td>
-							longtext
-						</td>
-						<td>
-							2.048
-						</td>
-						<td>
-							19
-						</td>
-						<td>
-							2
-						</td>
-						<td>
-							false
-						</td>
-						<td>
-							false
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="#column_detail_Location">
-								Location
-							</a>
-						</td>
-						<td>
-							varchar(200)
-						</td>
-						<td>
-							200
-						</td>
-						<td>
-							19
-						</td>
-						<td>
-							2
-						</td>
-						<td>
-							false
-						</td>
-						<td>
-							false
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="#column_detail_Position">
-								Position
-							</a>
-						</td>
-						<td>
-							varchar(100)
-						</td>
-						<td>
-							100
-						</td>
-						<td>
-							19
-						</td>
-						<td>
-							2
-						</td>
-						<td>
-							false
-						</td>
-						<td>
-							false
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="#column_detail_EstateUsage">
-								EstateUsage
-							</a>
-						</td>
-						<td>
-							varchar(50)
-						</td>
-						<td>
-							50
-						</td>
-						<td>
-							19
-						</td>
-						<td>
-							2
-						</td>
-						<td>
-							false
-						</td>
-						<td>
-							false
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="#column_detail_Area">
-								Area
+							<a href="#column_detail_PrincipalTax">
+								PrincipalTax
 							</a>
 						</td>
 						<td>
@@ -253,7 +128,32 @@
 							0
 						</td>
 						<td>
+							true
+						</td>
+						<td>
 							false
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="#column_detail_WifeTax">
+								WifeTax
+							</a>
+						</td>
+						<td>
+							float
+						</td>
+						<td>
+							255
+						</td>
+						<td>
+							12
+						</td>
+						<td>
+							0
+						</td>
+						<td>
+							true
 						</td>
 						<td>
 							false
@@ -284,8 +184,11 @@
 								PRIMARY
 						</td>
 						<td>
-								<a href="#column_detail_ID">
-									ID
+								<a href="#column_detail_TaxpayerID">
+									TaxpayerID
+								</a>
+								<a href="#column_detail_Year">
+									Year
 								</a>
 						</td>
 					</tr>
@@ -314,29 +217,11 @@
 				<tbody>
 						<tr>
 							<td>
-								FK_E2_OtherEstate
+								fk_IncomeTax_E1
 							</td>
 							<td>
-								<a href="E2.html" target="generalFrame">
-									E2
-								</a>
-							</td>
-							<td>
-									<a href="#column_detail_TaxpayerID">
-										TaxpayerID
-									</a>
-									<a href="#column_detail_Year">
-										Year
-									</a>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								FKB050CFAF1A8DBBC8
-							</td>
-							<td>
-								<a href="E2.html" target="generalFrame">
-									E2
+								<a href="E1.html" target="generalFrame">
+									E1
 								</a>
 							</td>
 							<td>
@@ -373,36 +258,6 @@
 								PRIMARY
 							</td>
 							<td>
-									<a href="#column_detail_ID">
-										ID
-									</a>
-							</td>
-						</tr>
-				</tbody>
-			</table>
-		
-			<table id="indexes">
-				<thead>
-					<tr>
-						<th class="MainTableHeading" colspan="2">
-							Indexes
-						</th>
-					</tr>
-					<tr>
-						<th style="width: 50%">
-							Name
-						</th>
-						<th style="width: 50%">
-							Columns
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-						<tr>
-							<td>
-								FK_E2_OtherEstate_idx
-							</td>
-							<td>
 									<a href="#column_detail_TaxpayerID">
 										TaxpayerID
 									</a>
@@ -414,38 +269,11 @@
 				</tbody>
 			</table>
 		
+		
 			<p id="column_detail" class="MainTableHeading">
 				Column Detail
 			</p>
 				
-				<h3 id="column_detail_ID">ID</h3>
-				
-				<ul>
-					<li>
-						<strong>Type:</strong> integer
-					</li>
-					<li>
-						<strong>Length:</strong> 255
-					</li>
-					<li>
-						<strong>Precision:</strong> 19
-					</li>
-					<li>
-						<strong>Scale:</strong> 2
-					</li>
-					<li>
-						<strong>Nullable:</strong> false
-					</li>
-					<li>
-						<strong>Unique:</strong> true
-					</li>
-					<li>
-						<strong>Comment:</strong> 
-					</li>
-				</ul>
-
-
-				<hr/>
 				<h3 id="column_detail_TaxpayerID">TaxpayerID</h3>
 				
 				<ul>
@@ -502,119 +330,7 @@
 
 
 				<hr/>
-				<h3 id="column_detail_Title">Title</h3>
-				
-				<ul>
-					<li>
-						<strong>Type:</strong> longtext
-					</li>
-					<li>
-						<strong>Length:</strong> 2.048
-					</li>
-					<li>
-						<strong>Precision:</strong> 19
-					</li>
-					<li>
-						<strong>Scale:</strong> 2
-					</li>
-					<li>
-						<strong>Nullable:</strong> false
-					</li>
-					<li>
-						<strong>Unique:</strong> false
-					</li>
-					<li>
-						<strong>Comment:</strong> 
-					</li>
-				</ul>
-
-
-				<hr/>
-				<h3 id="column_detail_Location">Location</h3>
-				
-				<ul>
-					<li>
-						<strong>Type:</strong> varchar(200)
-					</li>
-					<li>
-						<strong>Length:</strong> 200
-					</li>
-					<li>
-						<strong>Precision:</strong> 19
-					</li>
-					<li>
-						<strong>Scale:</strong> 2
-					</li>
-					<li>
-						<strong>Nullable:</strong> false
-					</li>
-					<li>
-						<strong>Unique:</strong> false
-					</li>
-					<li>
-						<strong>Comment:</strong> 
-					</li>
-				</ul>
-
-
-				<hr/>
-				<h3 id="column_detail_Position">Position</h3>
-				
-				<ul>
-					<li>
-						<strong>Type:</strong> varchar(100)
-					</li>
-					<li>
-						<strong>Length:</strong> 100
-					</li>
-					<li>
-						<strong>Precision:</strong> 19
-					</li>
-					<li>
-						<strong>Scale:</strong> 2
-					</li>
-					<li>
-						<strong>Nullable:</strong> false
-					</li>
-					<li>
-						<strong>Unique:</strong> false
-					</li>
-					<li>
-						<strong>Comment:</strong> 
-					</li>
-				</ul>
-
-
-				<hr/>
-				<h3 id="column_detail_EstateUsage">EstateUsage</h3>
-				
-				<ul>
-					<li>
-						<strong>Type:</strong> varchar(50)
-					</li>
-					<li>
-						<strong>Length:</strong> 50
-					</li>
-					<li>
-						<strong>Precision:</strong> 19
-					</li>
-					<li>
-						<strong>Scale:</strong> 2
-					</li>
-					<li>
-						<strong>Nullable:</strong> false
-					</li>
-					<li>
-						<strong>Unique:</strong> false
-					</li>
-					<li>
-						<strong>Comment:</strong> 
-					</li>
-				</ul>
-
-
-				<hr/>
-				<h3 id="column_detail_Area">Area</h3>
+				<h3 id="column_detail_PrincipalTax">PrincipalTax</h3>
 				
 				<ul>
 					<li>
@@ -630,7 +346,35 @@
 						<strong>Scale:</strong> 0
 					</li>
 					<li>
-						<strong>Nullable:</strong> false
+						<strong>Nullable:</strong> true
+					</li>
+					<li>
+						<strong>Unique:</strong> false
+					</li>
+					<li>
+						<strong>Comment:</strong> 
+					</li>
+				</ul>
+
+
+				<hr/>
+				<h3 id="column_detail_WifeTax">WifeTax</h3>
+				
+				<ul>
+					<li>
+						<strong>Type:</strong> float
+					</li>
+					<li>
+						<strong>Length:</strong> 255
+					</li>
+					<li>
+						<strong>Precision:</strong> 12
+					</li>
+					<li>
+						<strong>Scale:</strong> 0
+					</li>
+					<li>
+						<strong>Nullable:</strong> true
 					</li>
 					<li>
 						<strong>Unique:</strong> false

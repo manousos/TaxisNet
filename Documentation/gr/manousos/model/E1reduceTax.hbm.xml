@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Apr 16, 2013 12:57:38 AM by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 24 ?????? 2013 9:47:19 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.E1reduceTax" table="E1ReduceTax" catalog="TaxisDB">
         <id name="idE1reduceTax" type="java.lang.Integer">

@@ -35,6 +35,7 @@
         <mapping resource="gr/manousos/model/E1prepaidTaxes.hbm.xml" />
         <mapping resource="gr/manousos/model/E2otherEstate.hbm.xml" />
         <mapping resource="gr/manousos/model/E1infoData.hbm.xml" />
+        <mapping resource="gr/manousos/model/IncomeTax.hbm.xml" />
         <mapping resource="gr/manousos/model/E1taxPayerBankAccount.hbm.xml" />
         <mapping resource="gr/manousos/model/E1dataFromTaxPayerFolder.hbm.xml" />
         <mapping resource="gr/manousos/model/Contact.hbm.xml" />

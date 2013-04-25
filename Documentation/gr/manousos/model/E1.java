@@ -1,6 +1,6 @@
 package gr.manousos.model;
 
-// Generated Apr 16, 2013 12:57:37 AM by Hibernate Tools 3.4.0.CR1
+// Generated 24 Απρ 2013 9:47:18 μμ by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -30,6 +30,7 @@ public class E1 implements java.io.Serializable {
     private Date dateInserted;
     private String doy;
     private Integer marriage;
+    private IncomeTax incomeTax;
     private Set<RelatePerson> relatePersons = new HashSet<RelatePerson>(0);
 
     public E1() {
@@ -55,7 +56,8 @@ public class E1 implements java.io.Serializable {
 	    E1taxableIncomes e1taxableIncomes,
 	    E1incomesReduceTaxes e1incomesReduceTaxes, String taxpayerAddress,
 	    String atid, Integer isComplete, Date dateInserted, String doy,
-	    Integer marriage, Set<RelatePerson> relatePersons) {
+	    Integer marriage, IncomeTax incomeTax,
+	    Set<RelatePerson> relatePersons) {
 	this.id = id;
 	this.e1reduceTax = e1reduceTax;
 	this.e1objectiveSpending = e1objectiveSpending;
@@ -75,6 +77,7 @@ public class E1 implements java.io.Serializable {
 	this.dateInserted = dateInserted;
 	this.doy = doy;
 	this.marriage = marriage;
+	this.incomeTax = incomeTax;
 	this.relatePersons = relatePersons;
     }
 
@@ -233,6 +236,14 @@ public class E1 implements java.io.Serializable {
 
     public void setMarriage(Integer marriage) {
 	this.marriage = marriage;
+    }
+
+    public IncomeTax getIncomeTax() {
+	return this.incomeTax;
+    }
+
+    public void setIncomeTax(IncomeTax incomeTax) {
+	this.incomeTax = incomeTax;
     }
 
     public Set<RelatePerson> getRelatePersons() {
