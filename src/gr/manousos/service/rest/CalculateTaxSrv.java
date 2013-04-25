@@ -16,7 +16,9 @@ import java.net.URI;
 import java.util.Calendar;
 import java.util.Properties;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -41,16 +43,10 @@ public class CalculateTaxSrv {
     Properties config = new Properties();
     DAOFactory dao = DAOFactory.instance(DAOFactory.HIBERNATE);
 
-    /**
-     * @param key
-     *            - is E1 primary Key
-     * @return a float array. At pos 1 is Tax for principal and at pos 2 is vat
-     *         for wife (if exist)
-     */
     @Path("/tax")
     @GET
     @Produces("application/json")
-    public IncomeTax calculateTax(@QueryParam("tId") int taxpayerId,
+    public IncomeTax calculateAndSaveTax(@QueryParam("tId") int taxpayerId,
 	    @QueryParam("year") int year) {
 
 	// getE1
@@ -59,7 +55,6 @@ public class CalculateTaxSrv {
 	// GET CHILD'S & infand from table 3
 	// IS RETIRED
 	// βάζω περιορισμό στο αφορολόγιτο έως >0 && <= 12000€
-	float finalTax[] = new float[2];
 	boolean is65Retired = false;
 	boolean isMarriage = false;
 	boolean isYoung = false;
@@ -96,16 +91,33 @@ public class CalculateTaxSrv {
 	    float wifeNoTax = getWifeNoTax(reduceTax, isYoung, is65Retired,
 		    wifeTotalTaxableIncome);
 
-	    incomeTax = new IncomeTax(new IncomeTaxId(taxpayerId, year),
-		    getTax(principalTotalTaxableIncome, princepalNoTax),
-		    getTax(wifeTotalTaxableIncome, wifeNoTax));
+	    // incomeTax = new IncomeTax(new IncomeTaxId(taxpayerId, year),
+	    // getTax(principalTotalTaxableIncome, princepalNoTax),
+	    // getTax(wifeTotalTaxableIncome, wifeNoTax));
+	    // incomeTax.setE1(e1);
+	    incomeTax = new IncomeTax(e1, getTax(principalTotalTaxableIncome,
+		    princepalNoTax), getTax(wifeTotalTaxableIncome, wifeNoTax));
+	    incomeTax.setId(new IncomeTaxId(taxpayerId, year));
 
-	    finalTax[0] = getTax(principalTotalTaxableIncome, princepalNoTax);
-	    finalTax[1] = getTax(wifeTotalTaxableIncome, wifeNoTax);
+	    dao.getE1DAO().submitIncomeTax(incomeTax);
+	    incomeTax.setE1(null);
 	} catch (Exception ex) {
 	    log.error("Calculate Tax error :", ex);
 	}
 	return incomeTax;
+    }
+
+    @Path("/SaveTax")
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public boolean saveTax(IncomeTax tax) {
+	E1 e1 = dao.getE1DAO().findById(
+		new E1Id(tax.getId().getTaxPayerId(), tax.getId().getYear()),
+		false);
+	if (e1 != null)
+	    return dao.getE1DAO().submitIncomeTax(tax);
+	return false;
     }
 
     private float getTax(float totalIncome, float noTax) {

@@ -13,6 +13,7 @@ import static org.hibernate.criterion.Restrictions.eq;
 
 import gr.manousos.DAO.TaxpayerDAO;
 import gr.manousos.model.Contact;
+import gr.manousos.model.IncomeTax;
 import gr.manousos.model.Taxpayer;
 import gr.manousos.model.User;
 
@@ -97,7 +98,7 @@ public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 	List<?> result = query.list();
 	Iterator<?> it = result.iterator();
 	while (it.hasNext()) {
-	    //Taxpayer user = (Taxpayer) it.next();
+	    // Taxpayer user = (Taxpayer) it.next();
 	    // s = String
 	    // .format("USER ID : %s , ADDRESS  : %s , DATE OF BIRTH  : %s  , CONTACT NO  :  %s",
 	    // user.getID(), user.getAddress(), user.getDOB()
@@ -168,7 +169,7 @@ public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 		    taxpayer = new Taxpayer(null, null, t.getAfm(),
 			    t.getFname(), t.getLname(), t.getFatherName());
 		    taxpayer.setId(t.getId());
-		    
+
 		    Contact c = new Contact(t.getContact().getPhone(), t
 			    .getContact().getCell(), t.getContact().getEmail());
 		    taxpayer.setContact(c);
@@ -181,5 +182,5 @@ public class TaxpayerHibernate extends GenericDAOImpl<Taxpayer, Serializable>
 	    getSession().getTransaction().rollback();
 	}
 	return taxpayer;
-    }
+    }   
 }

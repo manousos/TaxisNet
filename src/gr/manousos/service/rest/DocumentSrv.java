@@ -135,4 +135,16 @@ public class DocumentSrv {
 
 	return o;
     }
+
+    @Path("/getE1ById")
+    @GET
+    @Produces("application/json")
+    public E1 getE1ById(@QueryParam("tId") int taxpayerId,
+	    @QueryParam("year") int year) {
+	E1 o = null;
+	o = dao.getE1DAO().findById(new E1Id(taxpayerId, year), false);
+	o.setIncomeTax(null);
+	return o;
+    }
+
 }

@@ -1,16 +1,15 @@
 package gr.manousos.DAO;
 
 import gr.manousos.model.Taxpayer;
-import gr.manousos.model.User;
 
 import java.io.Serializable;
 
 public interface TaxpayerDAO extends GenericDAO<Taxpayer, Serializable> {
-	public String getUserIngoById(String strId);
+    public String getUserIngoById(String strId);
 
-	public void addTaxpayer(Taxpayer user);
+    public void addTaxpayer(Taxpayer user);
 
-	public Taxpayer getTaxpayerByID(int id);
+    public Taxpayer getTaxpayerByID(int id);
 
-	public Taxpayer getTaxpayerByUserName(String username);
+    public Taxpayer getTaxpayerByUserName(String username);
 }

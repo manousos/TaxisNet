@@ -8,6 +8,7 @@ import gr.manousos.model.E1infoData;
 import gr.manousos.model.E1objectiveSpending;
 import gr.manousos.model.E1taxableIncomes;
 import gr.manousos.model.E1reduceTax;
+import gr.manousos.model.IncomeTax;
 
 import java.io.Serializable;
 import java.util.List;
@@ -216,4 +217,22 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 	return e1ReduceTax;
     }
 
+    @Override
+    public boolean submitIncomeTax(IncomeTax tax) {
+	boolean saved = false;
+	try {
+	    getSession().beginTransaction();
+	    getSession().saveOrUpdate(tax);
+	    getSession().getTransaction().commit();
+	    saved = true;
+	} catch (Exception ex) {
+	    log.error("Taxpayer makePersistent error ", ex);
+	    getSession().getTransaction().rollback();
+	} finally {
+	    if (getSession().isOpen())
+		getSession().close();
+	}
+
+	return saved;
+    }
 }
