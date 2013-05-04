@@ -10,10 +10,7 @@ import gr.manousos.model.E1reduceTax;
 import gr.manousos.model.E1taxableIncomes;
 import gr.manousos.model.IncomeTax;
 import gr.manousos.model.IncomeTaxId;
-import gr.manousos.model.Taxpayer;
 
-import java.net.URI;
-import java.util.Calendar;
 import java.util.Properties;
 
 import javax.ws.rs.Consumes;
@@ -27,16 +24,11 @@ import javax.ws.rs.core.MediaType;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.api.client.config.ClientConfig;
-import com.sun.jersey.api.client.config.DefaultClientConfig;
-
 /**
  * @author manousos
  * 
  */
-@Path("/TaxCalkService")
+@Path("/TaxCalcService")
 public class CalculateTaxSrv {
     private static Log log = LogFactory.getLog(CalculateTaxSrv.class);
 
