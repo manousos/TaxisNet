@@ -1,6 +1,6 @@
 package gr.manousos.model;
 
-// Generated 24 Απρ 2013 9:47:18 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 3 Ιουν 2013 11:58:42 μμ by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;

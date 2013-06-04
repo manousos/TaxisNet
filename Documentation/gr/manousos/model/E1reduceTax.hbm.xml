@@ -1,13 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 24 ?????? 2013 9:47:19 ???? by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 3 ???????? 2013 11:58:43 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.E1reduceTax" table="E1ReduceTax" catalog="TaxisDB">
-        <id name="idE1reduceTax" type="java.lang.Integer">
-            <column name="idE1ReduceTax" />
-            <generator class="identity" />
-        </id>
+        <composite-id name="id" class="gr.manousos.model.E1reduceTaxId">
+            <key-property name="tid" type="int">
+                <column name="tID" />
+            </key-property>
+            <key-property name="year" type="int">
+                <column name="Year" />
+            </key-property>
+        </composite-id>
+        <one-to-one name="e1" class="gr.manousos.model.E1" constrained="true"></one-to-one>
         <property name="001" type="java.lang.Integer">
             <column name="_001" />
         </property>
@@ -26,11 +31,5 @@
         <property name="006" type="java.lang.Integer">
             <column name="_006" />
         </property>
-        <set name="e1s" table="E1" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="idE1ReduceTax" unique="true" />
-            </key>
-            <one-to-many class="gr.manousos.model.E1" />
-        </set>
     </class>
 </hibernate-mapping>

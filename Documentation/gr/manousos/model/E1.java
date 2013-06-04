@@ -1,6 +1,6 @@
 package gr.manousos.model;
 
-// Generated 24 Απρ 2013 9:47:18 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 3 Ιουν 2013 11:58:42 μμ by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 import java.util.HashSet;
@@ -12,73 +12,72 @@ import java.util.Set;
 public class E1 implements java.io.Serializable {
 
     private E1Id id;
-    private E1reduceTax e1reduceTax;
-    private E1objectiveSpending e1objectiveSpending;
-    private E1taxPayerBankAccount e1taxPayerBankAccount;
     private Taxpayer taxpayer;
-    private E1infoData e1infoData;
-    private E1dataFromTaxPayerFolder e1dataFromTaxPayerFolder;
-    private E1personDataBorneTaxpayer e1personDataBorneTaxpayer;
-    private E1expensesRemovedFromTotalIncome e1expensesRemovedFromTotalIncome;
-    private E1nauticalincomes e1nauticalincomes;
-    private E1prepaidTaxes e1prepaidTaxes;
-    private E1taxableIncomes e1taxableIncomes;
-    private E1incomesReduceTaxes e1incomesReduceTaxes;
-    private String taxpayerAddress;
-    private String atid;
-    private Integer isComplete;
-    private Date dateInserted;
     private String doy;
+    private String atid;
+    private String taxpayerAddress;
+    private Integer isComplete;
     private Integer marriage;
+    private Date dateInserted;
+    private E1expensesRemovedFromTotalIncome e1expensesRemovedFromTotalIncome;
+    private E1incomesReduceTaxes e1incomesReduceTaxes;
     private IncomeTax incomeTax;
+    private E1dataFromTaxPayerFolder e1dataFromTaxPayerFolder;
+    private E1nauticalincomes e1nauticalincomes;
+    private E1reduceTax e1reduceTax;
+    private E1taxableIncomes e1taxableIncomes;
     private Set<RelatePerson> relatePersons = new HashSet<RelatePerson>(0);
+    private E1taxPayerBankAccount e1taxPayerBankAccount;
+    private E1objectiveSpending e1objectiveSpending;
+    private E1personDataBorneTaxpayer e1personDataBorneTaxpayer;
+    private E1infoData e1infoData;
+    private E1prepaidTaxes e1prepaidTaxes;
 
     public E1() {
     }
 
-    public E1(E1Id id, Taxpayer taxpayer, String taxpayerAddress, String atid,
-	    String doy) {
+    public E1(E1Id id, Taxpayer taxpayer, String doy, String atid,
+	    String taxpayerAddress) {
 	this.id = id;
 	this.taxpayer = taxpayer;
-	this.taxpayerAddress = taxpayerAddress;
-	this.atid = atid;
 	this.doy = doy;
+	this.atid = atid;
+	this.taxpayerAddress = taxpayerAddress;
     }
 
-    public E1(E1Id id, E1reduceTax e1reduceTax,
-	    E1objectiveSpending e1objectiveSpending,
-	    E1taxPayerBankAccount e1taxPayerBankAccount, Taxpayer taxpayer,
-	    E1infoData e1infoData,
-	    E1dataFromTaxPayerFolder e1dataFromTaxPayerFolder,
-	    E1personDataBorneTaxpayer e1personDataBorneTaxpayer,
+    public E1(E1Id id, Taxpayer taxpayer, String doy, String atid,
+	    String taxpayerAddress, Integer isComplete, Integer marriage,
+	    Date dateInserted,
 	    E1expensesRemovedFromTotalIncome e1expensesRemovedFromTotalIncome,
-	    E1nauticalincomes e1nauticalincomes, E1prepaidTaxes e1prepaidTaxes,
-	    E1taxableIncomes e1taxableIncomes,
-	    E1incomesReduceTaxes e1incomesReduceTaxes, String taxpayerAddress,
-	    String atid, Integer isComplete, Date dateInserted, String doy,
-	    Integer marriage, IncomeTax incomeTax,
-	    Set<RelatePerson> relatePersons) {
+	    E1incomesReduceTaxes e1incomesReduceTaxes, IncomeTax incomeTax,
+	    E1dataFromTaxPayerFolder e1dataFromTaxPayerFolder,
+	    E1nauticalincomes e1nauticalincomes, E1reduceTax e1reduceTax,
+	    E1taxableIncomes e1taxableIncomes, Set<RelatePerson> relatePersons,
+	    E1taxPayerBankAccount e1taxPayerBankAccount,
+	    E1objectiveSpending e1objectiveSpending,
+	    E1personDataBorneTaxpayer e1personDataBorneTaxpayer,
+	    E1infoData e1infoData, E1prepaidTaxes e1prepaidTaxes) {
 	this.id = id;
-	this.e1reduceTax = e1reduceTax;
-	this.e1objectiveSpending = e1objectiveSpending;
-	this.e1taxPayerBankAccount = e1taxPayerBankAccount;
 	this.taxpayer = taxpayer;
-	this.e1infoData = e1infoData;
-	this.e1dataFromTaxPayerFolder = e1dataFromTaxPayerFolder;
-	this.e1personDataBorneTaxpayer = e1personDataBorneTaxpayer;
-	this.e1expensesRemovedFromTotalIncome = e1expensesRemovedFromTotalIncome;
-	this.e1nauticalincomes = e1nauticalincomes;
-	this.e1prepaidTaxes = e1prepaidTaxes;
-	this.e1taxableIncomes = e1taxableIncomes;
-	this.e1incomesReduceTaxes = e1incomesReduceTaxes;
-	this.taxpayerAddress = taxpayerAddress;
-	this.atid = atid;
-	this.isComplete = isComplete;
-	this.dateInserted = dateInserted;
 	this.doy = doy;
+	this.atid = atid;
+	this.taxpayerAddress = taxpayerAddress;
+	this.isComplete = isComplete;
 	this.marriage = marriage;
+	this.dateInserted = dateInserted;
+	this.e1expensesRemovedFromTotalIncome = e1expensesRemovedFromTotalIncome;
+	this.e1incomesReduceTaxes = e1incomesReduceTaxes;
 	this.incomeTax = incomeTax;
+	this.e1dataFromTaxPayerFolder = e1dataFromTaxPayerFolder;
+	this.e1nauticalincomes = e1nauticalincomes;
+	this.e1reduceTax = e1reduceTax;
+	this.e1taxableIncomes = e1taxableIncomes;
 	this.relatePersons = relatePersons;
+	this.e1taxPayerBankAccount = e1taxPayerBankAccount;
+	this.e1objectiveSpending = e1objectiveSpending;
+	this.e1personDataBorneTaxpayer = e1personDataBorneTaxpayer;
+	this.e1infoData = e1infoData;
+	this.e1prepaidTaxes = e1prepaidTaxes;
     }
 
     public E1Id getId() {
@@ -89,31 +88,6 @@ public class E1 implements java.io.Serializable {
 	this.id = id;
     }
 
-    public E1reduceTax getE1reduceTax() {
-	return this.e1reduceTax;
-    }
-
-    public void setE1reduceTax(E1reduceTax e1reduceTax) {
-	this.e1reduceTax = e1reduceTax;
-    }
-
-    public E1objectiveSpending getE1objectiveSpending() {
-	return this.e1objectiveSpending;
-    }
-
-    public void setE1objectiveSpending(E1objectiveSpending e1objectiveSpending) {
-	this.e1objectiveSpending = e1objectiveSpending;
-    }
-
-    public E1taxPayerBankAccount getE1taxPayerBankAccount() {
-	return this.e1taxPayerBankAccount;
-    }
-
-    public void setE1taxPayerBankAccount(
-	    E1taxPayerBankAccount e1taxPayerBankAccount) {
-	this.e1taxPayerBankAccount = e1taxPayerBankAccount;
-    }
-
     public Taxpayer getTaxpayer() {
 	return this.taxpayer;
     }
@@ -122,30 +96,52 @@ public class E1 implements java.io.Serializable {
 	this.taxpayer = taxpayer;
     }
 
-    public E1infoData getE1infoData() {
-	return this.e1infoData;
+    public String getDoy() {
+	return this.doy;
     }
 
-    public void setE1infoData(E1infoData e1infoData) {
-	this.e1infoData = e1infoData;
+    public void setDoy(String doy) {
+	this.doy = doy;
     }
 
-    public E1dataFromTaxPayerFolder getE1dataFromTaxPayerFolder() {
-	return this.e1dataFromTaxPayerFolder;
+    public String getAtid() {
+	return this.atid;
     }
 
-    public void setE1dataFromTaxPayerFolder(
-	    E1dataFromTaxPayerFolder e1dataFromTaxPayerFolder) {
-	this.e1dataFromTaxPayerFolder = e1dataFromTaxPayerFolder;
+    public void setAtid(String atid) {
+	this.atid = atid;
     }
 
-    public E1personDataBorneTaxpayer getE1personDataBorneTaxpayer() {
-	return this.e1personDataBorneTaxpayer;
+    public String getTaxpayerAddress() {
+	return this.taxpayerAddress;
     }
 
-    public void setE1personDataBorneTaxpayer(
-	    E1personDataBorneTaxpayer e1personDataBorneTaxpayer) {
-	this.e1personDataBorneTaxpayer = e1personDataBorneTaxpayer;
+    public void setTaxpayerAddress(String taxpayerAddress) {
+	this.taxpayerAddress = taxpayerAddress;
+    }
+
+    public Integer getIsComplete() {
+	return this.isComplete;
+    }
+
+    public void setIsComplete(Integer isComplete) {
+	this.isComplete = isComplete;
+    }
+
+    public Integer getMarriage() {
+	return this.marriage;
+    }
+
+    public void setMarriage(Integer marriage) {
+	this.marriage = marriage;
+    }
+
+    public Date getDateInserted() {
+	return this.dateInserted;
+    }
+
+    public void setDateInserted(Date dateInserted) {
+	this.dateInserted = dateInserted;
     }
 
     public E1expensesRemovedFromTotalIncome getE1expensesRemovedFromTotalIncome() {
@@ -157,30 +153,6 @@ public class E1 implements java.io.Serializable {
 	this.e1expensesRemovedFromTotalIncome = e1expensesRemovedFromTotalIncome;
     }
 
-    public E1nauticalincomes getE1nauticalincomes() {
-	return this.e1nauticalincomes;
-    }
-
-    public void setE1nauticalincomes(E1nauticalincomes e1nauticalincomes) {
-	this.e1nauticalincomes = e1nauticalincomes;
-    }
-
-    public E1prepaidTaxes getE1prepaidTaxes() {
-	return this.e1prepaidTaxes;
-    }
-
-    public void setE1prepaidTaxes(E1prepaidTaxes e1prepaidTaxes) {
-	this.e1prepaidTaxes = e1prepaidTaxes;
-    }
-
-    public E1taxableIncomes getE1taxableIncomes() {
-	return this.e1taxableIncomes;
-    }
-
-    public void setE1taxableIncomes(E1taxableIncomes e1taxableIncomes) {
-	this.e1taxableIncomes = e1taxableIncomes;
-    }
-
     public E1incomesReduceTaxes getE1incomesReduceTaxes() {
 	return this.e1incomesReduceTaxes;
     }
@@ -188,54 +160,6 @@ public class E1 implements java.io.Serializable {
     public void setE1incomesReduceTaxes(
 	    E1incomesReduceTaxes e1incomesReduceTaxes) {
 	this.e1incomesReduceTaxes = e1incomesReduceTaxes;
-    }
-
-    public String getTaxpayerAddress() {
-	return this.taxpayerAddress;
-    }
-
-    public void setTaxpayerAddress(String taxpayerAddress) {
-	this.taxpayerAddress = taxpayerAddress;
-    }
-
-    public String getAtid() {
-	return this.atid;
-    }
-
-    public void setAtid(String atid) {
-	this.atid = atid;
-    }
-
-    public Integer getIsComplete() {
-	return this.isComplete;
-    }
-
-    public void setIsComplete(Integer isComplete) {
-	this.isComplete = isComplete;
-    }
-
-    public Date getDateInserted() {
-	return this.dateInserted;
-    }
-
-    public void setDateInserted(Date dateInserted) {
-	this.dateInserted = dateInserted;
-    }
-
-    public String getDoy() {
-	return this.doy;
-    }
-
-    public void setDoy(String doy) {
-	this.doy = doy;
-    }
-
-    public Integer getMarriage() {
-	return this.marriage;
-    }
-
-    public void setMarriage(Integer marriage) {
-	this.marriage = marriage;
     }
 
     public IncomeTax getIncomeTax() {
@@ -246,12 +170,87 @@ public class E1 implements java.io.Serializable {
 	this.incomeTax = incomeTax;
     }
 
+    public E1dataFromTaxPayerFolder getE1dataFromTaxPayerFolder() {
+	return this.e1dataFromTaxPayerFolder;
+    }
+
+    public void setE1dataFromTaxPayerFolder(
+	    E1dataFromTaxPayerFolder e1dataFromTaxPayerFolder) {
+	this.e1dataFromTaxPayerFolder = e1dataFromTaxPayerFolder;
+    }
+
+    public E1nauticalincomes getE1nauticalincomes() {
+	return this.e1nauticalincomes;
+    }
+
+    public void setE1nauticalincomes(E1nauticalincomes e1nauticalincomes) {
+	this.e1nauticalincomes = e1nauticalincomes;
+    }
+
+    public E1reduceTax getE1reduceTax() {
+	return this.e1reduceTax;
+    }
+
+    public void setE1reduceTax(E1reduceTax e1reduceTax) {
+	this.e1reduceTax = e1reduceTax;
+    }
+
+    public E1taxableIncomes getE1taxableIncomes() {
+	return this.e1taxableIncomes;
+    }
+
+    public void setE1taxableIncomes(E1taxableIncomes e1taxableIncomes) {
+	this.e1taxableIncomes = e1taxableIncomes;
+    }
+
     public Set<RelatePerson> getRelatePersons() {
 	return this.relatePersons;
     }
 
     public void setRelatePersons(Set<RelatePerson> relatePersons) {
 	this.relatePersons = relatePersons;
+    }
+
+    public E1taxPayerBankAccount getE1taxPayerBankAccount() {
+	return this.e1taxPayerBankAccount;
+    }
+
+    public void setE1taxPayerBankAccount(
+	    E1taxPayerBankAccount e1taxPayerBankAccount) {
+	this.e1taxPayerBankAccount = e1taxPayerBankAccount;
+    }
+
+    public E1objectiveSpending getE1objectiveSpending() {
+	return this.e1objectiveSpending;
+    }
+
+    public void setE1objectiveSpending(E1objectiveSpending e1objectiveSpending) {
+	this.e1objectiveSpending = e1objectiveSpending;
+    }
+
+    public E1personDataBorneTaxpayer getE1personDataBorneTaxpayer() {
+	return this.e1personDataBorneTaxpayer;
+    }
+
+    public void setE1personDataBorneTaxpayer(
+	    E1personDataBorneTaxpayer e1personDataBorneTaxpayer) {
+	this.e1personDataBorneTaxpayer = e1personDataBorneTaxpayer;
+    }
+
+    public E1infoData getE1infoData() {
+	return this.e1infoData;
+    }
+
+    public void setE1infoData(E1infoData e1infoData) {
+	this.e1infoData = e1infoData;
+    }
+
+    public E1prepaidTaxes getE1prepaidTaxes() {
+	return this.e1prepaidTaxes;
+    }
+
+    public void setE1prepaidTaxes(E1prepaidTaxes e1prepaidTaxes) {
+	this.e1prepaidTaxes = e1prepaidTaxes;
     }
 
 }

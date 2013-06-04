@@ -82,7 +82,7 @@ public class DocumentSrv {
 	E1objectiveSpending o = null;
 	o = dao.getE1DAO().getObjectiveSpendingByE1Id(
 		new E1Id(taxpayerId, year));
-	o.setE1s(null);
+	o.setE1(null);
 
 	return o;
     }
@@ -94,7 +94,7 @@ public class DocumentSrv {
 	    @QueryParam("year") int year) {
 	E1infoData o = null;
 	o = dao.getE1DAO().getInfoDataByE1Id(new E1Id(taxpayerId, year));
-	o.setE1s(null);
+	o.setE1(null);
 
 	return o;
     }
@@ -107,7 +107,7 @@ public class DocumentSrv {
 	E1expensesRemovedFromTotalIncome o = null;
 	o = dao.getE1DAO().getExpensesRemovedFromTotalIncomeByE1Id(
 		new E1Id(taxpayerId, year));
-	o.setE1s(null);
+	o.setE1(null);
 
 	return o;
     }
@@ -119,7 +119,7 @@ public class DocumentSrv {
 	    @QueryParam("tId") int taxpayerId, @QueryParam("year") int year) {
 	E1taxableIncomes o = null;
 	o = dao.getE1DAO().getTaxableIncomesByE1Id(new E1Id(taxpayerId, year));
-	o.setE1s(null);
+	o.setE1(null);
 
 	return o;
     }
@@ -131,7 +131,7 @@ public class DocumentSrv {
 	    @QueryParam("tId") int taxpayerId, @QueryParam("year") int year) {
 	E1reduceTax o = null;
 	o = dao.getE1DAO().getReduceTaxByE1Id(new E1Id(taxpayerId, year));
-	o.setE1s(null);
+	o.setE1(null);
 
 	return o;
     }

@@ -55,8 +55,10 @@ public class CalculateTaxSrv {
 	E1Id key = new E1Id(taxpayerId, year);
 	E1 e1 = dao.getE1DAO().findById(key, true);
 
-	if (e1 != null)
-	    isMarriage = e1.getMarriage() == 1;
+	if (e1 == null)
+	    return incomeTax;
+	
+	isMarriage = e1.getMarriage() == 1;
 	E1objectiveSpending objSpend = dao.getE1DAO()
 		.getObjectiveSpendingByE1Id(key);
 	E1expensesRemovedFromTotalIncome erfti = dao.getE1DAO()
