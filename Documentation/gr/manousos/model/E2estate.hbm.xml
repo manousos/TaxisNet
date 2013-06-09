@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 3 ???????? 2013 11:58:43 ???? by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated 8 ???????? 2013 9:45:48 ???? by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="gr.manousos.model.E2estate" table="E2Estate" catalog="TaxisDB">
         <id name="estateId" type="java.lang.Integer">
@@ -39,14 +39,17 @@
         <property name="monthlyRental" type="float">
             <column name="MonthlyRental" precision="12" scale="0" not-null="true" />
         </property>
-        <property name="rersentCoOwner" type="float">
-            <column name="RersentCoOwner" precision="12" scale="0" not-null="true" />
+        <property name="persentCoOwner" type="float">
+            <column name="PersentCoOwner" precision="12" scale="0" not-null="true" />
         </property>
         <property name="revenueFreeHome" type="float">
             <column name="RevenueFreeHome" precision="12" scale="0" not-null="true" />
         </property>
         <property name="revenueFreeOffice" type="float">
             <column name="RevenueFreeOffice" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="revenueFreeField" type="float">
+            <column name="RevenueFreeField" precision="12" scale="0" not-null="true" />
         </property>
         <property name="revenuePrivateHotel" type="float">
             <column name="RevenuePrivateHotel" precision="12" scale="0" not-null="true" />

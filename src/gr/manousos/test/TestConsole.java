@@ -231,7 +231,7 @@ public class TestConsole {
 	e2estateObj.setLocation("location test");
 	e2estateObj.setMonthlyRental(100);
 	e2estateObj.setPosition("position from test");
-	e2estateObj.setRersentCoOwner(50);
+	e2estateObj.setPersentCoOwner(50);
 	e2estateObj.setTenantAfm("0000000000");
 	e2estateObj.setTenantFullName("tenantFullName from test");
 	e2estateObj.setTo(10);

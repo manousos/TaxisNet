@@ -1,6 +1,6 @@
 package gr.manousos.model;
 
-// Generated 3 Ιουν 2013 11:58:42 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 8 Ιουν 2013 9:45:48 μμ by Hibernate Tools 3.4.0.CR1
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,9 +21,10 @@ public class E2estate implements java.io.Serializable {
     private int fromMonth;
     private int toMonth;
     private float monthlyRental;
-    private float rersentCoOwner;
+    private float persentCoOwner;
     private float revenueFreeHome;
     private float revenueFreeOffice;
+    private float revenueFreeField;
     private float revenuePrivateHotel;
     private float revenuePrivateOffice;
     private Set<E2coOwner> e2coOwners = new HashSet<E2coOwner>(0);
@@ -34,9 +35,9 @@ public class E2estate implements java.io.Serializable {
     public E2estate(E2 e2, String location, String position,
 	    String estateUsage, float area, String tenantFullName,
 	    String tenantAfm, int fromMonth, int toMonth, float monthlyRental,
-	    float rersentCoOwner, float revenueFreeHome,
-	    float revenueFreeOffice, float revenuePrivateHotel,
-	    float revenuePrivateOffice) {
+	    float persentCoOwner, float revenueFreeHome,
+	    float revenueFreeOffice, float revenueFreeField,
+	    float revenuePrivateHotel, float revenuePrivateOffice) {
 	this.e2 = e2;
 	this.location = location;
 	this.position = position;
@@ -47,9 +48,10 @@ public class E2estate implements java.io.Serializable {
 	this.fromMonth = fromMonth;
 	this.toMonth = toMonth;
 	this.monthlyRental = monthlyRental;
-	this.rersentCoOwner = rersentCoOwner;
+	this.persentCoOwner = persentCoOwner;
 	this.revenueFreeHome = revenueFreeHome;
 	this.revenueFreeOffice = revenueFreeOffice;
+	this.revenueFreeField = revenueFreeField;
 	this.revenuePrivateHotel = revenuePrivateHotel;
 	this.revenuePrivateOffice = revenuePrivateOffice;
     }
@@ -57,9 +59,10 @@ public class E2estate implements java.io.Serializable {
     public E2estate(E2 e2, String location, String position,
 	    String estateUsage, float area, String tenantFullName,
 	    String tenantAfm, int fromMonth, int toMonth, float monthlyRental,
-	    float rersentCoOwner, float revenueFreeHome,
-	    float revenueFreeOffice, float revenuePrivateHotel,
-	    float revenuePrivateOffice, Set<E2coOwner> e2coOwners) {
+	    float persentCoOwner, float revenueFreeHome,
+	    float revenueFreeOffice, float revenueFreeField,
+	    float revenuePrivateHotel, float revenuePrivateOffice,
+	    Set<E2coOwner> e2coOwners) {
 	this.e2 = e2;
 	this.location = location;
 	this.position = position;
@@ -70,9 +73,10 @@ public class E2estate implements java.io.Serializable {
 	this.fromMonth = fromMonth;
 	this.toMonth = toMonth;
 	this.monthlyRental = monthlyRental;
-	this.rersentCoOwner = rersentCoOwner;
+	this.persentCoOwner = persentCoOwner;
 	this.revenueFreeHome = revenueFreeHome;
 	this.revenueFreeOffice = revenueFreeOffice;
+	this.revenueFreeField = revenueFreeField;
 	this.revenuePrivateHotel = revenuePrivateHotel;
 	this.revenuePrivateOffice = revenuePrivateOffice;
 	this.e2coOwners = e2coOwners;
@@ -166,12 +170,12 @@ public class E2estate implements java.io.Serializable {
 	this.monthlyRental = monthlyRental;
     }
 
-    public float getRersentCoOwner() {
-	return this.rersentCoOwner;
+    public float getPersentCoOwner() {
+	return this.persentCoOwner;
     }
 
-    public void setRersentCoOwner(float rersentCoOwner) {
-	this.rersentCoOwner = rersentCoOwner;
+    public void setPersentCoOwner(float persentCoOwner) {
+	this.persentCoOwner = persentCoOwner;
     }
 
     public float getRevenueFreeHome() {
@@ -188,6 +192,14 @@ public class E2estate implements java.io.Serializable {
 
     public void setRevenueFreeOffice(float revenueFreeOffice) {
 	this.revenueFreeOffice = revenueFreeOffice;
+    }
+
+    public float getRevenueFreeField() {
+	return this.revenueFreeField;
+    }
+
+    public void setRevenueFreeField(float revenueFreeField) {
+	this.revenueFreeField = revenueFreeField;
     }
 
     public float getRevenuePrivateHotel() {

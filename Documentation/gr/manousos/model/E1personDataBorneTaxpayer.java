@@ -1,5 +1,5 @@
 package gr.manousos.model;
-// Generated 3 Ιουν 2013 11:58:42 μμ by Hibernate Tools 3.4.0.CR1
+// Generated 8 Ιουν 2013 9:45:48 μμ by Hibernate Tools 3.4.0.CR1
 
 
 
