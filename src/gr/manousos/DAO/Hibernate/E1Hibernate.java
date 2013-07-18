@@ -18,7 +18,6 @@ import org.apache.commons.logging.LogFactory;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
-import org.hibernate.criterion.Expression;
 import org.hibernate.criterion.Restrictions;
 
 public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
@@ -59,17 +58,26 @@ public class E1Hibernate extends GenericDAOImpl<E1, Serializable> implements
 	try {
 	    getSession().beginTransaction();
 
-	    entity.getE1dataFromTaxPayerFolder().setE1(entity);
-	    entity.getE1expensesRemovedFromTotalIncome().setE1(entity);
-	    entity.getE1incomesReduceTaxes().setE1(entity);
-	    entity.getE1infoData().setE1(entity);
-	    entity.getE1nauticalincomes().setE1(entity);
-	    entity.getE1objectiveSpending().setE1(entity);
-	    entity.getE1personDataBorneTaxpayer().setE1(entity);
-	    entity.getE1prepaidTaxes().setE1(entity);
-	    entity.getE1reduceTax().setE1(entity);
-	    entity.getE1taxableIncomes().setE1(entity);
-	    entity.getE1taxPayerBankAccount().setE1(entity);
+	    if (entity.getE1dataFromTaxPayerFolder() != null)
+		entity.getE1dataFromTaxPayerFolder().setE1(entity);
+	    if (entity.getE1expensesRemovedFromTotalIncome() != null)
+		entity.getE1expensesRemovedFromTotalIncome().setE1(entity);
+	    if (entity.getE1infoData() != null)
+		entity.getE1infoData().setE1(entity);
+	    if (entity.getE1nauticalincomes() != null)
+		entity.getE1nauticalincomes().setE1(entity);
+	    if (entity.getE1objectiveSpending() != null)
+		entity.getE1objectiveSpending().setE1(entity);
+	    if (entity.getE1personDataBorneTaxpayer() != null)
+		entity.getE1personDataBorneTaxpayer().setE1(entity);
+	    if (entity.getE1prepaidTaxes() != null)
+		entity.getE1prepaidTaxes().setE1(entity);
+	    if (entity.getE1reduceTax() != null)
+		entity.getE1reduceTax().setE1(entity);
+	    if (entity.getE1taxableIncomes() != null)
+		entity.getE1taxableIncomes().setE1(entity);
+	    if (entity.getE1taxPayerBankAccount() != null)
+		entity.getE1taxPayerBankAccount().setE1(entity);
 
 	    super.makePersistent(entity);
 	    getSession().getTransaction().commit();

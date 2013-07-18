@@ -13,7 +13,6 @@ import static org.hibernate.criterion.Restrictions.eq;
 
 import gr.manousos.DAO.TaxpayerDAO;
 import gr.manousos.model.Contact;
-import gr.manousos.model.IncomeTax;
 import gr.manousos.model.Taxpayer;
 import gr.manousos.model.User;
 
