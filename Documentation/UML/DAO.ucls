@@ -1,57 +1,92 @@
-<class-diagram version="1.0.11" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.4" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
   realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
-  <interface id="1" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.E2DAO" project="TaxisNet" 
-    file="/TaxisNet/src/gr/manousos/DAO/E2DAO.java" binary="false">    
-    <position height="78" width="101" x="410" y="272"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+  <interface id="1" language="java" name="gr.manousos.DAO.E2DAO" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/E2DAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="535" y="326"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="2" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.TaxpayerDAO" project="TaxisNet" 
-    file="/TaxisNet/src/gr/manousos/DAO/TaxpayerDAO.java" binary="false">    
-    <position height="95" width="170" x="200" y="272"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+  <interface id="2" language="java" name="gr.manousos.DAO.TaxpayerDAO" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/TaxpayerDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="347" y="344"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.DAOFactory" project="TaxisNet" 
-    file="/TaxisNet/src/gr/manousos/DAO/DAOFactory.java" binary="false">    
-    <position height="-1" width="-1" x="375" y="499"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+  <class id="3" language="java" name="gr.manousos.DAO.DAOFactory" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/DAOFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="527" y="673"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="4" corner="BOTTOM_RIGHT" language="java" name="gr.manousos.DAO.GenericDAO" project="TaxisNet" 
-    file="/TaxisNet/src/gr/manousos/DAO/GenericDAO.java" binary="false">    
-    <position height="-1" width="-1" x="380" y="112"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true"/>      
-      <operations public="true" package="true" protected="true" private="true"/>    
+  <interface id="4" language="java" name="gr.manousos.DAO.GenericDAO" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/GenericDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="523" y="92"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <generalization id="5">    
-    <end type="SOURCE" refId="2"/>    
+  <interface id="5" language="java" name="gr.manousos.DAO.E1DAO" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/E1DAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="843" y="371"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="6" language="java" name="gr.manousos.DAO.UserDAO" project="TaxisNet" 
+    file="/TaxisNet/src/gr/manousos/DAO/UserDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="128" y="326"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <generalization id="7">    
+    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="4"/>  
   </generalization>  
-  <dependency id="6">    
+  <dependency id="8">    
     <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
+    <end type="TARGET" refId="5"/>  
   </dependency>  
-  <dependency id="7">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="2"/>  
-  </dependency>  
-  <generalization id="8">    
+  <generalization id="9">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="4"/>  
   </generalization>  
+  <dependency id="10">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="11">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <dependency id="13">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-    visibility="true">    
-    <attributes public="true" package="true" protected="true" private="true"/>    
-    <operations public="true" package="true" protected="true" private="true"/>  
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
   </classifier-display>  
   <association-display labels="true" multiplicity="true"/>
 </class-diagram>
